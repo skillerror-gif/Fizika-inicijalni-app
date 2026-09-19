@@ -57,7 +57,8 @@ class _HomeScreenState extends State<HomeScreen>{
   Future<void> _practice(List<AppQuestion> qs,{int count=10}) async{
     final summaries=await AdaptiveEngine.all();
     final weak=summaries.where((x)=>x.isWeak).map((x)=>x.subdomain).toSet();
-    final focused=weak.isEmpty?qs:qs.where((q)=>weak.contains(q.subdomain)).toList();
+    final weakPool=qs.where((q)=>weak.contains(q.subdomain)).toList();
+    final focused=weakPool.isEmpty?qs:weakPool;
     if(!mounted)return;
     Navigator.push(context,MaterialPageRoute(builder:(_)=>QuizScreen(questions:randomizedPractice(focused,count:min(count,focused.length)))));
   }
@@ -83,7 +84,7 @@ class _PracticePersonalizationScreenState extends State<PracticePersonalizationS
   List<String> subdomains(String area){final ids=widget.allQuestions.where((q)=>mainAreaId(q.subdomainId)==area).map((q)=>q.subdomainId).toSet().toList();ids.sort();return ids;}
   bool areaSelected(String area){final ids=subdomains(area);return ids.isNotEmpty&&ids.every(selectedSubdomains.contains);}
   void toggleArea(String area,bool value){final ids=subdomains(area);setState((){if(value){selectedSubdomains.addAll(ids);}else{selectedSubdomains.removeAll(ids);}});}
-  void start(){final pool=widget.allQuestions.where((q)=>selectedSubdomains.isEmpty||selectedSubdomains.contains(q.subdomainId)).toList();if(pool.isEmpty)return;Navigator.push(context,MaterialPageRoute(builder:(_)=>QuizScreen(questions:randomizedPractice(pool,count:min(count,pool.length),focus:focus))));}
+  Future<void> start() async{final selectedPool=widget.allQuestions.where((q)=>selectedSubdomains.isEmpty||selectedSubdomains.contains(q.subdomainId)).toList();if(selectedPool.isEmpty)return;final summaries=await AdaptiveEngine.all();final weak=summaries.where((x)=>x.isWeak).map((x)=>x.subdomain).toSet();final weakPool=selectedPool.where((q)=>weak.contains(q.subdomain)).toList();final pool=weakPool.isEmpty?selectedPool:weakPool;if(!mounted)return;Navigator.push(context,MaterialPageRoute(builder:(_)=>QuizScreen(questions:randomizedPractice(pool,count:min(count,pool.length),focus:focus))));}
   @override Widget build(BuildContext context){final all=selectedSubdomains.isEmpty;return Scaffold(appBar:AppBar(title:const Text('Personalizuj vežbanje')),body:ListView(padding:const EdgeInsets.all(20),children:[
     const Text('Oblasti',style:TextStyle(fontSize:22,fontWeight:FontWeight.bold)),const SizedBox(height:6),const Text('Izaberi sve obrađene oblasti, glavnu oblast ili pojedinačno gradivo unutar nje.'),
     CheckboxListTile(value:all,title:const Text('Sve obrađene oblasti'),subtitle:const Text('Koristi ceo trenutno dostupan fond pitanja'),onChanged:(_)=>setState(selectedSubdomains.clear)),
