@@ -19,6 +19,9 @@ class AppQuestion {
 }
 Future<List<AppQuestion>> loadQuestions() async{final raw=await ContentRepository.loadRaw();ContentRepository.refreshSilently();final data=jsonDecode(raw) as Map<String,dynamic>;return (data['questions'] as List).map((e)=>AppQuestion.fromJson(e)).where((q)=>q.unlock<=35).toList();}
 
+const mainAreaNames=<String,String>{'UVF':'Увод у физику','KIN':'Кинематика'};
+String mainAreaId(String subdomainId)=>subdomainId.split('-').first;
+
 const lessonNames=<String,String>{'UVF-01':'Предмет, методе и задаци физике','UVF-02':'Физичке величине, мерење и SI јединице','UVF-03':'Скаларне и векторске физичке величине','KIN-01':'Референтни систем и материјална тачка','KIN-02':'Положај, путања, пут и померај','KIN-03':'Средња и тренутна брзина','KIN-08':'Слагање брзина и релативно кретање'};
 
 List<AppQuestion> randomizedPractice(List<AppQuestion> source,{int count=10,String focus='mixed'}){
@@ -76,17 +79,23 @@ class _HomeCard extends StatelessWidget{const _HomeCard({required this.icon,requ
 
 class PracticePersonalizationScreen extends StatefulWidget{const PracticePersonalizationScreen({super.key,required this.allQuestions});final List<AppQuestion> allQuestions;@override State<PracticePersonalizationScreen> createState()=>_PracticePersonalizationScreenState();}
 class _PracticePersonalizationScreenState extends State<PracticePersonalizationScreen>{
-  late final List<String> areas;final Set<String> selected={};int count=10;String focus='mixed';
-  @override void initState(){super.initState();areas=widget.allQuestions.map((q)=>q.subdomain).toSet().toList()..sort();}
-  void start(){final pool=widget.allQuestions.where((q)=>selected.isEmpty||selected.contains(q.subdomain)).toList();if(pool.isEmpty)return;Navigator.push(context,MaterialPageRoute(builder:(_)=>QuizScreen(questions:randomizedPractice(pool,count:min(count,pool.length),focus:focus))));}
-  @override Widget build(BuildContext context){final all=selected.isEmpty;return Scaffold(appBar:AppBar(title:const Text('Personalizuj vežbanje')),body:ListView(padding:const EdgeInsets.all(20),children:[
-    const Text('Oblasti',style:TextStyle(fontSize:22,fontWeight:FontWeight.bold)),const SizedBox(height:6),const Text('Bez posebnog izbora koriste se sve trenutno obrađene oblasti.'),
-    CheckboxListTile(value:all,title:const Text('Sve obrađene oblasti'),onChanged:(_)=>setState(selected.clear)),
-    ...areas.map((a)=>CheckboxListTile(value:selected.contains(a),title:Text(a),onChanged:(v)=>setState((){if(v==true){selected.add(a);}else{selected.remove(a);}}))),
+  final Set<String> selectedSubdomains={};final Set<String> expandedAreas={};int count=10;String focus='mixed';
+  List<String> get areas{final ids=widget.allQuestions.map((q)=>mainAreaId(q.subdomainId)).toSet().toList();ids.sort();return ids;}
+  List<String> subdomains(String area){final ids=widget.allQuestions.where((q)=>mainAreaId(q.subdomainId)==area).map((q)=>q.subdomainId).toSet().toList();ids.sort();return ids;}
+  bool areaSelected(String area){final ids=subdomains(area);return ids.isNotEmpty&&ids.every(selectedSubdomains.contains);}
+  void toggleArea(String area,bool value){final ids=subdomains(area);setState((){if(value){selectedSubdomains.addAll(ids);}else{selectedSubdomains.removeAll(ids);}});}
+  void start(){final pool=widget.allQuestions.where((q)=>selectedSubdomains.isEmpty||selectedSubdomains.contains(q.subdomainId)).toList();if(pool.isEmpty)return;Navigator.push(context,MaterialPageRoute(builder:(_)=>QuizScreen(questions:randomizedPractice(pool,count:min(count,pool.length),focus:focus))));}
+  @override Widget build(BuildContext context){final all=selectedSubdomains.isEmpty;return Scaffold(appBar:AppBar(title:const Text('Personalizuj vežbanje')),body:ListView(padding:const EdgeInsets.all(20),children:[
+    const Text('Oblasti',style:TextStyle(fontSize:22,fontWeight:FontWeight.bold)),const SizedBox(height:6),const Text('Izaberi sve obrađene oblasti, glavnu oblast ili pojedinačno gradivo unutar nje.'),
+    CheckboxListTile(value:all,title:const Text('Sve obrađene oblasti'),subtitle:const Text('Koristi ceo trenutno dostupan fond pitanja'),onChanged:(_)=>setState(selectedSubdomains.clear)),
+    ...areas.map((area){final open=expandedAreas.contains(area);final ids=subdomains(area);return Card(child:Column(children:[
+      ListTile(leading:Checkbox(value:areaSelected(area),onChanged:(v)=>toggleArea(area,v==true)),title:Text(mainAreaNames[area]??area),subtitle:Text('${ids.length} obrađenih celina'),trailing:Icon(open?Icons.expand_less:Icons.expand_more),onTap:()=>setState(()=>open?expandedAreas.remove(area):expandedAreas.add(area))),
+      if(open)...ids.map((id)=>CheckboxListTile(contentPadding:const EdgeInsets.only(left:48,right:16),value:selectedSubdomains.contains(id),title:Text(lessonNames[id]??id),onChanged:(v)=>setState((){if(v==true){selectedSubdomains.add(id);}else{selectedSubdomains.remove(id);}})))
+    ]));}),
     const SizedBox(height:12),const Text('Vrsta zadataka',style:TextStyle(fontSize:18,fontWeight:FontWeight.bold)),
     SegmentedButton<String>(segments:const [ButtonSegment(value:'mixed',label:Text('Mešovito')),ButtonSegment(value:'calculation',label:Text('Računski')),ButtonSegment(value:'theory',label:Text('Teorijski'))],selected:{focus},onSelectionChanged:(v)=>setState(()=>focus=v.first)),
     const SizedBox(height:12),Text('Broj pitanja: $count'),Slider(value:count.toDouble(),min:5,max:20,divisions:15,label:'$count',onChanged:(v)=>setState(()=>count=v.round())),
-    const SizedBox(height:12),FilledButton.icon(onPressed:start,icon:const Icon(Icons.play_arrow),label:Text(all?'Vežbaj sve oblasti':'Vežbaj izabrane oblasti (${selected.length})'))
+    const SizedBox(height:12),FilledButton.icon(onPressed:start,icon:const Icon(Icons.play_arrow),label:Text(all?'Vežbaj sve obrađene oblasti':'Vežbaj izabrano (${selectedSubdomains.length})'))
   ]));}
 }
 
