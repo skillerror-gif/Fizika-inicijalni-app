@@ -1,8 +1,9 @@
 name: Flutter K7
 on:
-  push:
+  pull_request:
     branches: [main]
   workflow_dispatch:
+
 jobs:
   android:
     runs-on: ubuntu-latest
@@ -14,16 +15,23 @@ jobs:
           cache: true
       - name: Generate Android platform
         run: flutter create --platforms=android .
-      - run: flutter pub get
-      - run: python3 tool/validate_content.py
-      - run: dart format --output=none --set-exit-if-changed lib test
-      - run: flutter analyze
-      - run: flutter test
-      - run: flutter build apk --release
+      - name: Dependencies
+        run: flutter pub get
+      - name: Validate content
+        run: python3 tool/validate_content.py
+      - name: Format check
+        run: dart format --output=none --set-exit-if-changed lib test
+      - name: Analyze
+        run: flutter analyze
+      - name: Tests
+        run: flutter test
+      - name: Build Android APK
+        run: flutter build apk --release
       - uses: actions/upload-artifact@v4
         with:
           name: fizika-android-apk
           path: build/app/outputs/flutter-apk/app-release.apk
+
   ios-compile:
     runs-on: macos-latest
     steps:
@@ -34,7 +42,11 @@ jobs:
           cache: true
       - name: Generate iOS platform
         run: flutter create --platforms=ios .
-      - run: flutter pub get
-      - run: flutter analyze
-      - run: flutter test
-      - run: flutter build ios --release --no-codesign
+      - name: Dependencies
+        run: flutter pub get
+      - name: Analyze
+        run: flutter analyze
+      - name: Tests
+        run: flutter test
+      - name: Build iOS unsigned
+        run: flutter build ios --release --no-codesign
