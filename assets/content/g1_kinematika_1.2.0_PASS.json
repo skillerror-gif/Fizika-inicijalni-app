@@ -1,9 +1,9 @@
 {
   "database_id": "fizika-app-g1",
   "schema_version": 1,
-  "content_version": "1.2.0",
+  "content_version": "1.3.0",
   "grade": 1,
-  "domain_id": "KIN",
+  "domain_id": "G1",
   "questions": [
     {
       "id": "PHY-G1-KIN-000001",
@@ -83,7 +83,7 @@
       },
       "adaptive": {
         "primary_concept_id": "reference_system",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -168,7 +168,7 @@
       },
       "adaptive": {
         "primary_concept_id": "material_point",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -253,7 +253,7 @@
       },
       "adaptive": {
         "primary_concept_id": "trajectory_reference",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -338,7 +338,7 @@
       },
       "adaptive": {
         "primary_concept_id": "position_vector",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -423,7 +423,7 @@
       },
       "adaptive": {
         "primary_concept_id": "path_displacement",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -508,7 +508,7 @@
       },
       "adaptive": {
         "primary_concept_id": "path_displacement",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -594,7 +594,7 @@
       },
       "adaptive": {
         "primary_concept_id": "displacement_vector",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -679,7 +679,7 @@
       },
       "adaptive": {
         "primary_concept_id": "path_displacement",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -765,7 +765,7 @@
       },
       "adaptive": {
         "primary_concept_id": "average_speed",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -851,7 +851,7 @@
       },
       "adaptive": {
         "primary_concept_id": "average_speed",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -936,7 +936,7 @@
       },
       "adaptive": {
         "primary_concept_id": "average_velocity",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -1021,7 +1021,7 @@
       },
       "adaptive": {
         "primary_concept_id": "instantaneous_velocity",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -1106,7 +1106,7 @@
       },
       "adaptive": {
         "primary_concept_id": "acceleration",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -1191,7 +1191,7 @@
       },
       "adaptive": {
         "primary_concept_id": "acceleration_sign",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -1277,7 +1277,7 @@
       },
       "adaptive": {
         "primary_concept_id": "acceleration_vector",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -1362,7 +1362,7 @@
       },
       "adaptive": {
         "primary_concept_id": "acceleration_graph",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -1447,7 +1447,7 @@
       },
       "adaptive": {
         "primary_concept_id": "xt_slope",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -1532,7 +1532,7 @@
       },
       "adaptive": {
         "primary_concept_id": "uniform_motion",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -1617,7 +1617,7 @@
       },
       "adaptive": {
         "primary_concept_id": "vt_area",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -1703,7 +1703,7 @@
       },
       "adaptive": {
         "primary_concept_id": "vt_signed_area",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -1789,7 +1789,7 @@
       },
       "adaptive": {
         "primary_concept_id": "constant_acceleration",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -1875,7 +1875,7 @@
       },
       "adaptive": {
         "primary_concept_id": "constant_acceleration",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -1962,7 +1962,7 @@
       },
       "adaptive": {
         "primary_concept_id": "stopping_distance",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -2049,7 +2049,7 @@
       },
       "adaptive": {
         "primary_concept_id": "constant_acceleration_model",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -2135,7 +2135,7 @@
       },
       "adaptive": {
         "primary_concept_id": "free_fall",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -2221,7 +2221,7 @@
       },
       "adaptive": {
         "primary_concept_id": "free_fall",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -2307,7 +2307,7 @@
       },
       "adaptive": {
         "primary_concept_id": "vertical_throw",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -2393,7 +2393,7 @@
       },
       "adaptive": {
         "primary_concept_id": "vertical_throw",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -2480,7 +2480,7 @@
       },
       "adaptive": {
         "primary_concept_id": "relative_velocity",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -2567,7 +2567,7 @@
       },
       "adaptive": {
         "primary_concept_id": "relative_velocity",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -2654,7 +2654,7 @@
       },
       "adaptive": {
         "primary_concept_id": "relative_velocity",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -2742,7 +2742,7 @@
       },
       "adaptive": {
         "primary_concept_id": "relative_velocity_model",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -2828,7 +2828,7 @@
       },
       "adaptive": {
         "primary_concept_id": "period_frequency",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -2914,7 +2914,7 @@
       },
       "adaptive": {
         "primary_concept_id": "linear_angular_speed",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -3000,7 +3000,7 @@
       },
       "adaptive": {
         "primary_concept_id": "centripetal_acceleration",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -3086,7 +3086,7 @@
       },
       "adaptive": {
         "primary_concept_id": "rigid_rotation",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -3177,7 +3177,7 @@
       },
       "adaptive": {
         "primary_concept_id": "reference_system",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -3268,7 +3268,7 @@
       },
       "adaptive": {
         "primary_concept_id": "relative_motion",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -3359,7 +3359,7 @@
       },
       "adaptive": {
         "primary_concept_id": "material_point",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -3450,7 +3450,7 @@
       },
       "adaptive": {
         "primary_concept_id": "material_point",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -3541,7 +3541,7 @@
       },
       "adaptive": {
         "primary_concept_id": "position",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -3632,7 +3632,7 @@
       },
       "adaptive": {
         "primary_concept_id": "position_vector",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -3723,7 +3723,7 @@
       },
       "adaptive": {
         "primary_concept_id": "trajectory",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -3814,7 +3814,7 @@
       },
       "adaptive": {
         "primary_concept_id": "trajectory",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -3905,7 +3905,7 @@
       },
       "adaptive": {
         "primary_concept_id": "reference_system",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -4005,7 +4005,7 @@
       },
       "adaptive": {
         "primary_concept_id": "relative_motion",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -4096,7 +4096,7 @@
       },
       "adaptive": {
         "primary_concept_id": "position",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -4191,7 +4191,7 @@
       },
       "adaptive": {
         "primary_concept_id": "position",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -4286,7 +4286,7 @@
       },
       "adaptive": {
         "primary_concept_id": "reference_system",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -4377,7 +4377,7 @@
       },
       "adaptive": {
         "primary_concept_id": "material_point",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -4468,7 +4468,7 @@
       },
       "adaptive": {
         "primary_concept_id": "position",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -4559,7 +4559,7 @@
       },
       "adaptive": {
         "primary_concept_id": "relative_motion",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -4656,7 +4656,7 @@
       },
       "adaptive": {
         "primary_concept_id": "path_displacement",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -4747,7 +4747,7 @@
       },
       "adaptive": {
         "primary_concept_id": "path_displacement",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -4838,7 +4838,7 @@
       },
       "adaptive": {
         "primary_concept_id": "path_displacement",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -4929,7 +4929,7 @@
       },
       "adaptive": {
         "primary_concept_id": "path_displacement",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -5020,7 +5020,7 @@
       },
       "adaptive": {
         "primary_concept_id": "displacement_vector",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -5126,7 +5126,7 @@
       },
       "adaptive": {
         "primary_concept_id": "displacement_vector",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -5217,7 +5217,7 @@
       },
       "adaptive": {
         "primary_concept_id": "path_displacement",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -5308,7 +5308,7 @@
       },
       "adaptive": {
         "primary_concept_id": "path_displacement",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -5399,7 +5399,7 @@
       },
       "adaptive": {
         "primary_concept_id": "displacement_vector",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -5490,7 +5490,7 @@
       },
       "adaptive": {
         "primary_concept_id": "displacement_vector",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -5596,7 +5596,7 @@
       },
       "adaptive": {
         "primary_concept_id": "path_displacement",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -5691,7 +5691,7 @@
       },
       "adaptive": {
         "primary_concept_id": "path_displacement",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -5786,7 +5786,7 @@
       },
       "adaptive": {
         "primary_concept_id": "trajectory_path",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -5877,7 +5877,7 @@
       },
       "adaptive": {
         "primary_concept_id": "path_displacement",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -5968,7 +5968,7 @@
       },
       "adaptive": {
         "primary_concept_id": "path_displacement",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -6059,7 +6059,7 @@
       },
       "adaptive": {
         "primary_concept_id": "path_displacement",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -6150,7 +6150,7 @@
       },
       "adaptive": {
         "primary_concept_id": "average_speed",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -6257,7 +6257,7 @@
       },
       "adaptive": {
         "primary_concept_id": "unit_conversion",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -6348,7 +6348,7 @@
       },
       "adaptive": {
         "primary_concept_id": "unit_conversion",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -6439,7 +6439,7 @@
       },
       "adaptive": {
         "primary_concept_id": "average_speed",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -6554,7 +6554,7 @@
       },
       "adaptive": {
         "primary_concept_id": "average_speed",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -6659,7 +6659,7 @@
       },
       "adaptive": {
         "primary_concept_id": "average_speed",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -6768,7 +6768,7 @@
       },
       "adaptive": {
         "primary_concept_id": "average_velocity",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -6859,7 +6859,7 @@
       },
       "adaptive": {
         "primary_concept_id": "average_velocity",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -6950,7 +6950,7 @@
       },
       "adaptive": {
         "primary_concept_id": "instantaneous_speed",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -7041,7 +7041,7 @@
       },
       "adaptive": {
         "primary_concept_id": "instantaneous_speed",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -7136,7 +7136,7 @@
       },
       "adaptive": {
         "primary_concept_id": "instantaneous_speed",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -7227,7 +7227,7 @@
       },
       "adaptive": {
         "primary_concept_id": "average_speed",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -7322,7 +7322,7 @@
       },
       "adaptive": {
         "primary_concept_id": "average_speed",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -7413,7 +7413,7 @@
       },
       "adaptive": {
         "primary_concept_id": "speed_concepts",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -7504,7 +7504,7 @@
       },
       "adaptive": {
         "primary_concept_id": "average_speed",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -7609,7 +7609,7 @@
       },
       "adaptive": {
         "primary_concept_id": "average_velocity",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -7716,7 +7716,7 @@
       },
       "adaptive": {
         "primary_concept_id": "velocity_addition",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -7807,7 +7807,7 @@
       },
       "adaptive": {
         "primary_concept_id": "velocity_addition",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -7898,7 +7898,7 @@
       },
       "adaptive": {
         "primary_concept_id": "velocity_addition",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -7989,7 +7989,7 @@
       },
       "adaptive": {
         "primary_concept_id": "relative_velocity",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -8080,7 +8080,7 @@
       },
       "adaptive": {
         "primary_concept_id": "relative_velocity",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -8171,7 +8171,7 @@
       },
       "adaptive": {
         "primary_concept_id": "relative_velocity",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -8262,7 +8262,7 @@
       },
       "adaptive": {
         "primary_concept_id": "velocity_addition_2d",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -8368,7 +8368,7 @@
       },
       "adaptive": {
         "primary_concept_id": "velocity_addition_2d",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -8469,7 +8469,7 @@
       },
       "adaptive": {
         "primary_concept_id": "velocity_addition",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -8560,7 +8560,7 @@
       },
       "adaptive": {
         "primary_concept_id": "velocity_addition",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -8651,7 +8651,7 @@
       },
       "adaptive": {
         "primary_concept_id": "velocity_addition",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -8742,7 +8742,7 @@
       },
       "adaptive": {
         "primary_concept_id": "velocity_addition",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -8833,7 +8833,7 @@
       },
       "adaptive": {
         "primary_concept_id": "relative_velocity",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -8924,7 +8924,7 @@
       },
       "adaptive": {
         "primary_concept_id": "relative_velocity",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -9015,7 +9015,7 @@
       },
       "adaptive": {
         "primary_concept_id": "velocity_addition_2d",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
@@ -9115,12 +9115,3072 @@
       },
       "adaptive": {
         "primary_concept_id": "relative_velocity",
-        "diagnostic_weight": 1.0,
+        "diagnostic_weight": 1,
         "cooldown_attempts": 2,
         "adaptive_enabled": true
       },
       "equivalence_group": "relative_velocity_64",
       "published_in": "1.1.0"
+    },
+    {
+      "id": "PHY-G1-UVF-000001",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 1,
+      "track": null,
+      "domain_id": "UVF",
+      "domain_name": "Увод у физику",
+      "subdomain_id": "UVF-01",
+      "subdomain_name": "Предмет, методе и задаци физике",
+      "lesson_ids": [
+        "UVF-01"
+      ],
+      "unlock_order": 1,
+      "outcome_ids": [
+        "G1-01"
+      ],
+      "concept_ids": [
+        "Физика проучава најопштије облике кретања и узајамног деловања материје."
+      ],
+      "difficulty": "basic",
+      "achievement_level": "N1",
+      "cognitive_process": "knowledge",
+      "question_type": "single_choice",
+      "nature": "theory",
+      "representation": "text",
+      "stem": "Шта физика проучава?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "Шта физика проучава?"
+        },
+        {
+          "option_id": "B",
+          "text": "Најопштије облике кретања и узајамног деловања материје"
+        },
+        {
+          "option_id": "V",
+          "text": "Само жива бића"
+        },
+        {
+          "option_id": "G",
+          "text": "Само хемијски састав супстанци"
+        }
+      ],
+      "correct_option_id": "Само небеска тела",
+      "explanation": "A",
+      "common_errors": [
+        {
+          "message": "Проверити дефиницију, јединицу и физички смисао одговора.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "PHY-I-UVV-001",
+          "role": "professor_pass",
+          "source_state": "PASS"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "unambiguous": "PASS",
+        "lesson_boundary": "PASS",
+        "review_date": "2026-09-19"
+      },
+      "adaptive": {
+        "primary_concept_id": "Физика проучава најопштије облике кретања и узајамног деловања материје.",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "Физика проучава најопштије облике кретања и узајамног деловања материје.",
+      "published_in": "1.3.0"
+    },
+    {
+      "id": "PHY-G1-UVF-000002",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 1,
+      "track": null,
+      "domain_id": "UVF",
+      "domain_name": "Увод у физику",
+      "subdomain_id": "UVF-01",
+      "subdomain_name": "Предмет, методе и задаци физике",
+      "lesson_ids": [
+        "UVF-01"
+      ],
+      "unlock_order": 1,
+      "outcome_ids": [
+        "G1-01"
+      ],
+      "concept_ids": [
+        "Експериментална провера предвиђања је важан део научног метода."
+      ],
+      "difficulty": "basic",
+      "achievement_level": "N1",
+      "cognitive_process": "knowledge",
+      "question_type": "single_choice",
+      "nature": "theory",
+      "representation": "text",
+      "stem": "Који поступак је део научног метода у физици?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "Који поступак је део научног метода у физици?"
+        },
+        {
+          "option_id": "B",
+          "text": "Провера предвиђања експериментом"
+        },
+        {
+          "option_id": "V",
+          "text": "Прихватање тврдње без провере"
+        },
+        {
+          "option_id": "G",
+          "text": "Избегавање мерења"
+        }
+      ],
+      "correct_option_id": "Замена података претпоставком",
+      "explanation": "A",
+      "common_errors": [
+        {
+          "message": "Проверити дефиницију, јединицу и физички смисао одговора.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "PHY-I-UVV-001",
+          "role": "professor_pass",
+          "source_state": "PASS"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "unambiguous": "PASS",
+        "lesson_boundary": "PASS",
+        "review_date": "2026-09-19"
+      },
+      "adaptive": {
+        "primary_concept_id": "Експериментална провера предвиђања је важан део научног метода.",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "Експериментална провера предвиђања је важан део научног метода.",
+      "published_in": "1.3.0"
+    },
+    {
+      "id": "PHY-G1-UVF-000003",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 1,
+      "track": null,
+      "domain_id": "UVF",
+      "domain_name": "Увод у физику",
+      "subdomain_id": "UVF-01",
+      "subdomain_name": "Предмет, методе и задаци физике",
+      "lesson_ids": [
+        "UVF-01"
+      ],
+      "unlock_order": 1,
+      "outcome_ids": [
+        "G1-01"
+      ],
+      "concept_ids": [
+        "Контролисано испитивање захтева мерење и систематско мењање релевантних услова."
+      ],
+      "difficulty": "basic",
+      "achievement_level": "N1",
+      "cognitive_process": "knowledge",
+      "question_type": "single_choice",
+      "nature": "theory",
+      "representation": "text",
+      "stem": "Ученик жели да испита од чега зависи период клатна. Шта је најпримереније?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "Ученик жели да испита од чега зависи период клатна. Шта је најпримереније?"
+        },
+        {
+          "option_id": "B",
+          "text": "Мењати једну величину, мерити период и поредити резултате"
+        },
+        {
+          "option_id": "V",
+          "text": "Променити све услове истовремено"
+        },
+        {
+          "option_id": "G",
+          "text": "Само претпоставити резултат"
+        }
+      ],
+      "correct_option_id": "Измерити само дужину клатна",
+      "explanation": "A",
+      "common_errors": [
+        {
+          "message": "Проверити дефиницију, јединицу и физички смисао одговора.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "PHY-I-UVV-001",
+          "role": "professor_pass",
+          "source_state": "PASS"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "unambiguous": "PASS",
+        "lesson_boundary": "PASS",
+        "review_date": "2026-09-19"
+      },
+      "adaptive": {
+        "primary_concept_id": "Контролисано испитивање захтева мерење и систематско мењање релевантних услова.",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "Контролисано испитивање захтева мерење и систематско мењање релевантних услова.",
+      "published_in": "1.3.0"
+    },
+    {
+      "id": "PHY-G1-UVF-000004",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 1,
+      "track": null,
+      "domain_id": "UVF",
+      "domain_name": "Увод у физику",
+      "subdomain_id": "UVF-01",
+      "subdomain_name": "Предмет, методе и задаци физике",
+      "lesson_ids": [
+        "UVF-01"
+      ],
+      "unlock_order": 1,
+      "outcome_ids": [
+        "G1-01"
+      ],
+      "concept_ids": [
+        "Физички метод повезује посматрање, мерење и експеримент са моделом и провером."
+      ],
+      "difficulty": "intermediate",
+      "achievement_level": "N2",
+      "cognitive_process": "application",
+      "question_type": "single_choice",
+      "nature": "theory",
+      "representation": "text",
+      "stem": "Који низ најбоље описује рад у физици?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "Који низ најбоље описује рад у физици?"
+        },
+        {
+          "option_id": "B",
+          "text": "Посматрање → мерење/експеримент → модел или закон → провера"
+        },
+        {
+          "option_id": "V",
+          "text": "Формула → претпоставка → крај"
+        },
+        {
+          "option_id": "G",
+          "text": "Мерење → занемаривање резултата"
+        }
+      ],
+      "correct_option_id": "Посматрање → закључак без провере",
+      "explanation": "A",
+      "common_errors": [
+        {
+          "message": "Проверити дефиницију, јединицу и физички смисао одговора.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "PHY-I-UVV-001",
+          "role": "professor_pass",
+          "source_state": "PASS"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "unambiguous": "PASS",
+        "lesson_boundary": "PASS",
+        "review_date": "2026-09-19"
+      },
+      "adaptive": {
+        "primary_concept_id": "Физички метод повезује посматрање, мерење и експеримент са моделом и провером.",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "Физички метод повезује посматрање, мерење и експеримент са моделом и провером.",
+      "published_in": "1.3.0"
+    },
+    {
+      "id": "PHY-G1-UVF-000005",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 1,
+      "track": null,
+      "domain_id": "UVF",
+      "domain_name": "Увод у физику",
+      "subdomain_id": "UVF-01",
+      "subdomain_name": "Предмет, методе и задаци физике",
+      "lesson_ids": [
+        "UVF-01"
+      ],
+      "unlock_order": 1,
+      "outcome_ids": [
+        "G1-01"
+      ],
+      "concept_ids": [
+        "Модел поједностављује реалну ситуацију задржавајући особине важне за проблем."
+      ],
+      "difficulty": "basic",
+      "achievement_level": "N1",
+      "cognitive_process": "knowledge",
+      "question_type": "single_choice",
+      "nature": "theory",
+      "representation": "text",
+      "stem": "Зашто се у физици користе модели?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "Зашто се у физици користе модели?"
+        },
+        {
+          "option_id": "B",
+          "text": "Да се издвоје особине важне за посматрани проблем"
+        },
+        {
+          "option_id": "V",
+          "text": "Да замене сва мерења"
+        },
+        {
+          "option_id": "G",
+          "text": "Да сва тела прогласе једнаким"
+        }
+      ],
+      "correct_option_id": "Да уклоне потребу за провером",
+      "explanation": "A",
+      "common_errors": [
+        {
+          "message": "Проверити дефиницију, јединицу и физички смисао одговора.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "PHY-I-UVV-001",
+          "role": "professor_pass",
+          "source_state": "PASS"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "unambiguous": "PASS",
+        "lesson_boundary": "PASS",
+        "review_date": "2026-09-19"
+      },
+      "adaptive": {
+        "primary_concept_id": "Модел поједностављује реалну ситуацију задржавајући особине важне за проблем.",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "Модел поједностављује реалну ситуацију задржавајући особине важне за проблем.",
+      "published_in": "1.3.0"
+    },
+    {
+      "id": "PHY-G1-UVF-000006",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 1,
+      "track": null,
+      "domain_id": "UVF",
+      "domain_name": "Увод у физику",
+      "subdomain_id": "UVF-01",
+      "subdomain_name": "Предмет, методе и задаци физике",
+      "lesson_ids": [
+        "UVF-01"
+      ],
+      "unlock_order": 1,
+      "outcome_ids": [
+        "G1-01"
+      ],
+      "concept_ids": [
+        "У експерименту се услови контролишу, а последице мере и анализирају."
+      ],
+      "difficulty": "basic",
+      "achievement_level": "N1",
+      "cognitive_process": "knowledge",
+      "question_type": "single_choice",
+      "nature": "theory",
+      "representation": "text",
+      "stem": "Који пример најнепосредније представља експеримент?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "Који пример најнепосредније представља експеримент?"
+        },
+        {
+          "option_id": "B",
+          "text": "Контролисано мењање услова и мерење последице"
+        },
+        {
+          "option_id": "V",
+          "text": "Гледање фотографије без мерења"
+        },
+        {
+          "option_id": "G",
+          "text": "Преписивање формуле"
+        }
+      ],
+      "correct_option_id": "Погађање исхода",
+      "explanation": "A",
+      "common_errors": [
+        {
+          "message": "Проверити дефиницију, јединицу и физички смисао одговора.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "PHY-I-UVV-001",
+          "role": "professor_pass",
+          "source_state": "PASS"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "unambiguous": "PASS",
+        "lesson_boundary": "PASS",
+        "review_date": "2026-09-19"
+      },
+      "adaptive": {
+        "primary_concept_id": "У експерименту се услови контролишу, а последице мере и анализирају.",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "У експерименту се услови контролишу, а последице мере и анализирају.",
+      "published_in": "1.3.0"
+    },
+    {
+      "id": "PHY-G1-UVF-000007",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 1,
+      "track": null,
+      "domain_id": "UVF",
+      "domain_name": "Увод у физику",
+      "subdomain_id": "UVF-01",
+      "subdomain_name": "Предмет, методе и задаци физике",
+      "lesson_ids": [
+        "UVF-01"
+      ],
+      "unlock_order": 1,
+      "outcome_ids": [
+        "G1-01"
+      ],
+      "concept_ids": [
+        "Формула без услова важења није потпун физички исказ."
+      ],
+      "difficulty": "basic",
+      "achievement_level": "N1",
+      "cognitive_process": "knowledge",
+      "question_type": "single_choice",
+      "nature": "theory",
+      "representation": "text",
+      "stem": "Шта значи да физички закон има услове важења?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "Шта значи да физички закон има услове важења?"
+        },
+        {
+          "option_id": "B",
+          "text": "Може се примењивати само у ситуацијама за које су испуњене његове претпоставке"
+        },
+        {
+          "option_id": "V",
+          "text": "Важи само у лабораторији"
+        },
+        {
+          "option_id": "G",
+          "text": "Може се користити без обзира на ситуацију"
+        }
+      ],
+      "correct_option_id": "Зависи од избора јединице",
+      "explanation": "A",
+      "common_errors": [
+        {
+          "message": "Проверити дефиницију, јединицу и физички смисао одговора.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "PHY-I-UVV-001",
+          "role": "professor_pass",
+          "source_state": "PASS"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "unambiguous": "PASS",
+        "lesson_boundary": "PASS",
+        "review_date": "2026-09-19"
+      },
+      "adaptive": {
+        "primary_concept_id": "Формула без услова важења није потпун физички исказ.",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "Формула без услова важења није потпун физички исказ.",
+      "published_in": "1.3.0"
+    },
+    {
+      "id": "PHY-G1-UVF-000008",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 1,
+      "track": null,
+      "domain_id": "UVF",
+      "domain_name": "Увод у физику",
+      "subdomain_id": "UVF-01",
+      "subdomain_name": "Предмет, методе и задаци физике",
+      "lesson_ids": [
+        "UVF-01"
+      ],
+      "unlock_order": 1,
+      "outcome_ids": [
+        "G1-01"
+      ],
+      "concept_ids": [
+        "Мерењем се вредност физичке величине одређује у односу на јединицу."
+      ],
+      "difficulty": "basic",
+      "achievement_level": "N1",
+      "cognitive_process": "knowledge",
+      "question_type": "single_choice",
+      "nature": "theory",
+      "representation": "text",
+      "stem": "Која активност најбоље представља мерење?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "Која активност најбоље представља мерење?"
+        },
+        {
+          "option_id": "B",
+          "text": "Поређење величине са усвојеном јединицом"
+        },
+        {
+          "option_id": "V",
+          "text": "Процена без јединице"
+        },
+        {
+          "option_id": "G",
+          "text": "Цртање предмета"
+        }
+      ],
+      "correct_option_id": "Именовање појаве",
+      "explanation": "A",
+      "common_errors": [
+        {
+          "message": "Проверити дефиницију, јединицу и физички смисао одговора.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "PHY-I-UVV-001",
+          "role": "professor_pass",
+          "source_state": "PASS"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "unambiguous": "PASS",
+        "lesson_boundary": "PASS",
+        "review_date": "2026-09-19"
+      },
+      "adaptive": {
+        "primary_concept_id": "Мерењем се вредност физичке величине одређује у односу на јединицу.",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "Мерењем се вредност физичке величине одређује у односу на јединицу.",
+      "published_in": "1.3.0"
+    },
+    {
+      "id": "PHY-G1-UVF-000009",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 1,
+      "track": null,
+      "domain_id": "UVF",
+      "domain_name": "Увод у физику",
+      "subdomain_id": "UVF-01",
+      "subdomain_name": "Предмет, методе и задаци физике",
+      "lesson_ids": [
+        "UVF-01"
+      ],
+      "unlock_order": 1,
+      "outcome_ids": [
+        "G1-01"
+      ],
+      "concept_ids": [
+        "Уређени подаци омогућавају поређење, анализу и проверу закључака."
+      ],
+      "difficulty": "intermediate",
+      "achievement_level": "N2",
+      "cognitive_process": "application",
+      "question_type": "single_choice",
+      "nature": "theory",
+      "representation": "text",
+      "stem": "При испитивању загревања воде, зашто се резултати бележе у табелу?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "При испитивању загревања воде, зашто се резултати бележе у табелу?"
+        },
+        {
+          "option_id": "B",
+          "text": "Да би се подаци систематично упоредили и анализирали"
+        },
+        {
+          "option_id": "V",
+          "text": "Да би се избегло мерење"
+        },
+        {
+          "option_id": "G",
+          "text": "Да би јединице постале непотребне"
+        }
+      ],
+      "correct_option_id": "Да би се унапред потврдила претпоставка",
+      "explanation": "A",
+      "common_errors": [
+        {
+          "message": "Проверити дефиницију, јединицу и физички смисао одговора.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "PHY-I-UVV-001",
+          "role": "professor_pass",
+          "source_state": "PASS"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "unambiguous": "PASS",
+        "lesson_boundary": "PASS",
+        "review_date": "2026-09-19"
+      },
+      "adaptive": {
+        "primary_concept_id": "Уређени подаци омогућавају поређење, анализу и проверу закључака.",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "Уређени подаци омогућавају поређење, анализу и проверу закључака.",
+      "published_in": "1.3.0"
+    },
+    {
+      "id": "PHY-G1-UVF-000010",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 1,
+      "track": null,
+      "domain_id": "UVF",
+      "domain_name": "Увод у физику",
+      "subdomain_id": "UVF-01",
+      "subdomain_name": "Предмет, методе и задаци физике",
+      "lesson_ids": [
+        "UVF-01"
+      ],
+      "unlock_order": 1,
+      "outcome_ids": [
+        "G1-01"
+      ],
+      "concept_ids": [
+        "Провера пореди предвиђања са посматрањем и мерењем."
+      ],
+      "difficulty": "basic",
+      "achievement_level": "N1",
+      "cognitive_process": "knowledge",
+      "question_type": "single_choice",
+      "nature": "theory",
+      "representation": "text",
+      "stem": "Шта је улога експерименталне провере?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "Шта је улога експерименталне провере?"
+        },
+        {
+          "option_id": "B",
+          "text": "Да се утврди да ли су предвиђања модела или закона у складу са мерењима"
+        },
+        {
+          "option_id": "V",
+          "text": "Да замени теорију произвољним мишљењем"
+        },
+        {
+          "option_id": "G",
+          "text": "Да уклони мерне јединице"
+        }
+      ],
+      "correct_option_id": "Да обезбеди да сва мерења буду идентична",
+      "explanation": "A",
+      "common_errors": [
+        {
+          "message": "Проверити дефиницију, јединицу и физички смисао одговора.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "PHY-I-UVV-001",
+          "role": "professor_pass",
+          "source_state": "PASS"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "unambiguous": "PASS",
+        "lesson_boundary": "PASS",
+        "review_date": "2026-09-19"
+      },
+      "adaptive": {
+        "primary_concept_id": "Провера пореди предвиђања са посматрањем и мерењем.",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "Провера пореди предвиђања са посматрањем и мерењем.",
+      "published_in": "1.3.0"
+    },
+    {
+      "id": "PHY-G1-UVF-000011",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 1,
+      "track": null,
+      "domain_id": "UVF",
+      "domain_name": "Увод у физику",
+      "subdomain_id": "UVF-01",
+      "subdomain_name": "Предмет, методе и задаци физике",
+      "lesson_ids": [
+        "UVF-01"
+      ],
+      "unlock_order": 1,
+      "outcome_ids": [
+        "G1-01"
+      ],
+      "concept_ids": [
+        "Кретање и кочење возила су физичке појаве које се описују мерењем и законима."
+      ],
+      "difficulty": "basic",
+      "achievement_level": "N1",
+      "cognitive_process": "knowledge",
+      "question_type": "single_choice",
+      "nature": "theory",
+      "representation": "text",
+      "stem": "Који пример показује примену физике у свакодневном животу?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "Који пример показује примену физике у свакодневном животу?"
+        },
+        {
+          "option_id": "B",
+          "text": "Анализа кочења аутомобила помоћу закона кретања"
+        },
+        {
+          "option_id": "V",
+          "text": "Азбучни ред речи"
+        },
+        {
+          "option_id": "G",
+          "text": "Правописно правило"
+        }
+      ],
+      "correct_option_id": "Класификација књижевних жанрова",
+      "explanation": "A",
+      "common_errors": [
+        {
+          "message": "Проверити дефиницију, јединицу и физички смисао одговора.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "PHY-I-UVV-001",
+          "role": "professor_pass",
+          "source_state": "PASS"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "unambiguous": "PASS",
+        "lesson_boundary": "PASS",
+        "review_date": "2026-09-19"
+      },
+      "adaptive": {
+        "primary_concept_id": "Кретање и кочење возила су физичке појаве које се описују мерењем и законима.",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "Кретање и кочење возила су физичке појаве које се описују мерењем и законима.",
+      "published_in": "1.3.0"
+    },
+    {
+      "id": "PHY-G1-UVF-000012",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 1,
+      "track": null,
+      "domain_id": "UVF",
+      "domain_name": "Увод у физику",
+      "subdomain_id": "UVF-01",
+      "subdomain_name": "Предмет, методе и задаци физике",
+      "lesson_ids": [
+        "UVF-01"
+      ],
+      "unlock_order": 1,
+      "outcome_ids": [
+        "G1-01"
+      ],
+      "concept_ids": [
+        "Разлике мерења анализирају се провером поступка, услова и ограничења мерења."
+      ],
+      "difficulty": "basic",
+      "achievement_level": "N1",
+      "cognitive_process": "knowledge",
+      "question_type": "single_choice",
+      "nature": "theory",
+      "representation": "text",
+      "stem": "Када два мерења не дају потпуно исту вредност, исправан поступак је:",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "Када два мерења не дају потпуно исту вредност, исправан поступак је:"
+        },
+        {
+          "option_id": "B",
+          "text": "проверити услове, поступак и мерну несигурност"
+        },
+        {
+          "option_id": "V",
+          "text": "избрисати неповољан резултат без образложења"
+        },
+        {
+          "option_id": "G",
+          "text": "изабрати већи број као тачан"
+        }
+      ],
+      "correct_option_id": "занемарити јединице",
+      "explanation": "A",
+      "common_errors": [
+        {
+          "message": "Проверити дефиницију, јединицу и физички смисао одговора.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "PHY-I-UVV-001",
+          "role": "professor_pass",
+          "source_state": "PASS"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "unambiguous": "PASS",
+        "lesson_boundary": "PASS",
+        "review_date": "2026-09-19"
+      },
+      "adaptive": {
+        "primary_concept_id": "Разлике мерења анализирају се провером поступка, услова и ограничења мерења.",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "Разлике мерења анализирају се провером поступка, услова и ограничења мерења.",
+      "published_in": "1.3.0"
+    },
+    {
+      "id": "PHY-G1-UVF-000013",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 1,
+      "track": null,
+      "domain_id": "UVF",
+      "domain_name": "Увод у физику",
+      "subdomain_id": "UVF-02",
+      "subdomain_name": "Физичке величине, мерење и SI јединице",
+      "lesson_ids": [
+        "UVF-02"
+      ],
+      "unlock_order": 2,
+      "outcome_ids": [
+        "G1-01"
+      ],
+      "concept_ids": [
+        "Вредност физичке величине записује се бројном вредношћу и јединицом."
+      ],
+      "difficulty": "basic",
+      "achievement_level": "N1",
+      "cognitive_process": "knowledge",
+      "question_type": "single_choice",
+      "nature": "theory",
+      "representation": "text",
+      "stem": "Који запис физичке величине је потпун?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "Који запис физичке величине је потпун?"
+        },
+        {
+          "option_id": "B",
+          "text": "5 m"
+        },
+        {
+          "option_id": "V",
+          "text": "5"
+        },
+        {
+          "option_id": "G",
+          "text": "m"
+        }
+      ],
+      "correct_option_id": "пет без јединице",
+      "explanation": "A",
+      "common_errors": [
+        {
+          "message": "Проверити дефиницију, јединицу и физички смисао одговора.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "PHY-I-UVV-001",
+          "role": "professor_pass",
+          "source_state": "PASS"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "unambiguous": "PASS",
+        "lesson_boundary": "PASS",
+        "review_date": "2026-09-19"
+      },
+      "adaptive": {
+        "primary_concept_id": "Вредност физичке величине записује се бројном вредношћу и јединицом.",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "Вредност физичке величине записује се бројном вредношћу и јединицом.",
+      "published_in": "1.3.0"
+    },
+    {
+      "id": "PHY-G1-UVF-000014",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 1,
+      "track": null,
+      "domain_id": "UVF",
+      "domain_name": "Увод у физику",
+      "subdomain_id": "UVF-02",
+      "subdomain_name": "Физичке величине, мерење и SI јединице",
+      "lesson_ids": [
+        "UVF-02"
+      ],
+      "unlock_order": 2,
+      "outcome_ids": [
+        "G1-01"
+      ],
+      "concept_ids": [
+        "Основна SI јединица за време је секунда (s)."
+      ],
+      "difficulty": "intermediate",
+      "achievement_level": "N2",
+      "cognitive_process": "application",
+      "question_type": "single_choice",
+      "nature": "theory",
+      "representation": "text",
+      "stem": "Која је SI јединица за време?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "Која је SI јединица за време?"
+        },
+        {
+          "option_id": "B",
+          "text": "секунда (s)"
+        },
+        {
+          "option_id": "V",
+          "text": "минут (min)"
+        },
+        {
+          "option_id": "G",
+          "text": "час (h)"
+        }
+      ],
+      "correct_option_id": "дан",
+      "explanation": "A",
+      "common_errors": [
+        {
+          "message": "Проверити дефиницију, јединицу и физички смисао одговора.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "PHY-I-UVV-001",
+          "role": "professor_pass",
+          "source_state": "PASS"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "unambiguous": "PASS",
+        "lesson_boundary": "PASS",
+        "review_date": "2026-09-19"
+      },
+      "adaptive": {
+        "primary_concept_id": "Основна SI јединица за време је секунда (s).",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "Основна SI јединица за време је секунда (s).",
+      "published_in": "1.3.0"
+    },
+    {
+      "id": "PHY-G1-UVF-000015",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 1,
+      "track": null,
+      "domain_id": "UVF",
+      "domain_name": "Увод у физику",
+      "subdomain_id": "UVF-02",
+      "subdomain_name": "Физичке величине, мерење и SI јединице",
+      "lesson_ids": [
+        "UVF-02"
+      ],
+      "unlock_order": 2,
+      "outcome_ids": [
+        "G1-01"
+      ],
+      "concept_ids": [
+        "Основна SI јединица за дужину је метар (m)."
+      ],
+      "difficulty": "basic",
+      "achievement_level": "N1",
+      "cognitive_process": "knowledge",
+      "question_type": "single_choice",
+      "nature": "theory",
+      "representation": "text",
+      "stem": "Која је SI јединица за дужину?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "Која је SI јединица за дужину?"
+        },
+        {
+          "option_id": "B",
+          "text": "метар (m)"
+        },
+        {
+          "option_id": "V",
+          "text": "центиметар (cm)"
+        },
+        {
+          "option_id": "G",
+          "text": "километар (km)"
+        }
+      ],
+      "correct_option_id": "милиметар (mm)",
+      "explanation": "A",
+      "common_errors": [
+        {
+          "message": "Проверити дефиницију, јединицу и физички смисао одговора.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "PHY-I-UVV-001",
+          "role": "professor_pass",
+          "source_state": "PASS"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "unambiguous": "PASS",
+        "lesson_boundary": "PASS",
+        "review_date": "2026-09-19"
+      },
+      "adaptive": {
+        "primary_concept_id": "Основна SI јединица за дужину је метар (m).",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "Основна SI јединица за дужину је метар (m).",
+      "published_in": "1.3.0"
+    },
+    {
+      "id": "PHY-G1-UVF-000016",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 1,
+      "track": null,
+      "domain_id": "UVF",
+      "domain_name": "Увод у физику",
+      "subdomain_id": "UVF-02",
+      "subdomain_name": "Физичке величине, мерење и SI јединице",
+      "lesson_ids": [
+        "UVF-02"
+      ],
+      "unlock_order": 2,
+      "outcome_ids": [
+        "G1-01"
+      ],
+      "concept_ids": [
+        "Основна SI јединица за масу је килограм (kg)."
+      ],
+      "difficulty": "basic",
+      "achievement_level": "N1",
+      "cognitive_process": "knowledge",
+      "question_type": "single_choice",
+      "nature": "theory",
+      "representation": "text",
+      "stem": "Која је SI јединица за масу?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "Која је SI јединица за масу?"
+        },
+        {
+          "option_id": "B",
+          "text": "килограм (kg)"
+        },
+        {
+          "option_id": "V",
+          "text": "грам (g)"
+        },
+        {
+          "option_id": "G",
+          "text": "тона (t)"
+        }
+      ],
+      "correct_option_id": "милиграм (mg)",
+      "explanation": "A",
+      "common_errors": [
+        {
+          "message": "Проверити дефиницију, јединицу и физички смисао одговора.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "PHY-I-UVV-001",
+          "role": "professor_pass",
+          "source_state": "PASS"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "unambiguous": "PASS",
+        "lesson_boundary": "PASS",
+        "review_date": "2026-09-19"
+      },
+      "adaptive": {
+        "primary_concept_id": "Основна SI јединица за масу је килограм (kg).",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "Основна SI јединица за масу је килограм (kg).",
+      "published_in": "1.3.0"
+    },
+    {
+      "id": "PHY-G1-UVF-000017",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 1,
+      "track": null,
+      "domain_id": "UVF",
+      "domain_name": "Увод у физику",
+      "subdomain_id": "UVF-02",
+      "subdomain_name": "Физичке величине, мерење и SI јединице",
+      "lesson_ids": [
+        "UVF-02"
+      ],
+      "unlock_order": 2,
+      "outcome_ids": [
+        "G1-01"
+      ],
+      "concept_ids": [
+        "1 km = 1000 m, па је 2,5 km = 2500 m."
+      ],
+      "difficulty": "basic",
+      "achievement_level": "N1",
+      "cognitive_process": "knowledge",
+      "question_type": "single_choice",
+      "nature": "theory",
+      "representation": "text",
+      "stem": "Колико метара има 2,5 km?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "Колико метара има 2,5 km?"
+        },
+        {
+          "option_id": "B",
+          "text": "2500 m"
+        },
+        {
+          "option_id": "V",
+          "text": "250 m"
+        },
+        {
+          "option_id": "G",
+          "text": "25 000 m"
+        }
+      ],
+      "correct_option_id": "0,0025 m",
+      "explanation": "A",
+      "common_errors": [
+        {
+          "message": "Проверити дефиницију, јединицу и физички смисао одговора.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "PHY-I-UVV-001",
+          "role": "professor_pass",
+          "source_state": "PASS"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "unambiguous": "PASS",
+        "lesson_boundary": "PASS",
+        "review_date": "2026-09-19"
+      },
+      "adaptive": {
+        "primary_concept_id": "1 km = 1000 m, па је 2,5 km = 2500 m.",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "1 km = 1000 m, па је 2,5 km = 2500 m.",
+      "published_in": "1.3.0"
+    },
+    {
+      "id": "PHY-G1-UVF-000018",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 1,
+      "track": null,
+      "domain_id": "UVF",
+      "domain_name": "Увод у физику",
+      "subdomain_id": "UVF-02",
+      "subdomain_name": "Физичке величине, мерење и SI јединице",
+      "lesson_ids": [
+        "UVF-02"
+      ],
+      "unlock_order": 2,
+      "outcome_ids": [
+        "G1-01"
+      ],
+      "concept_ids": [
+        "1 min = 60 s, па је 3 min = 180 s."
+      ],
+      "difficulty": "basic",
+      "achievement_level": "N1",
+      "cognitive_process": "knowledge",
+      "question_type": "single_choice",
+      "nature": "theory",
+      "representation": "text",
+      "stem": "Колико секунди има 3 min?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "Колико секунди има 3 min?"
+        },
+        {
+          "option_id": "B",
+          "text": "180 s"
+        },
+        {
+          "option_id": "V",
+          "text": "30 s"
+        },
+        {
+          "option_id": "G",
+          "text": "300 s"
+        }
+      ],
+      "correct_option_id": "0,05 s",
+      "explanation": "A",
+      "common_errors": [
+        {
+          "message": "Проверити дефиницију, јединицу и физички смисао одговора.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "PHY-I-UVV-001",
+          "role": "professor_pass",
+          "source_state": "PASS"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "unambiguous": "PASS",
+        "lesson_boundary": "PASS",
+        "review_date": "2026-09-19"
+      },
+      "adaptive": {
+        "primary_concept_id": "1 min = 60 s, па је 3 min = 180 s.",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "1 min = 60 s, па је 3 min = 180 s.",
+      "published_in": "1.3.0"
+    },
+    {
+      "id": "PHY-G1-UVF-000019",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 1,
+      "track": null,
+      "domain_id": "UVF",
+      "domain_name": "Увод у физику",
+      "subdomain_id": "UVF-02",
+      "subdomain_name": "Физичке величине, мерење и SI јединице",
+      "lesson_ids": [
+        "UVF-02"
+      ],
+      "unlock_order": 2,
+      "outcome_ids": [
+        "G1-01"
+      ],
+      "concept_ids": [
+        "У запису 1,20 m број је бројна вредност, а m је јединица."
+      ],
+      "difficulty": "intermediate",
+      "achievement_level": "N2",
+      "cognitive_process": "application",
+      "question_type": "single_choice",
+      "nature": "theory",
+      "representation": "text",
+      "stem": "Дужина стола је 1,20 m. Шта број 1,20 представља?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "Дужина стола је 1,20 m. Шта број 1,20 представља?"
+        },
+        {
+          "option_id": "B",
+          "text": "Бројну вредност дужине изражене у метрима"
+        },
+        {
+          "option_id": "V",
+          "text": "Мерну јединицу"
+        },
+        {
+          "option_id": "G",
+          "text": "Назив физичке величине"
+        }
+      ],
+      "correct_option_id": "Димензију просторије",
+      "explanation": "A",
+      "common_errors": [
+        {
+          "message": "Проверити дефиницију, јединицу и физички смисао одговора.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "PHY-I-UVV-001",
+          "role": "professor_pass",
+          "source_state": "PASS"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "unambiguous": "PASS",
+        "lesson_boundary": "PASS",
+        "review_date": "2026-09-19"
+      },
+      "adaptive": {
+        "primary_concept_id": "У запису 1,20 m број је бројна вредност, а m је јединица.",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "У запису 1,20 m број је бројна вредност, а m је јединица.",
+      "published_in": "1.3.0"
+    },
+    {
+      "id": "PHY-G1-UVF-000020",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 1,
+      "track": null,
+      "domain_id": "UVF",
+      "domain_name": "Увод у физику",
+      "subdomain_id": "UVF-02",
+      "subdomain_name": "Физичке величине, мерење и SI јединице",
+      "lesson_ids": [
+        "UVF-02"
+      ],
+      "unlock_order": 2,
+      "outcome_ids": [
+        "G1-01"
+      ],
+      "concept_ids": [
+        "Јединствен систем јединица омогућава доследно и упоредиво изражавање мерења."
+      ],
+      "difficulty": "basic",
+      "achievement_level": "N1",
+      "cognitive_process": "knowledge",
+      "question_type": "single_choice",
+      "nature": "theory",
+      "representation": "text",
+      "stem": "Зашто се користи SI систем?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "Зашто се користи SI систем?"
+        },
+        {
+          "option_id": "B",
+          "text": "Да мерења и прорачуни буду доследни и упоредиви"
+        },
+        {
+          "option_id": "V",
+          "text": "Да свака земља користи различите јединице"
+        },
+        {
+          "option_id": "G",
+          "text": "Да се избегну бројне вредности"
+        }
+      ],
+      "correct_option_id": "Да физичке величине немају јединице",
+      "explanation": "A",
+      "common_errors": [
+        {
+          "message": "Проверити дефиницију, јединицу и физички смисао одговора.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "PHY-I-UVV-001",
+          "role": "professor_pass",
+          "source_state": "PASS"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "unambiguous": "PASS",
+        "lesson_boundary": "PASS",
+        "review_date": "2026-09-19"
+      },
+      "adaptive": {
+        "primary_concept_id": "Јединствен систем јединица омогућава доследно и упоредиво изражавање мерења.",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "Јединствен систем јединица омогућава доследно и упоредиво изражавање мерења.",
+      "published_in": "1.3.0"
+    },
+    {
+      "id": "PHY-G1-UVF-000021",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 1,
+      "track": null,
+      "domain_id": "UVF",
+      "domain_name": "Увод у физику",
+      "subdomain_id": "UVF-02",
+      "subdomain_name": "Физичке величине, мерење и SI јединице",
+      "lesson_ids": [
+        "UVF-02"
+      ],
+      "unlock_order": 2,
+      "outcome_ids": [
+        "G1-01"
+      ],
+      "concept_ids": [
+        "Без јединице број не представља потпун резултат мерења физичке величине."
+      ],
+      "difficulty": "basic",
+      "achievement_level": "N1",
+      "cognitive_process": "knowledge",
+      "question_type": "single_choice",
+      "nature": "theory",
+      "representation": "text",
+      "stem": "Шта мора стајати уз бројни резултат мерења дужине?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "Шта мора стајати уз бројни резултат мерења дужине?"
+        },
+        {
+          "option_id": "B",
+          "text": "Одговарајућа јединица"
+        },
+        {
+          "option_id": "V",
+          "text": "Само назив предмета"
+        },
+        {
+          "option_id": "G",
+          "text": "Само знак једнакости"
+        }
+      ],
+      "correct_option_id": "Ништа",
+      "explanation": "A",
+      "common_errors": [
+        {
+          "message": "Проверити дефиницију, јединицу и физички смисао одговора.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "PHY-I-UVV-001",
+          "role": "professor_pass",
+          "source_state": "PASS"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "unambiguous": "PASS",
+        "lesson_boundary": "PASS",
+        "review_date": "2026-09-19"
+      },
+      "adaptive": {
+        "primary_concept_id": "Без јединице број не представља потпун резултат мерења физичке величине.",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "Без јединице број не представља потпун резултат мерења физичке величине.",
+      "published_in": "1.3.0"
+    },
+    {
+      "id": "PHY-G1-UVF-000022",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 1,
+      "track": null,
+      "domain_id": "UVF",
+      "domain_name": "Увод у физику",
+      "subdomain_id": "UVF-02",
+      "subdomain_name": "Физичке величине, мерење и SI јединице",
+      "lesson_ids": [
+        "UVF-02"
+      ],
+      "unlock_order": 2,
+      "outcome_ids": [
+        "G1-01"
+      ],
+      "concept_ids": [
+        "0,50·60 s = 30 s."
+      ],
+      "difficulty": "basic",
+      "achievement_level": "N1",
+      "cognitive_process": "knowledge",
+      "question_type": "single_choice",
+      "nature": "theory",
+      "representation": "text",
+      "stem": "Ученик је измерио време 0,50 min. Колико је то секунди?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "Ученик је измерио време 0,50 min. Колико је то секунди?"
+        },
+        {
+          "option_id": "B",
+          "text": "30 s"
+        },
+        {
+          "option_id": "V",
+          "text": "50 s"
+        },
+        {
+          "option_id": "G",
+          "text": "5 s"
+        }
+      ],
+      "correct_option_id": "300 s",
+      "explanation": "A",
+      "common_errors": [
+        {
+          "message": "Проверити дефиницију, јединицу и физички смисао одговора.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "PHY-I-UVV-001",
+          "role": "professor_pass",
+          "source_state": "PASS"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "unambiguous": "PASS",
+        "lesson_boundary": "PASS",
+        "review_date": "2026-09-19"
+      },
+      "adaptive": {
+        "primary_concept_id": "0,50·60 s = 30 s.",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "0,50·60 s = 30 s.",
+      "published_in": "1.3.0"
+    },
+    {
+      "id": "PHY-G1-UVF-000023",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 1,
+      "track": null,
+      "domain_id": "UVF",
+      "domain_name": "Увод у физику",
+      "subdomain_id": "UVF-02",
+      "subdomain_name": "Физичке величине, мерење и SI јединице",
+      "lesson_ids": [
+        "UVF-02"
+      ],
+      "unlock_order": 2,
+      "outcome_ids": [
+        "G1-01"
+      ],
+      "concept_ids": [
+        "Време је физичка величина, а секунда њена SI јединица."
+      ],
+      "difficulty": "basic",
+      "achievement_level": "N1",
+      "cognitive_process": "knowledge",
+      "question_type": "single_choice",
+      "nature": "theory",
+      "representation": "text",
+      "stem": "Који пар садржи физичку величину и њену јединицу?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "Који пар садржи физичку величину и њену јединицу?"
+        },
+        {
+          "option_id": "B",
+          "text": "време — секунда"
+        },
+        {
+          "option_id": "V",
+          "text": "метар — дужина"
+        },
+        {
+          "option_id": "G",
+          "text": "килограм — маса као јединица"
+        }
+      ],
+      "correct_option_id": "секунда — часовник",
+      "explanation": "A",
+      "common_errors": [
+        {
+          "message": "Проверити дефиницију, јединицу и физички смисао одговора.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "PHY-I-UVV-001",
+          "role": "professor_pass",
+          "source_state": "PASS"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "unambiguous": "PASS",
+        "lesson_boundary": "PASS",
+        "review_date": "2026-09-19"
+      },
+      "adaptive": {
+        "primary_concept_id": "Време је физичка величина, а секунда њена SI јединица.",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "Време је физичка величина, а секунда њена SI јединица.",
+      "published_in": "1.3.0"
+    },
+    {
+      "id": "PHY-G1-UVF-000024",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 1,
+      "track": null,
+      "domain_id": "UVF",
+      "domain_name": "Увод у физику",
+      "subdomain_id": "UVF-02",
+      "subdomain_name": "Физичке величине, мерење и SI јединице",
+      "lesson_ids": [
+        "UVF-02"
+      ],
+      "unlock_order": 2,
+      "outcome_ids": [
+        "G1-01"
+      ],
+      "concept_ids": [
+        "Усаглашене јединице омогућавају исправан бројни и димензиони резултат."
+      ],
+      "difficulty": "intermediate",
+      "achievement_level": "N2",
+      "cognitive_process": "application",
+      "question_type": "single_choice",
+      "nature": "theory",
+      "representation": "text",
+      "stem": "При уношењу вредности у формулу најбезбедније је:",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "При уношењу вредности у формулу најбезбедније је:"
+        },
+        {
+          "option_id": "B",
+          "text": "прво величине изразити у међусобно усаглашеним јединицама"
+        },
+        {
+          "option_id": "V",
+          "text": "занемарити јединице до краја"
+        },
+        {
+          "option_id": "G",
+          "text": "мешати km, m и cm без претварања"
+        }
+      ],
+      "correct_option_id": "заокружити све бројеве на цео број",
+      "explanation": "A",
+      "common_errors": [
+        {
+          "message": "Проверити дефиницију, јединицу и физички смисао одговора.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "PHY-I-UVV-001",
+          "role": "professor_pass",
+          "source_state": "PASS"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "unambiguous": "PASS",
+        "lesson_boundary": "PASS",
+        "review_date": "2026-09-19"
+      },
+      "adaptive": {
+        "primary_concept_id": "Усаглашене јединице омогућавају исправан бројни и димензиони резултат.",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "Усаглашене јединице омогућавају исправан бројни и димензиони резултат.",
+      "published_in": "1.3.0"
+    },
+    {
+      "id": "PHY-G1-UVF-000025",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 1,
+      "track": null,
+      "domain_id": "UVF",
+      "domain_name": "Увод у физику",
+      "subdomain_id": "UVF-03",
+      "subdomain_name": "Скаларне и векторске физичке величине",
+      "lesson_ids": [
+        "UVF-03"
+      ],
+      "unlock_order": 3,
+      "outcome_ids": [
+        "G1-01"
+      ],
+      "concept_ids": [
+        "Вектор се описује интензитетом, правцем и смером."
+      ],
+      "difficulty": "basic",
+      "achievement_level": "N1",
+      "cognitive_process": "knowledge",
+      "question_type": "single_choice",
+      "nature": "theory",
+      "representation": "text",
+      "stem": "Која особина је неопходна за потпун опис векторске величине?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "Која особина је неопходна за потпун опис векторске величине?"
+        },
+        {
+          "option_id": "B",
+          "text": "Интензитет, правац и смер"
+        },
+        {
+          "option_id": "V",
+          "text": "Само бројна вредност"
+        },
+        {
+          "option_id": "G",
+          "text": "Само јединица"
+        }
+      ],
+      "correct_option_id": "Само назив величине",
+      "explanation": "A",
+      "common_errors": [
+        {
+          "message": "Проверити дефиницију, јединицу и физички смисао одговора.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "PHY-I-UVV-001",
+          "role": "professor_pass",
+          "source_state": "PASS"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "unambiguous": "PASS",
+        "lesson_boundary": "PASS",
+        "review_date": "2026-09-19"
+      },
+      "adaptive": {
+        "primary_concept_id": "Вектор се описује интензитетом, правцем и смером.",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "Вектор се описује интензитетом, правцем и смером.",
+      "published_in": "1.3.0"
+    },
+    {
+      "id": "PHY-G1-UVF-000026",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 1,
+      "track": null,
+      "domain_id": "UVF",
+      "domain_name": "Увод у физику",
+      "subdomain_id": "UVF-03",
+      "subdomain_name": "Скаларне и векторске физичке величине",
+      "lesson_ids": [
+        "UVF-03"
+      ],
+      "unlock_order": 3,
+      "outcome_ids": [
+        "G1-01"
+      ],
+      "concept_ids": [
+        "Маса има бројну вредност и јединицу, али нема правац и смер."
+      ],
+      "difficulty": "basic",
+      "achievement_level": "N1",
+      "cognitive_process": "knowledge",
+      "question_type": "single_choice",
+      "nature": "theory",
+      "representation": "text",
+      "stem": "Која од наведених величина је скаларна?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "Која од наведених величина је скаларна?"
+        },
+        {
+          "option_id": "B",
+          "text": "маса"
+        },
+        {
+          "option_id": "V",
+          "text": "померај"
+        },
+        {
+          "option_id": "G",
+          "text": "брзина као вектор"
+        }
+      ],
+      "correct_option_id": "сила",
+      "explanation": "A",
+      "common_errors": [
+        {
+          "message": "Проверити дефиницију, јединицу и физички смисао одговора.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "PHY-I-UVV-001",
+          "role": "professor_pass",
+          "source_state": "PASS"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "unambiguous": "PASS",
+        "lesson_boundary": "PASS",
+        "review_date": "2026-09-19"
+      },
+      "adaptive": {
+        "primary_concept_id": "Маса има бројну вредност и јединицу, али нема правац и смер.",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "Маса има бројну вредност и јединицу, али нема правац и смер.",
+      "published_in": "1.3.0"
+    },
+    {
+      "id": "PHY-G1-UVF-000027",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 1,
+      "track": null,
+      "domain_id": "UVF",
+      "domain_name": "Увод у физику",
+      "subdomain_id": "UVF-03",
+      "subdomain_name": "Скаларне и векторске физичке величине",
+      "lesson_ids": [
+        "UVF-03"
+      ],
+      "unlock_order": 3,
+      "outcome_ids": [
+        "G1-01"
+      ],
+      "concept_ids": [
+        "Померај има интензитет, правац и смер."
+      ],
+      "difficulty": "basic",
+      "achievement_level": "N1",
+      "cognitive_process": "knowledge",
+      "question_type": "single_choice",
+      "nature": "theory",
+      "representation": "text",
+      "stem": "Која од наведених величина је векторска?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "Која од наведених величина је векторска?"
+        },
+        {
+          "option_id": "B",
+          "text": "померај"
+        },
+        {
+          "option_id": "V",
+          "text": "време"
+        },
+        {
+          "option_id": "G",
+          "text": "маса"
+        }
+      ],
+      "correct_option_id": "температура",
+      "explanation": "A",
+      "common_errors": [
+        {
+          "message": "Проверити дефиницију, јединицу и физички смисао одговора.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "PHY-I-UVV-001",
+          "role": "professor_pass",
+          "source_state": "PASS"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "unambiguous": "PASS",
+        "lesson_boundary": "PASS",
+        "review_date": "2026-09-19"
+      },
+      "adaptive": {
+        "primary_concept_id": "Померај има интензитет, правац и смер.",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "Померај има интензитет, правац и смер.",
+      "published_in": "1.3.0"
+    },
+    {
+      "id": "PHY-G1-UVF-000028",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 1,
+      "track": null,
+      "domain_id": "UVF",
+      "domain_name": "Увод у физику",
+      "subdomain_id": "UVF-03",
+      "subdomain_name": "Скаларне и векторске физичке величине",
+      "lesson_ids": [
+        "UVF-03"
+      ],
+      "unlock_order": 3,
+      "outcome_ids": [
+        "G1-01"
+      ],
+      "concept_ids": [
+        "За колинеарне векторе истог смера резултанта има збир интензитета и исти смер."
+      ],
+      "difficulty": "basic",
+      "achievement_level": "N1",
+      "cognitive_process": "knowledge",
+      "question_type": "single_choice",
+      "nature": "theory",
+      "representation": "text",
+      "stem": "Два вектора истог правца и истог смера сабирају се тако што се:",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "Два вектора истог правца и истог смера сабирају се тако што се:"
+        },
+        {
+          "option_id": "B",
+          "text": "саберу њихови интензитети, уз исти смер"
+        },
+        {
+          "option_id": "V",
+          "text": "одузму њихови интензитети"
+        },
+        {
+          "option_id": "G",
+          "text": "увек добије нулти вектор"
+        }
+      ],
+      "correct_option_id": "занемари њихов смер",
+      "explanation": "A",
+      "common_errors": [
+        {
+          "message": "Проверити дефиницију, јединицу и физички смисао одговора.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "PHY-I-UVV-001",
+          "role": "professor_pass",
+          "source_state": "PASS"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "unambiguous": "PASS",
+        "lesson_boundary": "PASS",
+        "review_date": "2026-09-19"
+      },
+      "adaptive": {
+        "primary_concept_id": "За колинеарне векторе истог смера резултанта има збир интензитета и исти смер.",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "За колинеарне векторе истог смера резултанта има збир интензитета и исти смер.",
+      "published_in": "1.3.0"
+    },
+    {
+      "id": "PHY-G1-UVF-000029",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 1,
+      "track": null,
+      "domain_id": "UVF",
+      "domain_name": "Увод у физику",
+      "subdomain_id": "UVF-03",
+      "subdomain_name": "Скаларне и векторске физичке величине",
+      "lesson_ids": [
+        "UVF-03"
+      ],
+      "unlock_order": 3,
+      "outcome_ids": [
+        "G1-01"
+      ],
+      "concept_ids": [
+        "Код супротних смерова интензитет резултанте је разлика интензитета: 7−3=4."
+      ],
+      "difficulty": "intermediate",
+      "achievement_level": "N2",
+      "cognitive_process": "application",
+      "question_type": "single_choice",
+      "nature": "theory",
+      "representation": "text",
+      "stem": "Вектори интензитета 7 и 3 истог су правца, а супротних смерова. Интензитет резултанте је:",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "Вектори интензитета 7 и 3 истог су правца, а супротних смерова. Интензитет резултанте је:"
+        },
+        {
+          "option_id": "B",
+          "text": "4"
+        },
+        {
+          "option_id": "V",
+          "text": "10"
+        },
+        {
+          "option_id": "G",
+          "text": "21"
+        }
+      ],
+      "correct_option_id": "0",
+      "explanation": "A",
+      "common_errors": [
+        {
+          "message": "Проверити дефиницију, јединицу и физички смисао одговора.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "PHY-I-UVV-001",
+          "role": "professor_pass",
+          "source_state": "PASS"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "unambiguous": "PASS",
+        "lesson_boundary": "PASS",
+        "review_date": "2026-09-19"
+      },
+      "adaptive": {
+        "primary_concept_id": "Код супротних смерова интензитет резултанте је разлика интензитета: 7−3=4.",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "Код супротних смерова интензитет резултанте је разлика интензитета: 7−3=4.",
+      "published_in": "1.3.0"
+    },
+    {
+      "id": "PHY-G1-UVF-000030",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 1,
+      "track": null,
+      "domain_id": "UVF",
+      "domain_name": "Увод у физику",
+      "subdomain_id": "UVF-03",
+      "subdomain_name": "Скаларне и векторске физичке величине",
+      "lesson_ids": [
+        "UVF-03"
+      ],
+      "unlock_order": 3,
+      "outcome_ids": [
+        "G1-01"
+      ],
+      "concept_ids": [
+        "За нормалне компоненте важи Питагорина теорема: √(3²+4²)=5."
+      ],
+      "difficulty": "basic",
+      "achievement_level": "N1",
+      "cognitive_process": "knowledge",
+      "question_type": "single_choice",
+      "nature": "theory",
+      "representation": "text",
+      "stem": "Два међусобно нормална вектора имају интензитете 3 и 4. Интензитет њиховог збира је:",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "Два међусобно нормална вектора имају интензитете 3 и 4. Интензитет њиховог збира је:"
+        },
+        {
+          "option_id": "B",
+          "text": "5"
+        },
+        {
+          "option_id": "V",
+          "text": "7"
+        },
+        {
+          "option_id": "G",
+          "text": "1"
+        }
+      ],
+      "correct_option_id": "12",
+      "explanation": "A",
+      "common_errors": [
+        {
+          "message": "Проверити дефиницију, јединицу и физички смисао одговора.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "PHY-I-UVV-001",
+          "role": "professor_pass",
+          "source_state": "PASS"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "unambiguous": "PASS",
+        "lesson_boundary": "PASS",
+        "review_date": "2026-09-19"
+      },
+      "adaptive": {
+        "primary_concept_id": "За нормалне компоненте важи Питагорина теорема: √(3²+4²)=5.",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "За нормалне компоненте важи Питагорина теорема: √(3²+4²)=5.",
+      "published_in": "1.3.0"
+    },
+    {
+      "id": "PHY-G1-UVF-000031",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 1,
+      "track": null,
+      "domain_id": "UVF",
+      "domain_name": "Увод у физику",
+      "subdomain_id": "UVF-03",
+      "subdomain_name": "Скаларне и векторске физичке величине",
+      "lesson_ids": [
+        "UVF-03"
+      ],
+      "unlock_order": 3,
+      "outcome_ids": [
+        "G1-01"
+      ],
+      "concept_ids": [
+        "Једнакост вектора захтева једнак интензитет, правац и смер."
+      ],
+      "difficulty": "basic",
+      "achievement_level": "N1",
+      "cognitive_process": "knowledge",
+      "question_type": "single_choice",
+      "nature": "theory",
+      "representation": "text",
+      "stem": "Када су два вектора једнака?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "Када су два вектора једнака?"
+        },
+        {
+          "option_id": "B",
+          "text": "Када имају једнак интензитет, правац и смер"
+        },
+        {
+          "option_id": "V",
+          "text": "Када имају само једнак интензитет"
+        },
+        {
+          "option_id": "G",
+          "text": "Када почињу у истој тачки"
+        }
+      ],
+      "correct_option_id": "Када имају исту јединицу",
+      "explanation": "A",
+      "common_errors": [
+        {
+          "message": "Проверити дефиницију, јединицу и физички смисао одговора.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "PHY-I-UVV-001",
+          "role": "professor_pass",
+          "source_state": "PASS"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "unambiguous": "PASS",
+        "lesson_boundary": "PASS",
+        "review_date": "2026-09-19"
+      },
+      "adaptive": {
+        "primary_concept_id": "Једнакост вектора захтева једнак интензитет, правац и смер.",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "Једнакост вектора захтева једнак интензитет, правац и смер.",
+      "published_in": "1.3.0"
+    },
+    {
+      "id": "PHY-G1-UVF-000032",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 1,
+      "track": null,
+      "domain_id": "UVF",
+      "domain_name": "Увод у физику",
+      "subdomain_id": "UVF-03",
+      "subdomain_name": "Скаларне и векторске физичке величине",
+      "lesson_ids": [
+        "UVF-03"
+      ],
+      "unlock_order": 3,
+      "outcome_ids": [
+        "G1-01"
+      ],
+      "concept_ids": [
+        "Супротни вектори имају једнак интензитет и правац, а супротне смерове."
+      ],
+      "difficulty": "basic",
+      "achievement_level": "N1",
+      "cognitive_process": "knowledge",
+      "question_type": "single_choice",
+      "nature": "theory",
+      "representation": "text",
+      "stem": "Шта представља вектор супротан датом вектору?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "Шта представља вектор супротан датом вектору?"
+        },
+        {
+          "option_id": "B",
+          "text": "Исти интензитет и правац, супротан смер"
+        },
+        {
+          "option_id": "V",
+          "text": "Двоструко већи интензитет"
+        },
+        {
+          "option_id": "G",
+          "text": "Исти смер и мањи интензитет"
+        }
+      ],
+      "correct_option_id": "Нулти вектор",
+      "explanation": "A",
+      "common_errors": [
+        {
+          "message": "Проверити дефиницију, јединицу и физички смисао одговора.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "PHY-I-UVV-001",
+          "role": "professor_pass",
+          "source_state": "PASS"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "unambiguous": "PASS",
+        "lesson_boundary": "PASS",
+        "review_date": "2026-09-19"
+      },
+      "adaptive": {
+        "primary_concept_id": "Супротни вектори имају једнак интензитет и правац, а супротне смерове.",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "Супротни вектори имају једнак интензитет и правац, а супротне смерове.",
+      "published_in": "1.3.0"
+    },
+    {
+      "id": "PHY-G1-UVF-000033",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 1,
+      "track": null,
+      "domain_id": "UVF",
+      "domain_name": "Увод у физику",
+      "subdomain_id": "UVF-03",
+      "subdomain_name": "Скаларне и векторске физичке величине",
+      "lesson_ids": [
+        "UVF-03"
+      ],
+      "unlock_order": 3,
+      "outcome_ids": [
+        "G1-01"
+      ],
+      "concept_ids": [
+        "Множење позитивним скаларом чува правац и смер, а множи интензитет."
+      ],
+      "difficulty": "basic",
+      "achievement_level": "N1",
+      "cognitive_process": "knowledge",
+      "question_type": "single_choice",
+      "nature": "theory",
+      "representation": "text",
+      "stem": "Ако се вектор помножи позитивним бројем 2, добијени вектор има:",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "Ако се вектор помножи позитивним бројем 2, добијени вектор има:"
+        },
+        {
+          "option_id": "B",
+          "text": "исти правац и смер, двоструки интензитет"
+        },
+        {
+          "option_id": "V",
+          "text": "супротан смер и исти интензитет"
+        },
+        {
+          "option_id": "G",
+          "text": "нулти интензитет"
+        }
+      ],
+      "correct_option_id": "увек нормалан правац",
+      "explanation": "A",
+      "common_errors": [
+        {
+          "message": "Проверити дефиницију, јединицу и физички смисао одговора.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "PHY-I-UVV-001",
+          "role": "professor_pass",
+          "source_state": "PASS"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "unambiguous": "PASS",
+        "lesson_boundary": "PASS",
+        "review_date": "2026-09-19"
+      },
+      "adaptive": {
+        "primary_concept_id": "Множење позитивним скаларом чува правац и смер, а множи интензитет.",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "Множење позитивним скаларом чува правац и смер, а множи интензитет.",
+      "published_in": "1.3.0"
+    },
+    {
+      "id": "PHY-G1-UVF-000034",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 1,
+      "track": null,
+      "domain_id": "UVF",
+      "domain_name": "Увод у физику",
+      "subdomain_id": "UVF-03",
+      "subdomain_name": "Скаларне и векторске физичке величине",
+      "lesson_ids": [
+        "UVF-03"
+      ],
+      "unlock_order": 3,
+      "outcome_ids": [
+        "G1-01"
+      ],
+      "concept_ids": [
+        "Правило надовезивања чува интензитет, правац и смер сваког вектора."
+      ],
+      "difficulty": "intermediate",
+      "achievement_level": "N2",
+      "cognitive_process": "application",
+      "question_type": "single_choice",
+      "nature": "theory",
+      "representation": "text",
+      "stem": "Који поступак је исправан при графичком сабирању два вектора?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "Који поступак је исправан при графичком сабирању два вектора?"
+        },
+        {
+          "option_id": "B",
+          "text": "Други вектор се пренесе паралелно тако да му почетак буде на крају првог"
+        },
+        {
+          "option_id": "V",
+          "text": "Вектори се сабирају само по бројним вредностима без смера"
+        },
+        {
+          "option_id": "G",
+          "text": "Оба вектора морају бити на истом правцу"
+        }
+      ],
+      "correct_option_id": "Јединице се занемарују",
+      "explanation": "A",
+      "common_errors": [
+        {
+          "message": "Проверити дефиницију, јединицу и физички смисао одговора.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "PHY-I-UVV-001",
+          "role": "professor_pass",
+          "source_state": "PASS"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "unambiguous": "PASS",
+        "lesson_boundary": "PASS",
+        "review_date": "2026-09-19"
+      },
+      "adaptive": {
+        "primary_concept_id": "Правило надовезивања чува интензитет, правац и смер сваког вектора.",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "Правило надовезивања чува интензитет, правац и смер сваког вектора.",
+      "published_in": "1.3.0"
+    },
+    {
+      "id": "PHY-G1-UVF-000035",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 1,
+      "track": null,
+      "domain_id": "UVF",
+      "domain_name": "Увод у физику",
+      "subdomain_id": "UVF-03",
+      "subdomain_name": "Скаларне и векторске физичке величине",
+      "lesson_ids": [
+        "UVF-03"
+      ],
+      "unlock_order": 3,
+      "outcome_ids": [
+        "G1-01"
+      ],
+      "concept_ids": [
+        "Сила је векторска величина, па број и јединица нису довољни без правца и смера."
+      ],
+      "difficulty": "basic",
+      "achievement_level": "N1",
+      "cognitive_process": "knowledge",
+      "question_type": "single_choice",
+      "nature": "theory",
+      "representation": "text",
+      "stem": "Зашто се сила не може потпуно описати само бројем 10 N?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "Зашто се сила не може потпуно описати само бројем 10 N?"
+        },
+        {
+          "option_id": "B",
+          "text": "Потребни су и правац и смер деловања"
+        },
+        {
+          "option_id": "V",
+          "text": "Зато што N није јединица"
+        },
+        {
+          "option_id": "G",
+          "text": "Зато што сила нема интензитет"
+        }
+      ],
+      "correct_option_id": "Зато што је сила скалар",
+      "explanation": "A",
+      "common_errors": [
+        {
+          "message": "Проверити дефиницију, јединицу и физички смисао одговора.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "PHY-I-UVV-001",
+          "role": "professor_pass",
+          "source_state": "PASS"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "unambiguous": "PASS",
+        "lesson_boundary": "PASS",
+        "review_date": "2026-09-19"
+      },
+      "adaptive": {
+        "primary_concept_id": "Сила је векторска величина, па број и јединица нису довољни без правца и смера.",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "Сила је векторска величина, па број и јединица нису довољни без правца и смера.",
+      "published_in": "1.3.0"
+    },
+    {
+      "id": "PHY-G1-UVF-000036",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 1,
+      "track": null,
+      "domain_id": "UVF",
+      "domain_name": "Увод у физику",
+      "subdomain_id": "UVF-03",
+      "subdomain_name": "Скаларне и векторске физичке величине",
+      "lesson_ids": [
+        "UVF-03"
+      ],
+      "unlock_order": 3,
+      "outcome_ids": [
+        "G1-01"
+      ],
+      "concept_ids": [
+        "Основна разлика је у томе што вектор поред интензитета има правац и смер."
+      ],
+      "difficulty": "basic",
+      "achievement_level": "N1",
+      "cognitive_process": "knowledge",
+      "question_type": "single_choice",
+      "nature": "theory",
+      "representation": "text",
+      "stem": "Која тврдња правилно разликује скалар и вектор?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "Која тврдња правилно разликује скалар и вектор?"
+        },
+        {
+          "option_id": "B",
+          "text": "Скалар има бројну вредност и јединицу, а вектор уз интензитет има и правац и смер"
+        },
+        {
+          "option_id": "V",
+          "text": "Скалар увек има смер"
+        },
+        {
+          "option_id": "G",
+          "text": "Вектор нема јединицу"
+        }
+      ],
+      "correct_option_id": "Свака физичка величина је вектор",
+      "explanation": "A",
+      "common_errors": [
+        {
+          "message": "Проверити дефиницију, јединицу и физички смисао одговора.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "PHY-I-UVV-001",
+          "role": "professor_pass",
+          "source_state": "PASS"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "unambiguous": "PASS",
+        "lesson_boundary": "PASS",
+        "review_date": "2026-09-19"
+      },
+      "adaptive": {
+        "primary_concept_id": "Основна разлика је у томе што вектор поред интензитета има правац и смер.",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "Основна разлика је у томе што вектор поред интензитета има правац и смер.",
+      "published_in": "1.3.0"
     }
   ]
 }
