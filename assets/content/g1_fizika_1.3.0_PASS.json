@@ -604,7 +604,7 @@
     {
       "id": "PHY-G1-KIN-000008",
       "schema_version": 1,
-      "content_revision": 1,
+      "content_revision": 2,
       "status": "published",
       "grade": 1,
       "track": null,
@@ -626,7 +626,7 @@
       "achievement_level": "N3",
       "cognitive_process": "reasoning",
       "question_type": "single_choice",
-      "nature": "mixed",
+      "nature": "theory",
       "representation": "text",
       "stem": "Тркач направи један цео круг на стази дужине 400 m и заврши на месту старта. Који пар вредности је исправан?",
       "options": [
@@ -2664,7 +2664,7 @@
     {
       "id": "PHY-G1-KIN-000032",
       "schema_version": 1,
-      "content_revision": 2,
+      "content_revision": 3,
       "status": "published",
       "grade": 1,
       "track": null,
@@ -2686,10 +2686,10 @@
         "relative_velocity_model"
       ],
       "difficulty": "advanced",
-      "achievement_level": "N4",
+      "achievement_level": "N3",
       "cognitive_process": "reasoning",
       "question_type": "single_choice",
-      "nature": "mixed",
+      "nature": "calculation",
       "representation": "text",
       "stem": "Чамац може да се креће 5 m/s у односу на воду, а река тече 3 m/s низводно. Колика мора бити компонента брзине чамца узводно ако жели да се у односу на обалу креће тачно попречно?",
       "options": [
