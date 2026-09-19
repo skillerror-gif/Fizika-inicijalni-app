@@ -11,7 +11,7 @@ class ContentRepository{
   static Future<String> loadRaw() async{
     final dir=Directory(await getDatabasesPath());final current=File(join(dir.path,'content_current.json'));
     if(await current.exists()){try{final raw=await current.readAsString();final d=jsonDecode(raw);if(d is Map&&d['questions'] is List)return raw;}catch(_){}}
-    return rootBundle.loadString('assets/content/g1_kinematika_1.2.0_PASS.json');
+    return rootBundle.loadString('assets/content/g1_fizika_1.3.0_PASS.json');
   }
   static Future<void> refreshSilently() async{
     final client=http.Client();try{await ContentUpdateService(client).installAtomically(manifestUri);}catch(_){/* offline/update failure: keep last valid content */}finally{client.close();}
