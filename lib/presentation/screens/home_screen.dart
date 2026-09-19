@@ -22,7 +22,7 @@ Future<List<AppQuestion>> loadQuestions() async{final raw=await ContentRepositor
 const mainAreaNames=<String,String>{'UVF':'Увод у физику','KIN':'Кинематика'};
 String mainAreaId(String subdomainId)=>subdomainId.split('-').first;
 
-const lessonNames=<String,String>{'UVF-01':'Предмет, методе и задаци физике','UVF-02':'Физичке величине, мерење и SI јединице','UVF-03':'Скаларне и векторске физичке величине','KIN-01':'Референтни систем и материјална тачка','KIN-02':'Положај, путања, пут и померај','KIN-03':'Средња и тренутна брзина','KIN-08':'Слагање брзина и релативно кретање'};
+const lessonNames=<String,String>{'UVF-01':'Предмет, методе и задаци физике','UVF-02':'Физичке величине, мерење и SI јединице','UVF-03':'Скаларне и векторске физичке величине','KIN-01':'Материјална тачка и референтни систем','KIN-02':'Пут и померај','KIN-03':'Средња брзина','KIN-08':'Слагање брзина'};
 
 List<AppQuestion> randomizedPractice(List<AppQuestion> source,{int count=10,String focus='mixed'}){
   final random=Random.secure(),pool=source.toList()..shuffle(random);
