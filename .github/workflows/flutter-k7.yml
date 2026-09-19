@@ -1,5 +1,7 @@
 name: Flutter K7
 on:
+  push:
+    branches: [k7-build]
   pull_request:
     branches: [main]
     types: [opened, synchronize, reopened]
