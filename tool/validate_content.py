@@ -20,7 +20,13 @@ for q in qs:
     if q["status"]=="published":
         assert str(q["scientific_status"]).lower()=="pass", f"published without PASS {q['id']}"
     assert len(q["options"])==4
-    assert q["correct_option_id"] in {o["option_id"] for o in q["options"]}
+    option_ids=[o["option_id"] for o in q["options"]]
+    assert len(option_ids)==len(set(option_ids))==4, f"duplicate option IDs {q['id']}"
+    assert set(option_ids)=={"A","B","V","G"}, f"invalid option IDs {q['id']}: {option_ids}"
+    assert q["correct_option_id"] in set(option_ids)
+    assert q["achievement_level"] in {"N1","N2","N3"}, f"invalid achievement_level {q['id']}"
+    assert q["nature"] in {"theory","calculation"}, f"invalid nature {q['id']}"
+    assert isinstance(q["unlock_order"],int) and q["unlock_order"]>=1, f"invalid unlock_order {q['id']}"
 active=[q for q in qs if q["status"]=="published" and str(q["scientific_status"]).lower()=="pass" and q["unlock_order"]<=m["current_unlock_order"]]
 assert len(active)==116
 assert Counter(q["subdomain_id"] for q in active)==Counter({"UVF-01":12,"UVF-02":12,"UVF-03":12,"KIN-01":20,"KIN-02":20,"KIN-03":20,"KIN-08":20})
