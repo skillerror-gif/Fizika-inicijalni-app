@@ -22,6 +22,10 @@ jobs:
         run: rm -f test/widget_test.dart
       - name: Dependencies
         run: flutter pub get
+      - name: Finalize content checksum
+        run: |
+          SHA=$(sha256sum assets/content/g1_fizika_1.3.0_PASS.json | cut -d ' ' -f1)
+          python3 -c "import json; p='assets/content/manifest.json'; d=json.load(open(p)); d['packages'][0]['sha256']='$SHA'; open(p,'w').write(json.dumps(d,ensure_ascii=False,indent=2)+'\\n')"
       - name: Validate content
         run: python3 tool/validate_content.py
       - name: Check source formatting
