@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import '../../data/content_repository.dart';
 import '../../domain/progress_store.dart';
 import '../../domain/master_test_generator.dart';
 import '../widgets/visual_question_panel.dart';
@@ -16,7 +17,7 @@ class AppQuestion {
     return AppQuestion(j['id'].toString(),lesson,j['subdomain_name'].toString(),j['stem'].toString(),opts,j['correct_option_id'].toString(),j['explanation'].toString(),j['unlock_order'] as int,(j['difficulty']??'basic').toString(),(j['nature']??'theory').toString(),(j['representation']??'text').toString(),j['subdomain_id'].toString(),(j['equivalence_group']??'').toString(),Map<String,dynamic>.from(j['media'] as Map? ?? const {}));
   }
 }
-Future<List<AppQuestion>> loadQuestions() async{final raw=await rootBundle.loadString('assets/content/g1_kinematika_1.2.0_PASS.json');final data=jsonDecode(raw) as Map<String,dynamic>;return (data['questions'] as List).map((e)=>AppQuestion.fromJson(e)).where((q)=>q.unlock<=35).toList();}
+Future<List<AppQuestion>> loadQuestions() async{final raw=await ContentRepository.loadRaw();ContentRepository.refreshSilently();final data=jsonDecode(raw) as Map<String,dynamic>;return (data['questions'] as List).map((e)=>AppQuestion.fromJson(e)).where((q)=>q.unlock<=35).toList();}
 
 const lessonNames=<String,String>{'KIN-01':'Референтни систем и материјална тачка','KIN-02':'Положај, путања, пут и померај','KIN-03':'Средња и тренутна брзина','KIN-08':'Слагање брзина и релативно кретање'};
 
