@@ -14,12 +14,17 @@ qs=p["questions"]
 assert len(qs)==m["question_count"]==pkg["question_count"]==136
 ids=[q["id"] for q in qs]
 assert len(ids)==len(set(ids)), "duplicate IDs"
-required={"id","status","scientific_status","unlock_order","difficulty","achievement_level","nature","representation","subdomain_id","options","correct_option_id","explanation"}
+required={"id","status","scientific_status","unlock_order","difficulty","achievement_level","nature","representation","subdomain_id","subdomain_name","lesson_ids","question_type","stem","options","correct_option_id","explanation"}
 for q in qs:
     assert required <= q.keys(), f"missing metadata {q.get('id')}"
     if q["status"]=="published":
         assert str(q["scientific_status"]).lower()=="pass", f"published without PASS {q['id']}"
+    assert str(q["stem"]).strip(), f"empty stem {q['id']}"
+    assert str(q["explanation"]).strip(), f"empty explanation {q['id']}"
+    assert q["question_type"]=="single_choice", f"invalid question_type {q['id']}"
+    assert isinstance(q["lesson_ids"],list) and q["lesson_ids"], f"missing lesson_ids {q['id']}"
     assert len(q["options"])==4
+    assert all(str(o.get("text","")).strip() for o in q["options"]), f"empty option text {q['id']}"
     option_ids=[o["option_id"] for o in q["options"]]
     assert len(option_ids)==len(set(option_ids))==4, f"duplicate option IDs {q['id']}"
     assert set(option_ids)=={"A","B","V","G"}, f"invalid option IDs {q['id']}: {option_ids}"
@@ -29,7 +34,10 @@ for q in qs:
     assert isinstance(q["unlock_order"],int) and q["unlock_order"]>=1, f"invalid unlock_order {q['id']}"
 active=[q for q in qs if q["status"]=="published" and str(q["scientific_status"]).lower()=="pass" and q["unlock_order"]<=m["current_unlock_order"]]
 assert len(active)==116
-assert Counter(q["subdomain_id"] for q in active)==Counter({"UVF-01":12,"UVF-02":12,"UVF-03":12,"KIN-01":20,"KIN-02":20,"KIN-03":20,"KIN-08":20})
+expected=Counter({"UVF-01":12,"UVF-02":12,"UVF-03":12,"KIN-01":20,"KIN-02":20,"KIN-03":20,"KIN-08":20})
+assert Counter(q["subdomain_id"] for q in active)==expected
+assert all(len([q for q in active if q["subdomain_id"]==sid])>=5 for sid in expected), "formative pool below 5"
+assert all(q["subdomain_id"] in q["lesson_ids"] for q in active), "lesson/subdomain mismatch"
 levels=Counter(q["achievement_level"] for q in active)
 assert set(levels) <= {"N1","N2","N3"}, f"invalid achievement_level: {levels}"
 assert levels["N1"]>=8 and levels["N2"]>=5 and levels["N3"]>=3
