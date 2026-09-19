@@ -3,15 +3,16 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import '../../domain/progress_store.dart';
+import '../../domain/master_test_generator.dart';
 
 class AppQuestion {
-  AppQuestion(this.id,this.lessonId,this.subdomain,this.stem,this.options,this.correct,this.explanation,this.unlock,this.difficulty);
+  AppQuestion(this.id,this.lessonId,this.subdomain,this.stem,this.options,this.correct,this.explanation,this.unlock,this.difficulty,this.nature,this.representation,this.subdomainId,this.equivalenceGroup);
   final String id,lessonId,subdomain,stem,correct,explanation;
-  final Map<String,String> options; final int unlock; final String difficulty;
+  final Map<String,String> options; final int unlock; final String difficulty,nature,representation,subdomainId,equivalenceGroup;
   factory AppQuestion.fromJson(Map<String,dynamic> j){
     final opts=<String,String>{}; for(final o in (j['options'] as List? ?? const [])){opts[o['option_id'].toString()]=o['text'].toString();}
     final lessons=(j['lesson_ids'] as List? ?? const []); final lesson=lessons.isNotEmpty?lessons.first.toString():j['subdomain_id'].toString();
-    return AppQuestion(j['id'].toString(),lesson,j['subdomain_name'].toString(),j['stem'].toString(),opts,j['correct_option_id'].toString(),j['explanation'].toString(),j['unlock_order'] as int,(j['difficulty']??'basic').toString());
+    return AppQuestion(j['id'].toString(),lesson,j['subdomain_name'].toString(),j['stem'].toString(),opts,j['correct_option_id'].toString(),j['explanation'].toString(),j['unlock_order'] as int,(j['difficulty']??'basic').toString(),(j['nature']??'theory').toString(),(j['representation']??'text').toString(),j['subdomain_id'].toString(),(j['equivalence_group']??'').toString());
   }
 }
 Future<List<AppQuestion>> loadQuestions() async{final raw=await rootBundle.loadString('assets/content/g1_kinematika_1.1.1.json');final data=jsonDecode(raw) as Map<String,dynamic>;return (data['questions'] as List).map((e)=>AppQuestion.fromJson(e)).where((q)=>q.unlock<=35).toList();}
@@ -27,6 +28,14 @@ List<AppQuestion> randomizedPractice(List<AppQuestion> source,{int count=10}){
   } return result;
 }
 
+
+MasterLevel _level(String d)=>d=='advanced'?MasterLevel.advanced:d=='intermediate'?MasterLevel.intermediate:MasterLevel.basic;
+void _openMasterTest(BuildContext context,List<AppQuestion> qs){
+  final map={for(final q in qs)q.id:q};
+  final tq=qs.map((q)=>TestQuestion(id:q.id,unlockOrder:q.unlock,level:_level(q.difficulty),nature:q.nature,representation:q.representation,subdomainId:q.subdomainId,correctOptionId:q.correct,equivalenceGroup:q.equivalenceGroup,published:true,scientificPass:true)).toList();
+  try{final picked=MasterTestGenerator().generate(tq,35);Navigator.push(context,MaterialPageRoute(builder:(_)=>QuizScreen(questions:picked.map((x)=>map[x.id]!).toList())));}on TestGenerationException catch(e){showDialog(context:context,builder:(_)=>AlertDialog(title:const Text('Test trenutno nije moguće sastaviti'),content:Text('${e.reasons.join('\n')}\n\nNijedno pitanje iz kasnijeg gradiva neće biti upotrebljeno.'),actions:[TextButton(onPressed:()=>Navigator.pop(context),child:const Text('U redu'))]));}
+}
+
 class HomeScreen extends StatefulWidget{const HomeScreen({super.key});@override State<HomeScreen> createState()=>_HomeScreenState();}
 class _HomeScreenState extends State<HomeScreen>{
   late Future<List<AppQuestion>> _questions;@override void initState(){super.initState();_questions=loadQuestions();}
@@ -38,7 +47,7 @@ class _HomeScreenState extends State<HomeScreen>{
       _HomeCard(icon:Icons.school,title:'Vežbaj',subtitle:'Nasumična pitanja iz celog obrađenog gradiva',onTap:()=>_practice(qs)),
       _HomeCard(icon:Icons.tune,title:'Personalizuj vežbanje',subtitle:'Izaberi jednu, više ili sve oblasti',onTap:()=>Navigator.push(context,MaterialPageRoute(builder:(_)=>PracticePersonalizationScreen(allQuestions:qs)))),
       _HomeCard(icon:Icons.fact_check,title:'Formativna provera časa',subtitle:'Kratka provera sa povratnom informacijom',onTap:()=>Navigator.push(context,MaterialPageRoute(builder:(_)=>FormativeLessonScreen(allQuestions:qs)))),
-      _HomeCard(icon:Icons.assignment,title:'Test',subtitle:'MASTER test — završna pravila se primenjuju u K7.5',onTap:()=>_practice(qs,count:16)),
+      _HomeCard(icon:Icons.assignment,title:'Test',subtitle:'16 pitanja po MASTER pravilima',onTap:()=>_openMasterTest(context,qs)),
       _HomeCard(icon:Icons.insights,title:'Moj napredak',subtitle:'Pregled napretka i oblasti za dodatno vežbanje',onTap:()=>Navigator.push(context,MaterialPageRoute(builder:(_)=>ProgressScreen(allQuestions:qs)))),
       const SizedBox(height:8),const Card(child:ListTile(leading:Icon(Icons.lock_outline),title:Text('Kasnije gradivo je zaključano'),subtitle:Text('Ubrzanje i naredne oblasti neće se pojaviti dok ih nastavnik ne otključa.')))
     ]);
