@@ -17,7 +17,7 @@ class AppQuestion {
     return AppQuestion(j['id'].toString(),lesson,j['subdomain_name'].toString(),j['stem'].toString(),opts,j['correct_option_id'].toString(),j['explanation'].toString(),j['unlock_order'] as int,(j['difficulty']??'basic').toString(),(j['achievement_level']??'').toString(),(j['nature']??'theory').toString(),(j['representation']??'text').toString(),j['subdomain_id'].toString(),(j['equivalence_group']??'').toString(),Map<String,dynamic>.from(j['media'] as Map? ?? const {}));
   }
 }
-Future<List<AppQuestion>> loadQuestions() async{final raw=await ContentRepository.loadRaw();ContentRepository.refreshSilently();final data=jsonDecode(raw) as Map<String,dynamic>;return (data['questions'] as List).map((e)=>AppQuestion.fromJson(e)).where((q)=>q.unlock<=35).toList();}
+Future<List<AppQuestion>> loadQuestions() async{final raw=await ContentRepository.loadRaw();ContentRepository.refreshSilently();final data=jsonDecode(raw) as Map<String,dynamic>;return (data['questions'] as List).where((e)=>e['status']=='published'&&e['scientific_status'].toString().toLowerCase()=='pass').map((e)=>AppQuestion.fromJson(e)).where((q)=>q.unlock<=35).toList();}
 
 const mainAreaNames=<String,String>{'UVF':'Увод у физику','KIN':'Кинематика'};
 String mainAreaId(String subdomainId)=>subdomainId.split('-').first;
@@ -48,7 +48,7 @@ MasterLevel _level(String a){switch(a){case 'N1':return MasterLevel.basic;case '
 void _openMasterTest(BuildContext context,List<AppQuestion> qs){
   final map={for(final q in qs)q.id:q};
   final tq=qs.map((q)=>TestQuestion(id:q.id,unlockOrder:q.unlock,level:_level(q.achievementLevel),nature:q.nature,representation:q.representation,subdomainId:q.subdomainId,correctOptionId:q.correct,equivalenceGroup:q.equivalenceGroup,published:true,scientificPass:true)).toList();
-  try{final picked=MasterTestGenerator().generate(tq,35);Navigator.push(context,MaterialPageRoute(builder:(_)=>QuizScreen(questions:picked.map((x)=>map[x.id]!).toList())));}on TestGenerationException catch(e){showDialog(context:context,builder:(_)=>AlertDialog(title:const Text('Test trenutno nije moguće sastaviti'),content:Text('${e.reasons.join('\n')}\n\nNijedno pitanje iz kasnijeg gradiva neće biti upotrebljeno.'),actions:[TextButton(onPressed:()=>Navigator.pop(context),child:const Text('U redu'))]));}
+  try{final picked=MasterTestGenerator().generate(tq,35);Navigator.push(context,MaterialPageRoute(builder:(_)=>QuizScreen(questions:picked.map((x)=>map[x.id]!).toList())));}on TestGenerationException{showDialog(context:context,builder:(_)=>AlertDialog(title:const Text('Test trenutno nije moguće sastaviti'),content:const Text('Trenutno nema dovoljno odgovarajućih pitanja za sastavljanje testa. Pokušaj ponovo kasnije.'),actions:[TextButton(onPressed:()=>Navigator.pop(context),child:const Text('U redu'))]));}
 }
 
 class HomeScreen extends StatefulWidget{const HomeScreen({super.key});@override State<HomeScreen> createState()=>_HomeScreenState();}
