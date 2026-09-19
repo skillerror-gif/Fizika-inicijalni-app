@@ -1,7 +1,5 @@
 name: Flutter K7
 on:
-  push:
-    branches: [k7-build]
   pull_request:
     branches: [main]
     types: [opened, synchronize, reopened]
@@ -24,8 +22,8 @@ jobs:
         run: flutter pub get
       - name: Validate content
         run: python3 tool/validate_content.py
-      - name: Format source
-        run: dart format lib test
+      - name: Check source formatting
+        run: dart format --output=none --set-exit-if-changed lib test
       - name: Analyze
         run: flutter analyze
       - name: Tests
