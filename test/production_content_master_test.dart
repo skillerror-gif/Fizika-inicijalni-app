@@ -4,7 +4,7 @@ import 'dart:math';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:fizika_adaptivno_vezbanje/domain/master_test_generator.dart';
 
-MasterLevel level(String achievementLevel)=>achievementLevel=='N3'?MasterLevel.advanced:achievementLevel=='N2'?MasterLevel.intermediate:MasterLevel.basic;
+MasterLevel level(String achievementLevel){switch(achievementLevel){case 'N1':return MasterLevel.basic;case 'N2':return MasterLevel.intermediate;case 'N3':return MasterLevel.advanced;default:throw FormatException('Nepoznat achievement_level: $achievementLevel');}}
 
 void main(){
   final raw=jsonDecode(File('assets/content/g1_fizika_1.3.0_PASS.json').readAsStringSync()) as Map<String,dynamic>;
@@ -30,7 +30,7 @@ void main(){
       expect(out.where((q)=>q.representation=='scheme').length,greaterThanOrEqualTo(1));
       final answerCounts=['A','B','V','G'].map((a)=>out.where((q)=>q.correctOptionId==a).length).toList();
       expect(answerCounts.reduce(max)-answerCounts.reduce(min),lessThanOrEqualTo(1));
-      expect(out.map((q)=>q.subdomainId).toSet(),containsAll(['KIN-01','KIN-02','KIN-03','KIN-08']));
+      expect(out.map((q)=>q.subdomainId).toSet(),containsAll(['UVF-01','UVF-02','UVF-03','KIN-01','KIN-02','KIN-03','KIN-08']));
     }
   });
 }
