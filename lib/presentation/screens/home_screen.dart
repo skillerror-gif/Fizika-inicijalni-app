@@ -16,7 +16,7 @@ class AppQuestion {
 }
 
 Future<List<AppQuestion>> loadQuestions() async {
-  final raw=await rootBundle.loadString('assets/content/g1_kinematika_1.1.0.json');
+  final raw=await rootBundle.loadString('assets/content/g1_kinematika_1.1.1.json');
   final data=jsonDecode(raw) as Map<String,dynamic>;
   return (data['questions'] as List).map((e)=>AppQuestion.fromJson(e)).where((q)=>q.unlock<=35).toList();
 }
