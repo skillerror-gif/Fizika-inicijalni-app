@@ -17,9 +17,22 @@ class ProgressStore {
   static Future<Database> database() async {
     if(_db!=null)return _db!;
     final path=join(await getDatabasesPath(),'fizika_progress_v1.db');
-    _db=await openDatabase(path,version:1,onCreate:(db,_) async {
+    _db=await openDatabase(path,version:2,onCreate:(db,_) async {
       await db.execute('CREATE TABLE attempts(id INTEGER PRIMARY KEY AUTOINCREMENT, question_id TEXT NOT NULL, subdomain TEXT NOT NULL, correct INTEGER NOT NULL, difficulty TEXT NOT NULL, created_at INTEGER NOT NULL)');
       await db.execute('CREATE INDEX idx_attempt_subdomain ON attempts(subdomain, created_at DESC)');
+    },onUpgrade:(db,oldVersion,newVersion) async {
+      if(oldVersion<2){
+        const migration=<String,String>{
+          'Релативност кретања':'KIN-01',
+          'Пут и померај':'KIN-02',
+          'Средња векторска брзина':'KIN-03',
+          'Референтни системи':'KIN-08',
+          'Предмет, методе и задаци физике':'UVF-01',
+          'Физичке величине, мерење и SI јединице':'UVF-02',
+          'Скаларне и векторске физичке величине':'UVF-03',
+        };
+        for(final e in migration.entries){await db.update('attempts',{'subdomain':e.value},where:'subdomain=?',whereArgs:[e.key]);}
+      }
     }); return _db!;
   }
   static Future<void> record({required String questionId,required String subdomain,required bool correct,String difficulty='basic'}) async {
