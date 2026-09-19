@@ -68,10 +68,9 @@ class _HomeScreenState extends State<HomeScreen>{
       _HomeCard(icon:Icons.school,title:'Vežbaj',subtitle:'Mešovito vežbanje: teorijski i računski zadaci',onTap:()=>_practice(qs)),
       _HomeCard(icon:Icons.tune,title:'Personalizuj vežbanje',subtitle:'Izaberi jednu, više ili sve oblasti',onTap:()=>Navigator.push(context,MaterialPageRoute(builder:(_)=>PracticePersonalizationScreen(allQuestions:qs)))),
       _HomeCard(icon:Icons.fact_check,title:'Formativna provera časa',subtitle:'Kratka provera sa povratnom informacijom',onTap:()=>Navigator.push(context,MaterialPageRoute(builder:(_)=>FormativeLessonScreen(allQuestions:qs)))),
-      _HomeCard(icon:Icons.assignment,title:'Test',subtitle:'16 pitanja po MASTER pravilima',onTap:()=>_openMasterTest(context,qs)),
+      _HomeCard(icon:Icons.assignment,title:'Test',subtitle:'16 pitanja iz svih obrađenih oblasti',onTap:()=>_openMasterTest(context,qs)),
       _HomeCard(icon:Icons.insights,title:'Moj napredak',subtitle:'Pregled napretka i oblasti za dodatno vežbanje',onTap:()=>Navigator.push(context,MaterialPageRoute(builder:(_)=>ProgressScreen(allQuestions:qs)))),
       _HomeCard(icon:Icons.help_outline,title:'Korisničko uputstvo',subtitle:'Kako se koriste vežbanje, provera, test i napredak',onTap:()=>Navigator.push(context,MaterialPageRoute(builder:(_)=>const UserGuideScreen()))),
-      const SizedBox(height:8),const Card(child:ListTile(leading:Icon(Icons.lock_outline),title:Text('Kasnije gradivo je zaključano'),subtitle:Text('Ubrzanje i naredne oblasti neće se pojaviti dok ih nastavnik ne otključa.')))
     ]);
   }));
 }
