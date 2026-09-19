@@ -28,7 +28,7 @@ void main(){
       expect(out.where((q)=>q.representation=='graph').length,greaterThanOrEqualTo(2));
       expect(out.where((q)=>q.representation=='table').length,greaterThanOrEqualTo(1));
       expect(out.where((q)=>q.representation=='scheme').length,greaterThanOrEqualTo(1));
-      for(final a in ['A','B','V','G'])expect(out.where((q)=>q.correctOptionId==a).length,inInclusiveRange(3,5));
+      for(final a in ['A','B','V','G'])expect(out.where((q)=>q.correctOptionId==a).length,4);
       expect(out.map((q)=>q.subdomainId).toSet(),containsAll(['KIN-01','KIN-02','KIN-03','KIN-08']));
     }
   });
