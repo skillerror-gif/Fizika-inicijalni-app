@@ -14,7 +14,7 @@ void main(){
     correctOptionId:q['correct_option_id'].toString(),equivalenceGroup:(q['equivalence_group']??'').toString(),
     published:q['status']=='published',scientificPass:q['scientific_status'].toString().toLowerCase()=='pass')).toList();
 
-  test('production bank respects lesson-7 HARD STOP and can generate repeated MASTER tests',(){
+  test('production bank respects current internal boundary and can generate repeated MASTER tests',(){
     for(var seed=0;seed<50;seed++){
       final out=MasterTestGenerator(random:Random(seed)).generate(qs,35);
       expect(out.length,16);
