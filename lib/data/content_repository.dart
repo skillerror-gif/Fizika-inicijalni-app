@@ -7,7 +7,7 @@ import 'package:sqflite/sqflite.dart';
 import 'content_update_service.dart';
 
 class ContentRepository{
-  static final Uri manifestUri=Uri.parse('https://raw.githubusercontent.com/skillerror-gif/Fizika-inicijalni-app/k7-build/assets/content/manifest.json');
+  static final Uri manifestUri=Uri.parse('https://raw.githubusercontent.com/skillerror-gif/Fizika-inicijalni-app/main/assets/content/manifest.json');
   static Future<String> loadRaw() async{
     final dir=Directory(await getDatabasesPath());final current=File(join(dir.path,'content_current.json'));
     if(await current.exists()){try{final raw=await current.readAsString();final d=jsonDecode(raw);if(d is Map&&d['questions'] is List)return raw;}catch(_){}}
