@@ -20,15 +20,25 @@ Future<List<AppQuestion>> loadQuestions() async{final raw=await ContentRepositor
 
 const lessonNames=<String,String>{'KIN-01':'Референтни систем и материјална тачка','KIN-02':'Положај, путања, пут и померај','KIN-03':'Средња и тренутна брзина','KIN-08':'Слагање брзина и релативно кретање'};
 
-List<AppQuestion> randomizedPractice(List<AppQuestion> source,{int count=10}){
-  final pool=source.toList()..shuffle(Random.secure()); final result=<AppQuestion>[];
+List<AppQuestion> randomizedPractice(List<AppQuestion> source,{int count=10,String focus='mixed'}){
+  final random=Random.secure(),pool=source.toList()..shuffle(random);
+  final result=<AppQuestion>[];
+  int targetCalculation;
+  if(focus=='calculation'){targetCalculation=count;}
+  else if(focus=='theory'){targetCalculation=0;}
+  else{targetCalculation=(count/2).round();}
+  int calc=0;
   while(pool.isNotEmpty&&result.length<count){
-    var pick=0;
-    if(result.length>=2){final last=result.last.subdomain,prev=result[result.length-2].subdomain; if(last==prev){final alt=pool.indexWhere((q)=>q.subdomain!=last);if(alt>=0)pick=alt;}}
-    final q=pool.removeAt(pick); if(result.isNotEmpty&&result.last.id==q.id)continue; result.add(q);
-  } return result;
+    final needCalc=calc<targetCalculation;
+    var candidates=pool.where((q)=>focus=='calculation'?q.nature=='calculation':focus=='theory'?q.nature=='theory':(needCalc?q.nature=='calculation':q.nature!='calculation')).toList();
+    if(candidates.isEmpty)candidates=pool;
+    if(result.length>=2&&result.last.subdomain==result[result.length-2].subdomain){
+      final alt=candidates.where((q)=>q.subdomain!=result.last.subdomain).toList();if(alt.isNotEmpty)candidates=alt;
+    }
+    final q=candidates[random.nextInt(candidates.length)];pool.removeWhere((x)=>x.id==q.id);result.add(q);if(q.nature=='calculation')calc++;
+  }
+  return result;
 }
-
 
 MasterLevel _level(String d)=>d=='advanced'?MasterLevel.advanced:d=='intermediate'?MasterLevel.intermediate:MasterLevel.basic;
 void _openMasterTest(BuildContext context,List<AppQuestion> qs){
@@ -51,7 +61,7 @@ class _HomeScreenState extends State<HomeScreen>{
     if(s.hasError)return Center(child:Padding(padding:const EdgeInsets.all(24),child:Text('Greška pri učitavanju baze: ${s.error}')));if(!s.hasData)return const Center(child:CircularProgressIndicator());final qs=s.data!;
     return ListView(padding:const EdgeInsets.all(20),children:[
       const Text('Kinematika',style:TextStyle(fontSize:26,fontWeight:FontWeight.bold)),const SizedBox(height:8),const Text('Izaberi način rada. Prikazuje se samo gradivo obrađeno do 7. časa.'),const SizedBox(height:20),
-      _HomeCard(icon:Icons.school,title:'Vežbaj',subtitle:'Nasumična pitanja iz celog obrađenog gradiva',onTap:()=>_practice(qs)),
+      _HomeCard(icon:Icons.school,title:'Vežbaj',subtitle:'Mešovito vežbanje: teorijski i računski zadaci',onTap:()=>_practice(qs)),
       _HomeCard(icon:Icons.tune,title:'Personalizuj vežbanje',subtitle:'Izaberi jednu, više ili sve oblasti',onTap:()=>Navigator.push(context,MaterialPageRoute(builder:(_)=>PracticePersonalizationScreen(allQuestions:qs)))),
       _HomeCard(icon:Icons.fact_check,title:'Formativna provera časa',subtitle:'Kratka provera sa povratnom informacijom',onTap:()=>Navigator.push(context,MaterialPageRoute(builder:(_)=>FormativeLessonScreen(allQuestions:qs)))),
       _HomeCard(icon:Icons.assignment,title:'Test',subtitle:'16 pitanja po MASTER pravilima',onTap:()=>_openMasterTest(context,qs)),
@@ -64,13 +74,15 @@ class _HomeCard extends StatelessWidget{const _HomeCard({required this.icon,requ
 
 class PracticePersonalizationScreen extends StatefulWidget{const PracticePersonalizationScreen({super.key,required this.allQuestions});final List<AppQuestion> allQuestions;@override State<PracticePersonalizationScreen> createState()=>_PracticePersonalizationScreenState();}
 class _PracticePersonalizationScreenState extends State<PracticePersonalizationScreen>{
-  late final List<String> areas;final Set<String> selected={};int count=10;
+  late final List<String> areas;final Set<String> selected={};int count=10;String focus='mixed';
   @override void initState(){super.initState();areas=widget.allQuestions.map((q)=>q.subdomain).toSet().toList()..sort();}
-  void start(){final pool=widget.allQuestions.where((q)=>selected.isEmpty||selected.contains(q.subdomain)).toList();if(pool.isEmpty)return;Navigator.push(context,MaterialPageRoute(builder:(_)=>QuizScreen(questions:randomizedPractice(pool,count:min(count,pool.length)))));}
+  void start(){final pool=widget.allQuestions.where((q)=>selected.isEmpty||selected.contains(q.subdomain)).toList();if(pool.isEmpty)return;Navigator.push(context,MaterialPageRoute(builder:(_)=>QuizScreen(questions:randomizedPractice(pool,count:min(count,pool.length),focus:focus))));}
   @override Widget build(BuildContext context){final all=selected.isEmpty;return Scaffold(appBar:AppBar(title:const Text('Personalizuj vežbanje')),body:ListView(padding:const EdgeInsets.all(20),children:[
     const Text('Oblasti',style:TextStyle(fontSize:22,fontWeight:FontWeight.bold)),const SizedBox(height:6),const Text('Bez posebnog izbora koriste se sve trenutno obrađene oblasti.'),
     CheckboxListTile(value:all,title:const Text('Sve obrađene oblasti'),onChanged:(_)=>setState(selected.clear)),
     ...areas.map((a)=>CheckboxListTile(value:selected.contains(a),title:Text(a),onChanged:(v)=>setState((){if(v==true){selected.add(a);}else{selected.remove(a);}}))),
+    const SizedBox(height:12),const Text('Vrsta zadataka',style:TextStyle(fontSize:18,fontWeight:FontWeight.bold)),
+    SegmentedButton<String>(segments:const [ButtonSegment(value:'mixed',label:Text('Mešovito')),ButtonSegment(value:'calculation',label:Text('Računski')),ButtonSegment(value:'theory',label:Text('Teorijski'))],selected:{focus},onSelectionChanged:(v)=>setState(()=>focus=v.first)),
     const SizedBox(height:12),Text('Broj pitanja: $count'),Slider(value:count.toDouble(),min:5,max:20,divisions:15,label:'$count',onChanged:(v)=>setState(()=>count=v.round())),
     const SizedBox(height:12),FilledButton.icon(onPressed:start,icon:const Icon(Icons.play_arrow),label:Text(all?'Vežbaj sve oblasti':'Vežbaj izabrane oblasti (${selected.length})'))
   ]));}
