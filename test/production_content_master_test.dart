@@ -7,7 +7,7 @@ import 'package:fizika_adaptivno_vezbanje/domain/master_test_generator.dart';
 MasterLevel level(String achievementLevel)=>achievementLevel=='N3'?MasterLevel.advanced:achievementLevel=='N2'?MasterLevel.intermediate:MasterLevel.basic;
 
 void main(){
-  final raw=jsonDecode(File('assets/content/g1_kinematika_1.2.0_PASS.json').readAsStringSync()) as Map<String,dynamic>;
+  final raw=jsonDecode(File('assets/content/g1_fizika_1.3.0_PASS.json').readAsStringSync()) as Map<String,dynamic>;
   final qs=(raw['questions'] as List).cast<Map<String,dynamic>>().map((q)=>TestQuestion(
     id:q['id'].toString(),unlockOrder:q['unlock_order'] as int,level:level(q['achievement_level'].toString()),
     nature:q['nature'].toString(),representation:q['representation'].toString(),subdomainId:q['subdomain_id'].toString(),
