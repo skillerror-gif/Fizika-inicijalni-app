@@ -29,7 +29,9 @@ void main(){
       expect(out.where((q)=>q.representation=='table').length,greaterThanOrEqualTo(1));
       expect(out.where((q)=>q.representation=='scheme').length,greaterThanOrEqualTo(1));
       final answerCounts=['A','B','V','G'].map((a)=>out.where((q)=>q.correctOptionId==a).length).toList();
-      expect(answerCounts.reduce(max)-answerCounts.reduce(min),lessThanOrEqualTo(1));
+      expect(answerCounts.every((n)=>n>=2&&n<=6),isTrue);
+      for(var i=2;i<out.length;i++){expect(out[i].correctOptionId==out[i-1].correctOptionId&&out[i-1].correctOptionId==out[i-2].correctOptionId,isFalse);}
+      for(var i=4;i<out.length;i++){final s=out.sublist(i-4,i+1).map((q)=>q.correctOptionId).toList();expect(s[0]==s[2]&&s[2]==s[4]&&s[1]==s[3],isFalse);}
       expect(out.map((q)=>q.subdomainId).toSet(),containsAll(['UVF-01','UVF-02','UVF-03','KIN-01','KIN-02','KIN-03','KIN-08']));
     }
   });
