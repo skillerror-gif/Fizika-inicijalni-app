@@ -8,13 +8,13 @@ import '../widgets/visual_question_panel.dart';
 import 'user_guide_screen.dart';
 
 class AppQuestion {
-  AppQuestion(this.id,this.lessonId,this.subdomain,this.stem,this.options,this.correct,this.explanation,this.unlock,this.difficulty,this.nature,this.representation,this.subdomainId,this.equivalenceGroup,this.media);
+  AppQuestion(this.id,this.lessonId,this.subdomain,this.stem,this.options,this.correct,this.explanation,this.unlock,this.difficulty,this.achievementLevel,this.nature,this.representation,this.subdomainId,this.equivalenceGroup,this.media);
   final String id,lessonId,subdomain,stem,correct,explanation;
-  final Map<String,String> options; final int unlock; final String difficulty,nature,representation,subdomainId,equivalenceGroup; final Map<String,dynamic> media;
+  final Map<String,String> options; final int unlock; final String difficulty,achievementLevel,nature,representation,subdomainId,equivalenceGroup; final Map<String,dynamic> media;
   factory AppQuestion.fromJson(Map<String,dynamic> j){
     final opts=<String,String>{}; for(final o in (j['options'] as List? ?? const [])){opts[o['option_id'].toString()]=o['text'].toString();}
     final lessons=(j['lesson_ids'] as List? ?? const []); final lesson=lessons.isNotEmpty?lessons.first.toString():j['subdomain_id'].toString();
-    return AppQuestion(j['id'].toString(),lesson,j['subdomain_name'].toString(),j['stem'].toString(),opts,j['correct_option_id'].toString(),j['explanation'].toString(),j['unlock_order'] as int,(j['difficulty']??'basic').toString(),(j['nature']??'theory').toString(),(j['representation']??'text').toString(),j['subdomain_id'].toString(),(j['equivalence_group']??'').toString(),Map<String,dynamic>.from(j['media'] as Map? ?? const {}));
+    return AppQuestion(j['id'].toString(),lesson,j['subdomain_name'].toString(),j['stem'].toString(),opts,j['correct_option_id'].toString(),j['explanation'].toString(),j['unlock_order'] as int,(j['difficulty']??'basic').toString(),(j['achievement_level']??'').toString(),(j['nature']??'theory').toString(),(j['representation']??'text').toString(),j['subdomain_id'].toString(),(j['equivalence_group']??'').toString(),Map<String,dynamic>.from(j['media'] as Map? ?? const {}));
   }
 }
 Future<List<AppQuestion>> loadQuestions() async{final raw=await ContentRepository.loadRaw();ContentRepository.refreshSilently();final data=jsonDecode(raw) as Map<String,dynamic>;return (data['questions'] as List).map((e)=>AppQuestion.fromJson(e)).where((q)=>q.unlock<=35).toList();}
@@ -44,10 +44,10 @@ List<AppQuestion> randomizedPractice(List<AppQuestion> source,{int count=10,Stri
   return result;
 }
 
-MasterLevel _level(String d)=>d=='advanced'?MasterLevel.advanced:d=='intermediate'?MasterLevel.intermediate:MasterLevel.basic;
+MasterLevel _level(String a){switch(a){case 'N1':return MasterLevel.basic;case 'N2':return MasterLevel.intermediate;case 'N3':return MasterLevel.advanced;default:throw FormatException('Nepoznat achievement_level: $a');}}
 void _openMasterTest(BuildContext context,List<AppQuestion> qs){
   final map={for(final q in qs)q.id:q};
-  final tq=qs.map((q)=>TestQuestion(id:q.id,unlockOrder:q.unlock,level:_level(q.difficulty),nature:q.nature,representation:q.representation,subdomainId:q.subdomainId,correctOptionId:q.correct,equivalenceGroup:q.equivalenceGroup,published:true,scientificPass:true)).toList();
+  final tq=qs.map((q)=>TestQuestion(id:q.id,unlockOrder:q.unlock,level:_level(q.achievementLevel),nature:q.nature,representation:q.representation,subdomainId:q.subdomainId,correctOptionId:q.correct,equivalenceGroup:q.equivalenceGroup,published:true,scientificPass:true)).toList();
   try{final picked=MasterTestGenerator().generate(tq,35);Navigator.push(context,MaterialPageRoute(builder:(_)=>QuizScreen(questions:picked.map((x)=>map[x.id]!).toList())));}on TestGenerationException catch(e){showDialog(context:context,builder:(_)=>AlertDialog(title:const Text('Test trenutno nije moguće sastaviti'),content:Text('${e.reasons.join('\n')}\n\nNijedno pitanje iz kasnijeg gradiva neće biti upotrebljeno.'),actions:[TextButton(onPressed:()=>Navigator.pop(context),child:const Text('U redu'))]));}
 }
 
