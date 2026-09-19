@@ -12,7 +12,23 @@ class MasterTestGenerator{
   MasterTestGenerator({Random? random}):_random=random??Random.secure();final Random _random;
   List<TestQuestion> _eligible(Iterable<TestQuestion> all,int unlock)=>all.where((q)=>q.published&&q.scientificPass&&q.unlockOrder<=unlock).toList();
   List<String> auditPool(Iterable<TestQuestion> all,int unlock){final q=_eligible(all,unlock),r=<String>[];int n(MasterLevel l)=>q.where((x)=>x.level==l).length;if(n(MasterLevel.basic)<8)r.add('manje od 8 osnovnih');if(n(MasterLevel.intermediate)<5)r.add('manje od 5 srednjih');if(n(MasterLevel.advanced)<3)r.add('manje od 3 napredna');if(q.where((x)=>x.nature=='theory').length<7)r.add('manje od 7 teorijskih');if(q.where((x)=>x.nature=='calculation').length<7)r.add('manje od 7 računskih');if(q.where((x)=>x.representation=='graph').length<2)r.add('manje od 2 grafička');if(q.where((x)=>x.representation=='table').isEmpty)r.add('nema tabelarnog');if(q.where((x)=>x.representation=='scheme').isEmpty)r.add('nema šematskog');return r;}
-  List<TestQuestion> generate(Iterable<TestQuestion> all,int unlock){final r=auditPool(all,unlock);if(r.isNotEmpty)throw TestGenerationException(r);final pool=_eligible(all,unlock)..shuffle(_random);final chosen=<TestQuestion>[];for(final e in const {MasterLevel.basic:8,MasterLevel.intermediate:5,MasterLevel.advanced:3}.entries){final c=pool.where((q)=>q.level==e.key&&!chosen.any((x)=>x.id==q.id)).toList()..shuffle(_random);chosen.addAll(c.take(e.value));}if(chosen.length!=16)throw TestGenerationException(['nije moguće sastaviti 8+5+3']);_repairNature(chosen,pool);_repairVisuals(chosen,pool);_repairAnswers(chosen,pool);_repairCoverage(chosen,pool);return _antiPattern(chosen);}
+  List<TestQuestion> generate(Iterable<TestQuestion> all,int unlock){
+    final audit=auditPool(all,unlock);if(audit.isNotEmpty)throw TestGenerationException(audit);
+    final eligible=_eligible(all,unlock);TestGenerationException? last;
+    for(var attempt=0;attempt<250;attempt++){
+      final pool=[...eligible]..shuffle(_random);final chosen=<TestQuestion>[];
+      for(final e in const {MasterLevel.basic:8,MasterLevel.intermediate:5,MasterLevel.advanced:3}.entries){
+        final c=pool.where((q)=>q.level==e.key&&!chosen.any((x)=>x.id==q.id)).toList()..shuffle(_random);
+        chosen.addAll(c.take(e.value));
+      }
+      if(chosen.length!=16){last=TestGenerationException(['nije moguće sastaviti 8+5+3']);continue;}
+      try{
+        _repairNature(chosen,pool);_repairVisuals(chosen,pool);_repairAnswers(chosen,pool);_repairCoverage(chosen,pool);
+        return _antiPattern(chosen);
+      }on TestGenerationException catch(e){last=e;}
+    }
+    throw TestGenerationException(['nije pronađena validna MASTER kombinacija posle 250 pokušaja',...?last?.reasons]);
+  }
   bool _validNature(List<TestQuestion> q){final t=q.where((x)=>x.nature=='theory').length,c=q.where((x)=>x.nature=='calculation').length;return t>=7&&t<=9&&c>=7&&c<=9;}
   void _repairNature(List<TestQuestion> q,List<TestQuestion> pool){for(var g=0;g<100&&!_validNature(q);g++){final t=q.where((x)=>x.nature=='theory').length;final need=t<7?'theory':'calculation',ex=need=='theory'?'calculation':'theory';final incoming=pool.where((x)=>x.nature==need&&!q.any((c)=>c.id==x.id)).toList()..shuffle(_random);var ok=false;for(final x in incoming){final i=q.indexWhere((c)=>c.nature==ex&&c.level==x.level);if(i>=0){q[i]=x;ok=true;break;}}if(!ok)break;}if(!_validNature(q))throw TestGenerationException(['nije moguće postići dozvoljeni odnos teorija/račun 45:55–55:45']);}
   void _repairVisuals(List<TestQuestion> q,List<TestQuestion> pool){for(final e in const {'graph':2,'table':1,'scheme':1}.entries){while(q.where((x)=>x.representation==e.key).length<e.value){final inc=pool.where((x)=>x.representation==e.key&&!q.any((c)=>c.id==x.id)).toList()..shuffle(_random);if(inc.isEmpty)throw TestGenerationException(['nedovoljan fond za ${e.key}']);final x=inc.first;final i=q.indexWhere((c)=>c.level==x.level&&c.nature==x.nature&&!const {'graph','table','scheme'}.contains(c.representation));if(i<0)throw TestGenerationException(['vizuelni zahtev se ne može uklopiti']);q[i]=x;}}}
