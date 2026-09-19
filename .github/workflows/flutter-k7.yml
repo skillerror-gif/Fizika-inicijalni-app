@@ -15,7 +15,9 @@ jobs:
           channel: stable
           cache: true
       - name: Generate Android platform
-        run: flutter create --platforms=android --org rs.fizika.gimnazija .
+        run: flutter create --platforms=android --org rs.fizika.gimnazija --project-name fizika_adaptivno_vezbanje .
+      - name: Set Android visible app name
+        run: sed -i 's/android:label="[^"]*"/android:label="Fizika za I razred gimnazije"/' android/app/src/main/AndroidManifest.xml
       - name: Remove generated widget test
         run: rm -f test/widget_test.dart
       - name: Dependencies
@@ -49,8 +51,8 @@ jobs:
         run: rm -f test/widget_test.dart
       - name: Dependencies
         run: flutter pub get
-      - name: Format source
-        run: dart format lib test
+      - name: Check source formatting
+        run: dart format --output=none --set-exit-if-changed lib test
       - name: Analyze
         run: flutter analyze
       - name: Tests
