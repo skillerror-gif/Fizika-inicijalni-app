@@ -24,8 +24,9 @@ for q in qs:
 active=[q for q in qs if q["status"]=="published" and str(q["scientific_status"]).lower()=="pass" and q["unlock_order"]<=m["current_unlock_order"]]
 assert len(active)==116
 assert Counter(q["subdomain_id"] for q in active)==Counter({"UVF-01":12,"UVF-02":12,"UVF-03":12,"KIN-01":20,"KIN-02":20,"KIN-03":20,"KIN-08":20})
-levels=Counter(q["difficulty"] for q in active)
-assert levels["basic"]>=8 and levels["intermediate"]>=5 and levels["advanced"]>=3
+levels=Counter(q["achievement_level"] for q in active)
+assert set(levels) <= {"N1","N2","N3"}, f"invalid achievement_level: {levels}"
+assert levels["N1"]>=8 and levels["N2"]>=5 and levels["N3"]>=3
 nature=Counter(q["nature"] for q in active)
 assert nature["theory"]>=7 and nature["calculation"]>=7
 rep=Counter(q["representation"] for q in active)
