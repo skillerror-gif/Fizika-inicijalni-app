@@ -5,14 +5,13 @@ import 'package:flutter/services.dart';
 import '../../domain/progress_store.dart';
 
 class AppQuestion {
-  AppQuestion(this.id,this.lessonId,this.subdomain,this.stem,this.options,this.correct,this.explanation,this.unlock);
+  AppQuestion(this.id,this.lessonId,this.subdomain,this.stem,this.options,this.correct,this.explanation,this.unlock,this.difficulty);
   final String id,lessonId,subdomain,stem,correct,explanation;
-  final Map<String,String> options; final int unlock;
-  String get difficulty=>'basic';
+  final Map<String,String> options; final int unlock; final String difficulty;
   factory AppQuestion.fromJson(Map<String,dynamic> j){
     final opts=<String,String>{}; for(final o in (j['options'] as List? ?? const [])){opts[o['option_id'].toString()]=o['text'].toString();}
     final lessons=(j['lesson_ids'] as List? ?? const []); final lesson=lessons.isNotEmpty?lessons.first.toString():j['subdomain_id'].toString();
-    return AppQuestion(j['id'].toString(),lesson,j['subdomain_name'].toString(),j['stem'].toString(),opts,j['correct_option_id'].toString(),j['explanation'].toString(),j['unlock_order'] as int);
+    return AppQuestion(j['id'].toString(),lesson,j['subdomain_name'].toString(),j['stem'].toString(),opts,j['correct_option_id'].toString(),j['explanation'].toString(),j['unlock_order'] as int,(j['difficulty']??'basic').toString());
   }
 }
 Future<List<AppQuestion>> loadQuestions() async{final raw=await rootBundle.loadString('assets/content/g1_kinematika_1.1.1.json');final data=jsonDecode(raw) as Map<String,dynamic>;return (data['questions'] as List).map((e)=>AppQuestion.fromJson(e)).where((q)=>q.unlock<=35).toList();}
