@@ -17,7 +17,7 @@ jobs:
           channel: stable
           cache: true
       - name: Generate Android platform
-        run: flutter create --platforms=android .
+        run: flutter create --platforms=android --org rs.fizika.gimnazija .
       - name: Remove generated widget test
         run: rm -f test/widget_test.dart
       - name: Dependencies
@@ -46,7 +46,7 @@ jobs:
           channel: stable
           cache: true
       - name: Generate iOS platform
-        run: flutter create --platforms=ios .
+        run: flutter create --platforms=ios --org rs.fizika.gimnazija .
       - name: Remove generated widget test
         run: rm -f test/widget_test.dart
       - name: Dependencies
