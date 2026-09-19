@@ -14,7 +14,7 @@ qs=p["questions"]
 assert len(qs)==m["question_count"]==pkg["question_count"]==136
 ids=[q["id"] for q in qs]
 assert len(ids)==len(set(ids)), "duplicate IDs"
-required={"id","status","scientific_status","unlock_order","difficulty","nature","representation","subdomain_id","options","correct_option_id","explanation"}
+required={"id","status","scientific_status","unlock_order","difficulty","achievement_level","nature","representation","subdomain_id","options","correct_option_id","explanation"}
 for q in qs:
     assert required <= q.keys(), f"missing metadata {q.get('id')}"
     if q["status"]=="published":
