@@ -19,7 +19,7 @@ class AppQuestion {
 }
 Future<List<AppQuestion>> loadQuestions() async{final raw=await ContentRepository.loadRaw();ContentRepository.refreshSilently();final data=jsonDecode(raw) as Map<String,dynamic>;return (data['questions'] as List).map((e)=>AppQuestion.fromJson(e)).where((q)=>q.unlock<=35).toList();}
 
-const lessonNames=<String,String>{'KIN-01':'Референтни систем и материјална тачка','KIN-02':'Положај, путања, пут и померај','KIN-03':'Средња и тренутна брзина','KIN-08':'Слагање брзина и релативно кретање'};
+const lessonNames=<String,String>{'UVF-01':'Предмет, методе и задаци физике','UVF-02':'Физичке величине, мерење и SI јединице','UVF-03':'Скаларне и векторске физичке величине','KIN-01':'Референтни систем и материјална тачка','KIN-02':'Положај, путања, пут и померај','KIN-03':'Средња и тренутна брзина','KIN-08':'Слагање брзина и релативно кретање'};
 
 List<AppQuestion> randomizedPractice(List<AppQuestion> source,{int count=10,String focus='mixed'}){
   final random=Random.secure(),pool=source.toList()..shuffle(random);
@@ -61,7 +61,7 @@ class _HomeScreenState extends State<HomeScreen>{
   @override Widget build(BuildContext context)=>Scaffold(appBar:AppBar(title:const Text('Fizika za I razred gimnazije')),body:FutureBuilder<List<AppQuestion>>(future:_questions,builder:(context,s){
     if(s.hasError)return Center(child:Padding(padding:const EdgeInsets.all(24),child:Text('Greška pri učitavanju baze: ${s.error}')));if(!s.hasData)return const Center(child:CircularProgressIndicator());final qs=s.data!;
     return ListView(padding:const EdgeInsets.all(20),children:[
-      const Text('Fizika za I razred gimnazije',style:TextStyle(fontSize:26,fontWeight:FontWeight.bold)),const SizedBox(height:6),const Text('Vežbanje i provera znanja',style:TextStyle(fontSize:18,fontWeight:FontWeight.w500)),const SizedBox(height:8),const Text('Dostupno gradivo: do 7. časa. Izaberi način rada.'),const SizedBox(height:20),
+      const Text('Fizika za I razred gimnazije',style:TextStyle(fontSize:26,fontWeight:FontWeight.bold)),const SizedBox(height:6),const Text('Vežbanje i provera znanja',style:TextStyle(fontSize:18,fontWeight:FontWeight.w500)),const SizedBox(height:8),const Text('Izaberi način rada.'),const SizedBox(height:20),
       _HomeCard(icon:Icons.school,title:'Vežbaj',subtitle:'Mešovito vežbanje: teorijski i računski zadaci',onTap:()=>_practice(qs)),
       _HomeCard(icon:Icons.tune,title:'Personalizuj vežbanje',subtitle:'Izaberi jednu, više ili sve oblasti',onTap:()=>Navigator.push(context,MaterialPageRoute(builder:(_)=>PracticePersonalizationScreen(allQuestions:qs)))),
       _HomeCard(icon:Icons.fact_check,title:'Formativna provera časa',subtitle:'Kratka provera sa povratnom informacijom',onTap:()=>Navigator.push(context,MaterialPageRoute(builder:(_)=>FormativeLessonScreen(allQuestions:qs)))),
