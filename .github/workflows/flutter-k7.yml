@@ -14,7 +14,7 @@ jobs:
           channel: stable
           cache: true
       - name: Generate Android platform
-        run: flutter create --platforms=android .
+        run: flutter create --platforms=android .\n      - name: Remove generated widget test\n        run: rm -f test/widget_test.dart
       - name: Dependencies
         run: flutter pub get
       - name: Validate content
@@ -41,7 +41,7 @@ jobs:
           channel: stable
           cache: true
       - name: Generate iOS platform
-        run: flutter create --platforms=ios .
+        run: flutter create --platforms=ios .\n      - name: Remove generated widget test\n        run: rm -f test/widget_test.dart
       - name: Dependencies
         run: flutter pub get
       - name: Analyze
