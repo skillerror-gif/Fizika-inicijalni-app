@@ -22,7 +22,7 @@ jobs:
       - name: Restore selected launcher icon
         run: |
           for density in mdpi hdpi xhdpi xxhdpi xxxhdpi; do
-            cp assets/branding/newton_apple_icon.png "android/app/src/main/res/mipmap-$density/ic_launcher.png"
+            cp assets/branding/tesla_motor_icon.jpg "android/app/src/main/res/mipmap-$density/ic_launcher.png"
           done
       - name: Set Android visible app name
         run: sed -i 's/android:label="[^"]*"/android:label="Fizika za I razred gimnazije"/' android/app/src/main/AndroidManifest.xml
