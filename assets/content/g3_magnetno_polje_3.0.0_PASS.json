@@ -1,0 +1,2796 @@
+{
+  "database_id": "fizika-app-g3-mag",
+  "schema_version": 1,
+  "content_version": "3.0.0",
+  "grade": 3,
+  "domain_id": "MAG",
+  "source_kb_id": "MAG-III-001",
+  "question_count": 32,
+  "scope": "PASS core reconstructed textbook content; common PM/DJ core only; track-specific extensions intentionally excluded pending separate package",
+  "questions": [
+    {
+      "id": "PHY-G3-MAG-000001",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 3,
+      "track": [
+        "PM",
+        "DJ"
+      ],
+      "domain_id": "MAG",
+      "domain_name": "Магнетно поље",
+      "subdomain_id": "MAG-01",
+      "subdomain_name": "Магнетно поље и линије поља",
+      "lesson_ids": [
+        "MAG-01"
+      ],
+      "unlock_order": 1,
+      "outcome_ids": [
+        "G3-MAG-01"
+      ],
+      "concept_ids": [
+        "mag-01"
+      ],
+      "difficulty": "basic",
+      "achievement_level": "N1",
+      "cognitive_process": "knowledge",
+      "question_type": "single_choice",
+      "nature": "theory",
+      "representation": "text",
+      "stem": "Шта представљају линије магнетног поља?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "Путање наелектрисаних честица"
+        },
+        {
+          "option_id": "B",
+          "text": "Модел који показује правац и смер вектора B"
+        },
+        {
+          "option_id": "V",
+          "text": "Путање електрона у проводнику"
+        },
+        {
+          "option_id": "G",
+          "text": "Границе области у којој нема поља"
+        }
+      ],
+      "correct_option_id": "B",
+      "explanation": "Линије поља приказују правац и смер вектора магнетне индукције B; нису путање честица.",
+      "common_errors": [
+        {
+          "message": "Провери дефиницију, смер вектора и услове примене одговарајуће релације.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "MAG-III-001",
+          "role": "derived_pass_bank",
+          "source_state": "PASS_DERIVED"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "lesson_boundary": "pass",
+        "review_date": "2026-09-27"
+      },
+      "adaptive": {
+        "primary_concept_id": "mag-01",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "MAG-01-01",
+      "published_in": "3.0.0"
+    },
+    {
+      "id": "PHY-G3-MAG-000002",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 3,
+      "track": [
+        "PM",
+        "DJ"
+      ],
+      "domain_id": "MAG",
+      "domain_name": "Магнетно поље",
+      "subdomain_id": "MAG-01",
+      "subdomain_name": "Магнетно поље и линије поља",
+      "lesson_ids": [
+        "MAG-01"
+      ],
+      "unlock_order": 1,
+      "outcome_ids": [
+        "G3-MAG-01"
+      ],
+      "concept_ids": [
+        "mag-01"
+      ],
+      "difficulty": "basic",
+      "achievement_level": "N1",
+      "cognitive_process": "knowledge",
+      "question_type": "single_choice",
+      "nature": "theory",
+      "representation": "scheme",
+      "stem": "Која тврдња о линијама магнетног поља је исправна?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "Могу се пресецати у једној тачки"
+        },
+        {
+          "option_id": "B",
+          "text": "У свакој тачки тангента на линију даје правац вектора B"
+        },
+        {
+          "option_id": "V",
+          "text": "Увек су праве линије"
+        },
+        {
+          "option_id": "G",
+          "text": "Постоје само унутар магнета"
+        }
+      ],
+      "correct_option_id": "B",
+      "explanation": "Тангента на линију поља у посматраној тачки одређује правац вектора B.",
+      "common_errors": [
+        {
+          "message": "Провери дефиницију, смер вектора и услове примене одговарајуће релације.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "MAG-III-001",
+          "role": "derived_pass_bank",
+          "source_state": "PASS_DERIVED"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "lesson_boundary": "pass",
+        "review_date": "2026-09-27"
+      },
+      "adaptive": {
+        "primary_concept_id": "mag-01",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "MAG-01-02",
+      "published_in": "3.0.0"
+    },
+    {
+      "id": "PHY-G3-MAG-000003",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 3,
+      "track": [
+        "PM",
+        "DJ"
+      ],
+      "domain_id": "MAG",
+      "domain_name": "Магнетно поље",
+      "subdomain_id": "MAG-01",
+      "subdomain_name": "Магнетно поље и линије поља",
+      "lesson_ids": [
+        "MAG-01"
+      ],
+      "unlock_order": 1,
+      "outcome_ids": [
+        "G3-MAG-01"
+      ],
+      "concept_ids": [
+        "mag-01"
+      ],
+      "difficulty": "basic",
+      "achievement_level": "N1",
+      "cognitive_process": "knowledge",
+      "question_type": "single_choice",
+      "nature": "theory",
+      "representation": "text",
+      "stem": "Компас се постави близу проводника. Када кроз проводник потече струја, игла скрене. Шта непосредно показује овај оглед?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "Струја ствара електрично наелектрисање компаса"
+        },
+        {
+          "option_id": "B",
+          "text": "Струја ствара магнетно поље око проводника"
+        },
+        {
+          "option_id": "V",
+          "text": "Компас повећава јачину струје"
+        },
+        {
+          "option_id": "G",
+          "text": "Земљино магнетно поље нестаје"
+        }
+      ],
+      "correct_option_id": "B",
+      "explanation": "Ерстедов оглед показује магнетни ефекат електричне струје.",
+      "common_errors": [
+        {
+          "message": "Провери дефиницију, смер вектора и услове примене одговарајуће релације.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "MAG-III-001",
+          "role": "derived_pass_bank",
+          "source_state": "PASS_DERIVED"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "lesson_boundary": "pass",
+        "review_date": "2026-09-27"
+      },
+      "adaptive": {
+        "primary_concept_id": "mag-01",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "MAG-01-03",
+      "published_in": "3.0.0"
+    },
+    {
+      "id": "PHY-G3-MAG-000004",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 3,
+      "track": [
+        "PM",
+        "DJ"
+      ],
+      "domain_id": "MAG",
+      "domain_name": "Магнетно поље",
+      "subdomain_id": "MAG-01",
+      "subdomain_name": "Магнетно поље и линије поља",
+      "lesson_ids": [
+        "MAG-01"
+      ],
+      "unlock_order": 1,
+      "outcome_ids": [
+        "G3-MAG-01"
+      ],
+      "concept_ids": [
+        "mag-01"
+      ],
+      "difficulty": "intermediate",
+      "achievement_level": "N2",
+      "cognitive_process": "application",
+      "question_type": "single_choice",
+      "nature": "theory",
+      "representation": "scheme",
+      "stem": "При промени смера струје кроз праволинијски проводник, шта се дешава са смером B у истој тачки простора?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "Не мења се"
+        },
+        {
+          "option_id": "B",
+          "text": "Обрће се"
+        },
+        {
+          "option_id": "V",
+          "text": "Постаје нормалан на претходни смер"
+        },
+        {
+          "option_id": "G",
+          "text": "B постаје нула"
+        }
+      ],
+      "correct_option_id": "B",
+      "explanation": "Промена смера струје обрће оријентацију кружних линија магнетног поља.",
+      "common_errors": [
+        {
+          "message": "Провери дефиницију, смер вектора и услове примене одговарајуће релације.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "MAG-III-001",
+          "role": "derived_pass_bank",
+          "source_state": "PASS_DERIVED"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "lesson_boundary": "pass",
+        "review_date": "2026-09-27"
+      },
+      "adaptive": {
+        "primary_concept_id": "mag-01",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "MAG-01-04",
+      "published_in": "3.0.0"
+    },
+    {
+      "id": "PHY-G3-MAG-000005",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 3,
+      "track": [
+        "PM",
+        "DJ"
+      ],
+      "domain_id": "MAG",
+      "domain_name": "Магнетно поље",
+      "subdomain_id": "MAG-02",
+      "subdomain_name": "Магнетна индукција и поље праволинијског проводника",
+      "lesson_ids": [
+        "MAG-02"
+      ],
+      "unlock_order": 2,
+      "outcome_ids": [
+        "G3-MAG-02"
+      ],
+      "concept_ids": [
+        "mag-02"
+      ],
+      "difficulty": "basic",
+      "achievement_level": "N1",
+      "cognitive_process": "knowledge",
+      "question_type": "single_choice",
+      "nature": "theory",
+      "representation": "text",
+      "stem": "Која је SI јединица магнетне индукције B?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "вебер"
+        },
+        {
+          "option_id": "B",
+          "text": "тесла"
+        },
+        {
+          "option_id": "V",
+          "text": "ампер по метру"
+        },
+        {
+          "option_id": "G",
+          "text": "њутн"
+        }
+      ],
+      "correct_option_id": "B",
+      "explanation": "SI јединица магнетне индукције је тесла (T).",
+      "common_errors": [
+        {
+          "message": "Провери дефиницију, смер вектора и услове примене одговарајуће релације.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "MAG-III-001",
+          "role": "derived_pass_bank",
+          "source_state": "PASS_DERIVED"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "lesson_boundary": "pass",
+        "review_date": "2026-09-27"
+      },
+      "adaptive": {
+        "primary_concept_id": "mag-02",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "MAG-02-01",
+      "published_in": "3.0.0"
+    },
+    {
+      "id": "PHY-G3-MAG-000006",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 3,
+      "track": [
+        "PM",
+        "DJ"
+      ],
+      "domain_id": "MAG",
+      "domain_name": "Магнетно поље",
+      "subdomain_id": "MAG-02",
+      "subdomain_name": "Магнетна индукција и поље праволинијског проводника",
+      "lesson_ids": [
+        "MAG-02"
+      ],
+      "unlock_order": 2,
+      "outcome_ids": [
+        "G3-MAG-02"
+      ],
+      "concept_ids": [
+        "mag-02"
+      ],
+      "difficulty": "basic",
+      "achievement_level": "N1",
+      "cognitive_process": "knowledge",
+      "question_type": "single_choice",
+      "nature": "calculation",
+      "representation": "text",
+      "stem": "За дуг праволинијски проводник у ваздуху важи B=μ₀I/(2πr). Ако се I удвостручи при истом r, B ће:",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "остати исто"
+        },
+        {
+          "option_id": "B",
+          "text": "удвостручити се"
+        },
+        {
+          "option_id": "V",
+          "text": "преполовити се"
+        },
+        {
+          "option_id": "G",
+          "text": "порасти четири пута"
+        }
+      ],
+      "correct_option_id": "B",
+      "explanation": "B је директно пропорционално струји I.",
+      "common_errors": [
+        {
+          "message": "Провери дефиницију, смер вектора и услове примене одговарајуће релације.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "MAG-III-001",
+          "role": "derived_pass_bank",
+          "source_state": "PASS_DERIVED"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "lesson_boundary": "pass",
+        "review_date": "2026-09-27"
+      },
+      "adaptive": {
+        "primary_concept_id": "mag-02",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "MAG-02-02",
+      "published_in": "3.0.0"
+    },
+    {
+      "id": "PHY-G3-MAG-000007",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 3,
+      "track": [
+        "PM",
+        "DJ"
+      ],
+      "domain_id": "MAG",
+      "domain_name": "Магнетно поље",
+      "subdomain_id": "MAG-02",
+      "subdomain_name": "Магнетна индукција и поље праволинијског проводника",
+      "lesson_ids": [
+        "MAG-02"
+      ],
+      "unlock_order": 2,
+      "outcome_ids": [
+        "G3-MAG-02"
+      ],
+      "concept_ids": [
+        "mag-02"
+      ],
+      "difficulty": "intermediate",
+      "achievement_level": "N2",
+      "cognitive_process": "application",
+      "question_type": "single_choice",
+      "nature": "calculation",
+      "representation": "graph",
+      "stem": "Ако се растојање од дугог праволинијског проводника повећа са r на 2r при истој струји, магнетна индукција постаје:",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "2B"
+        },
+        {
+          "option_id": "B",
+          "text": "B/2"
+        },
+        {
+          "option_id": "V",
+          "text": "B/4"
+        },
+        {
+          "option_id": "G",
+          "text": "B"
+        }
+      ],
+      "correct_option_id": "B",
+      "explanation": "Пошто је B обрнуто пропорционално r, удвостручење растојања преполовљава B.",
+      "common_errors": [
+        {
+          "message": "Провери дефиницију, смер вектора и услове примене одговарајуће релације.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "MAG-III-001",
+          "role": "derived_pass_bank",
+          "source_state": "PASS_DERIVED"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "lesson_boundary": "pass",
+        "review_date": "2026-09-27"
+      },
+      "adaptive": {
+        "primary_concept_id": "mag-02",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "MAG-02-03",
+      "published_in": "3.0.0"
+    },
+    {
+      "id": "PHY-G3-MAG-000008",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 3,
+      "track": [
+        "PM",
+        "DJ"
+      ],
+      "domain_id": "MAG",
+      "domain_name": "Магнетно поље",
+      "subdomain_id": "MAG-02",
+      "subdomain_name": "Магнетна индукција и поље праволинијског проводника",
+      "lesson_ids": [
+        "MAG-02"
+      ],
+      "unlock_order": 2,
+      "outcome_ids": [
+        "G3-MAG-02"
+      ],
+      "concept_ids": [
+        "mag-02"
+      ],
+      "difficulty": "intermediate",
+      "achievement_level": "N2",
+      "cognitive_process": "application",
+      "question_type": "single_choice",
+      "nature": "calculation",
+      "representation": "text",
+      "stem": "Дуг проводник носи струју 5,0 A. Колико је приближно B на 0,10 m у ваздуху? (μ₀=4π·10⁻⁷ T·m/A)",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "1,0·10⁻⁶ T"
+        },
+        {
+          "option_id": "B",
+          "text": "1,0·10⁻⁵ T"
+        },
+        {
+          "option_id": "V",
+          "text": "5,0·10⁻⁵ T"
+        },
+        {
+          "option_id": "G",
+          "text": "1,0·10⁻⁴ T"
+        }
+      ],
+      "correct_option_id": "B",
+      "explanation": "B=μ₀I/(2πr)=1,0·10⁻⁵ T=10 μT.",
+      "common_errors": [
+        {
+          "message": "Провери дефиницију, смер вектора и услове примене одговарајуће релације.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "MAG-III-001",
+          "role": "derived_pass_bank",
+          "source_state": "PASS_DERIVED"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "lesson_boundary": "pass",
+        "review_date": "2026-09-27"
+      },
+      "adaptive": {
+        "primary_concept_id": "mag-02",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "MAG-02-04",
+      "published_in": "3.0.0"
+    },
+    {
+      "id": "PHY-G3-MAG-000009",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 3,
+      "track": [
+        "PM",
+        "DJ"
+      ],
+      "domain_id": "MAG",
+      "domain_name": "Магнетно поље",
+      "subdomain_id": "MAG-03",
+      "subdomain_name": "Магнетни флукс",
+      "lesson_ids": [
+        "MAG-03"
+      ],
+      "unlock_order": 3,
+      "outcome_ids": [
+        "G3-MAG-03"
+      ],
+      "concept_ids": [
+        "mag-03"
+      ],
+      "difficulty": "basic",
+      "achievement_level": "N1",
+      "cognitive_process": "knowledge",
+      "question_type": "single_choice",
+      "nature": "theory",
+      "representation": "scheme",
+      "stem": "У формули Φ=BS cosα, угао α је угао између:",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "B и равни површине"
+        },
+        {
+          "option_id": "B",
+          "text": "B и нормале на површину"
+        },
+        {
+          "option_id": "V",
+          "text": "нормале и ивице површине"
+        },
+        {
+          "option_id": "G",
+          "text": "B и смера струје"
+        }
+      ],
+      "correct_option_id": "B",
+      "explanation": "У дефиницији магнетног флукса α се мери између B и нормале на површину.",
+      "common_errors": [
+        {
+          "message": "Провери дефиницију, смер вектора и услове примене одговарајуће релације.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "MAG-III-001",
+          "role": "derived_pass_bank",
+          "source_state": "PASS_DERIVED"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "lesson_boundary": "pass",
+        "review_date": "2026-09-27"
+      },
+      "adaptive": {
+        "primary_concept_id": "mag-03",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "MAG-03-01",
+      "published_in": "3.0.0"
+    },
+    {
+      "id": "PHY-G3-MAG-000010",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 3,
+      "track": [
+        "PM",
+        "DJ"
+      ],
+      "domain_id": "MAG",
+      "domain_name": "Магнетно поље",
+      "subdomain_id": "MAG-03",
+      "subdomain_name": "Магнетни флукс",
+      "lesson_ids": [
+        "MAG-03"
+      ],
+      "unlock_order": 3,
+      "outcome_ids": [
+        "G3-MAG-03"
+      ],
+      "concept_ids": [
+        "mag-03"
+      ],
+      "difficulty": "basic",
+      "achievement_level": "N1",
+      "cognitive_process": "knowledge",
+      "question_type": "single_choice",
+      "nature": "theory",
+      "representation": "text",
+      "stem": "Када је магнетни флукс кроз равну површину у хомогеном пољу максималан?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "Када је B паралелан равни"
+        },
+        {
+          "option_id": "B",
+          "text": "Када је B паралелан нормали"
+        },
+        {
+          "option_id": "V",
+          "text": "Када је α=90°"
+        },
+        {
+          "option_id": "G",
+          "text": "Када је B=0"
+        }
+      ],
+      "correct_option_id": "B",
+      "explanation": "За α=0° је cosα=1, па је Φ=BS максималан.",
+      "common_errors": [
+        {
+          "message": "Провери дефиницију, смер вектора и услове примене одговарајуће релације.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "MAG-III-001",
+          "role": "derived_pass_bank",
+          "source_state": "PASS_DERIVED"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "lesson_boundary": "pass",
+        "review_date": "2026-09-27"
+      },
+      "adaptive": {
+        "primary_concept_id": "mag-03",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "MAG-03-02",
+      "published_in": "3.0.0"
+    },
+    {
+      "id": "PHY-G3-MAG-000011",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 3,
+      "track": [
+        "PM",
+        "DJ"
+      ],
+      "domain_id": "MAG",
+      "domain_name": "Магнетно поље",
+      "subdomain_id": "MAG-03",
+      "subdomain_name": "Магнетни флукс",
+      "lesson_ids": [
+        "MAG-03"
+      ],
+      "unlock_order": 3,
+      "outcome_ids": [
+        "G3-MAG-03"
+      ],
+      "concept_ids": [
+        "mag-03"
+      ],
+      "difficulty": "intermediate",
+      "achievement_level": "N2",
+      "cognitive_process": "application",
+      "question_type": "single_choice",
+      "nature": "calculation",
+      "representation": "text",
+      "stem": "Површина S=0,20 m² налази се у пољу B=0,50 T, а B је паралелан нормали. Флукс је:",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "0 Wb"
+        },
+        {
+          "option_id": "B",
+          "text": "0,10 Wb"
+        },
+        {
+          "option_id": "V",
+          "text": "0,25 Wb"
+        },
+        {
+          "option_id": "G",
+          "text": "2,5 Wb"
+        }
+      ],
+      "correct_option_id": "B",
+      "explanation": "Φ=BS=0,50·0,20=0,10 Wb.",
+      "common_errors": [
+        {
+          "message": "Провери дефиницију, смер вектора и услове примене одговарајуће релације.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "MAG-III-001",
+          "role": "derived_pass_bank",
+          "source_state": "PASS_DERIVED"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "lesson_boundary": "pass",
+        "review_date": "2026-09-27"
+      },
+      "adaptive": {
+        "primary_concept_id": "mag-03",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "MAG-03-03",
+      "published_in": "3.0.0"
+    },
+    {
+      "id": "PHY-G3-MAG-000012",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 3,
+      "track": [
+        "PM",
+        "DJ"
+      ],
+      "domain_id": "MAG",
+      "domain_name": "Магнетно поље",
+      "subdomain_id": "MAG-03",
+      "subdomain_name": "Магнетни флукс",
+      "lesson_ids": [
+        "MAG-03"
+      ],
+      "unlock_order": 3,
+      "outcome_ids": [
+        "G3-MAG-03"
+      ],
+      "concept_ids": [
+        "mag-03"
+      ],
+      "difficulty": "advanced",
+      "achievement_level": "N3",
+      "cognitive_process": "reasoning",
+      "question_type": "single_choice",
+      "nature": "calculation",
+      "representation": "graph",
+      "stem": "За исте B и S, површина се окрене тако да угао B са нормалом пређе са 0° на 60°. Однос новог и почетног флукса је:",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "2"
+        },
+        {
+          "option_id": "B",
+          "text": "1/2"
+        },
+        {
+          "option_id": "V",
+          "text": "√3/2"
+        },
+        {
+          "option_id": "G",
+          "text": "0"
+        }
+      ],
+      "correct_option_id": "B",
+      "explanation": "Φ₂/Φ₁=cos60°/cos0°=1/2.",
+      "common_errors": [
+        {
+          "message": "Провери дефиницију, смер вектора и услове примене одговарајуће релације.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "MAG-III-001",
+          "role": "derived_pass_bank",
+          "source_state": "PASS_DERIVED"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "lesson_boundary": "pass",
+        "review_date": "2026-09-27"
+      },
+      "adaptive": {
+        "primary_concept_id": "mag-03",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "MAG-03-04",
+      "published_in": "3.0.0"
+    },
+    {
+      "id": "PHY-G3-MAG-000013",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 3,
+      "track": [
+        "PM",
+        "DJ"
+      ],
+      "domain_id": "MAG",
+      "domain_name": "Магнетно поље",
+      "subdomain_id": "MAG-04",
+      "subdomain_name": "Амперова сила",
+      "lesson_ids": [
+        "MAG-04"
+      ],
+      "unlock_order": 4,
+      "outcome_ids": [
+        "G3-MAG-04"
+      ],
+      "concept_ids": [
+        "mag-04"
+      ],
+      "difficulty": "basic",
+      "achievement_level": "N1",
+      "cognitive_process": "knowledge",
+      "question_type": "single_choice",
+      "nature": "theory",
+      "representation": "text",
+      "stem": "Интензитет Амперове силе на прав проводник дужине l у хомогеном пољу је:",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "F=BIl cosα"
+        },
+        {
+          "option_id": "B",
+          "text": "F=BIl sinα"
+        },
+        {
+          "option_id": "V",
+          "text": "F=qvB sinα"
+        },
+        {
+          "option_id": "G",
+          "text": "F=BI/l"
+        }
+      ],
+      "correct_option_id": "B",
+      "explanation": "За прав проводник важи F=BIl sinα, где је α угао између смера струје и B.",
+      "common_errors": [
+        {
+          "message": "Провери дефиницију, смер вектора и услове примене одговарајуће релације.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "MAG-III-001",
+          "role": "derived_pass_bank",
+          "source_state": "PASS_DERIVED"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "lesson_boundary": "pass",
+        "review_date": "2026-09-27"
+      },
+      "adaptive": {
+        "primary_concept_id": "mag-04",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "MAG-04-01",
+      "published_in": "3.0.0"
+    },
+    {
+      "id": "PHY-G3-MAG-000014",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 3,
+      "track": [
+        "PM",
+        "DJ"
+      ],
+      "domain_id": "MAG",
+      "domain_name": "Магнетно поље",
+      "subdomain_id": "MAG-04",
+      "subdomain_name": "Амперова сила",
+      "lesson_ids": [
+        "MAG-04"
+      ],
+      "unlock_order": 4,
+      "outcome_ids": [
+        "G3-MAG-04"
+      ],
+      "concept_ids": [
+        "mag-04"
+      ],
+      "difficulty": "basic",
+      "achievement_level": "N1",
+      "cognitive_process": "knowledge",
+      "question_type": "single_choice",
+      "nature": "theory",
+      "representation": "scheme",
+      "stem": "Када је Амперова сила на прав проводник у хомогеном пољу једнака нули?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "Када је проводник нормалан на B"
+        },
+        {
+          "option_id": "B",
+          "text": "Када је смер струје паралелан B"
+        },
+        {
+          "option_id": "V",
+          "text": "Само када је струја максимална"
+        },
+        {
+          "option_id": "G",
+          "text": "Када је α=90°"
+        }
+      ],
+      "correct_option_id": "B",
+      "explanation": "За паралелне правце је α=0° или 180°, па је sinα=0.",
+      "common_errors": [
+        {
+          "message": "Провери дефиницију, смер вектора и услове примене одговарајуће релације.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "MAG-III-001",
+          "role": "derived_pass_bank",
+          "source_state": "PASS_DERIVED"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "lesson_boundary": "pass",
+        "review_date": "2026-09-27"
+      },
+      "adaptive": {
+        "primary_concept_id": "mag-04",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "MAG-04-02",
+      "published_in": "3.0.0"
+    },
+    {
+      "id": "PHY-G3-MAG-000015",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 3,
+      "track": [
+        "PM",
+        "DJ"
+      ],
+      "domain_id": "MAG",
+      "domain_name": "Магнетно поље",
+      "subdomain_id": "MAG-04",
+      "subdomain_name": "Амперова сила",
+      "lesson_ids": [
+        "MAG-04"
+      ],
+      "unlock_order": 4,
+      "outcome_ids": [
+        "G3-MAG-04"
+      ],
+      "concept_ids": [
+        "mag-04"
+      ],
+      "difficulty": "intermediate",
+      "achievement_level": "N2",
+      "cognitive_process": "application",
+      "question_type": "single_choice",
+      "nature": "calculation",
+      "representation": "text",
+      "stem": "Проводник дужине 0,20 m носи струју 3 A нормално на поље B=0,50 T. Сила је:",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "0,03 N"
+        },
+        {
+          "option_id": "B",
+          "text": "0,30 N"
+        },
+        {
+          "option_id": "V",
+          "text": "3,0 N"
+        },
+        {
+          "option_id": "G",
+          "text": "30 N"
+        }
+      ],
+      "correct_option_id": "B",
+      "explanation": "F=BIl=0,50·3·0,20=0,30 N.",
+      "common_errors": [
+        {
+          "message": "Провери дефиницију, смер вектора и услове примене одговарајуће релације.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "MAG-III-001",
+          "role": "derived_pass_bank",
+          "source_state": "PASS_DERIVED"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "lesson_boundary": "pass",
+        "review_date": "2026-09-27"
+      },
+      "adaptive": {
+        "primary_concept_id": "mag-04",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "MAG-04-03",
+      "published_in": "3.0.0"
+    },
+    {
+      "id": "PHY-G3-MAG-000016",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 3,
+      "track": [
+        "PM",
+        "DJ"
+      ],
+      "domain_id": "MAG",
+      "domain_name": "Магнетно поље",
+      "subdomain_id": "MAG-04",
+      "subdomain_name": "Амперова сила",
+      "lesson_ids": [
+        "MAG-04"
+      ],
+      "unlock_order": 4,
+      "outcome_ids": [
+        "G3-MAG-04"
+      ],
+      "concept_ids": [
+        "mag-04"
+      ],
+      "difficulty": "advanced",
+      "achievement_level": "N3",
+      "cognitive_process": "reasoning",
+      "question_type": "single_choice",
+      "nature": "calculation",
+      "representation": "table",
+      "stem": "Ако се струја и дужина активног дела проводника истовремено удвоструче, а остало остане исто, Амперова сила постаје:",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "2F"
+        },
+        {
+          "option_id": "B",
+          "text": "4F"
+        },
+        {
+          "option_id": "V",
+          "text": "F/2"
+        },
+        {
+          "option_id": "G",
+          "text": "F"
+        }
+      ],
+      "correct_option_id": "B",
+      "explanation": "Из F=BIl sinα следи да два фактора ×2 дају силу ×4.",
+      "common_errors": [
+        {
+          "message": "Провери дефиницију, смер вектора и услове примене одговарајуће релације.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "MAG-III-001",
+          "role": "derived_pass_bank",
+          "source_state": "PASS_DERIVED"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "lesson_boundary": "pass",
+        "review_date": "2026-09-27"
+      },
+      "adaptive": {
+        "primary_concept_id": "mag-04",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "MAG-04-04",
+      "published_in": "3.0.0"
+    },
+    {
+      "id": "PHY-G3-MAG-000017",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 3,
+      "track": [
+        "PM",
+        "DJ"
+      ],
+      "domain_id": "MAG",
+      "domain_name": "Магнетно поље",
+      "subdomain_id": "MAG-05",
+      "subdomain_name": "Лоренцова сила",
+      "lesson_ids": [
+        "MAG-05"
+      ],
+      "unlock_order": 5,
+      "outcome_ids": [
+        "G3-MAG-05"
+      ],
+      "concept_ids": [
+        "mag-05"
+      ],
+      "difficulty": "basic",
+      "achievement_level": "N1",
+      "cognitive_process": "knowledge",
+      "question_type": "single_choice",
+      "nature": "theory",
+      "representation": "text",
+      "stem": "Магнетни део Лоренцове силе има интензитет:",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "F=qE"
+        },
+        {
+          "option_id": "B",
+          "text": "F=|q|vB sinα"
+        },
+        {
+          "option_id": "V",
+          "text": "F=BIl sinα"
+        },
+        {
+          "option_id": "G",
+          "text": "F=mv²/r без услова"
+        }
+      ],
+      "correct_option_id": "B",
+      "explanation": "За наелектрисану честицу у магнетном пољу F=|q|vB sinα.",
+      "common_errors": [
+        {
+          "message": "Провери дефиницију, смер вектора и услове примене одговарајуће релације.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "MAG-III-001",
+          "role": "derived_pass_bank",
+          "source_state": "PASS_DERIVED"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "lesson_boundary": "pass",
+        "review_date": "2026-09-27"
+      },
+      "adaptive": {
+        "primary_concept_id": "mag-05",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "MAG-05-01",
+      "published_in": "3.0.0"
+    },
+    {
+      "id": "PHY-G3-MAG-000018",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 3,
+      "track": [
+        "PM",
+        "DJ"
+      ],
+      "domain_id": "MAG",
+      "domain_name": "Магнетно поље",
+      "subdomain_id": "MAG-05",
+      "subdomain_name": "Лоренцова сила",
+      "lesson_ids": [
+        "MAG-05"
+      ],
+      "unlock_order": 5,
+      "outcome_ids": [
+        "G3-MAG-05"
+      ],
+      "concept_ids": [
+        "mag-05"
+      ],
+      "difficulty": "basic",
+      "achievement_level": "N1",
+      "cognitive_process": "knowledge",
+      "question_type": "single_choice",
+      "nature": "theory",
+      "representation": "scheme",
+      "stem": "Када је магнетна сила на наелектрисану честицу нула иако су v и B различити од нуле?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "Када је v нормално на B"
+        },
+        {
+          "option_id": "B",
+          "text": "Када је v паралелно или антипаралелно B"
+        },
+        {
+          "option_id": "V",
+          "text": "Када је честица позитивна"
+        },
+        {
+          "option_id": "G",
+          "text": "Када је B хомогено"
+        }
+      ],
+      "correct_option_id": "B",
+      "explanation": "За α=0° или 180° је sinα=0.",
+      "common_errors": [
+        {
+          "message": "Провери дефиницију, смер вектора и услове примене одговарајуће релације.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "MAG-III-001",
+          "role": "derived_pass_bank",
+          "source_state": "PASS_DERIVED"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "lesson_boundary": "pass",
+        "review_date": "2026-09-27"
+      },
+      "adaptive": {
+        "primary_concept_id": "mag-05",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "MAG-05-02",
+      "published_in": "3.0.0"
+    },
+    {
+      "id": "PHY-G3-MAG-000019",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 3,
+      "track": [
+        "PM",
+        "DJ"
+      ],
+      "domain_id": "MAG",
+      "domain_name": "Магнетно поље",
+      "subdomain_id": "MAG-05",
+      "subdomain_name": "Лоренцова сила",
+      "lesson_ids": [
+        "MAG-05"
+      ],
+      "unlock_order": 5,
+      "outcome_ids": [
+        "G3-MAG-05"
+      ],
+      "concept_ids": [
+        "mag-05"
+      ],
+      "difficulty": "intermediate",
+      "achievement_level": "N2",
+      "cognitive_process": "application",
+      "question_type": "single_choice",
+      "nature": "theory",
+      "representation": "scheme",
+      "stem": "Протон и електрон улазе истом брзином у исто B, нормално на поље. Како се односе смерови њихових магнетних сила?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "Исти су"
+        },
+        {
+          "option_id": "B",
+          "text": "Супротни су"
+        },
+        {
+          "option_id": "V",
+          "text": "Оба су дуж брзине"
+        },
+        {
+          "option_id": "G",
+          "text": "Оба су дуж B"
+        }
+      ],
+      "correct_option_id": "B",
+      "explanation": "Због супротних знакова наелектрисања смерови q(v×B) су супротни.",
+      "common_errors": [
+        {
+          "message": "Провери дефиницију, смер вектора и услове примене одговарајуће релације.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "MAG-III-001",
+          "role": "derived_pass_bank",
+          "source_state": "PASS_DERIVED"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "lesson_boundary": "pass",
+        "review_date": "2026-09-27"
+      },
+      "adaptive": {
+        "primary_concept_id": "mag-05",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "MAG-05-03",
+      "published_in": "3.0.0"
+    },
+    {
+      "id": "PHY-G3-MAG-000020",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 3,
+      "track": [
+        "PM",
+        "DJ"
+      ],
+      "domain_id": "MAG",
+      "domain_name": "Магнетно поље",
+      "subdomain_id": "MAG-05",
+      "subdomain_name": "Лоренцова сила",
+      "lesson_ids": [
+        "MAG-05"
+      ],
+      "unlock_order": 5,
+      "outcome_ids": [
+        "G3-MAG-05"
+      ],
+      "concept_ids": [
+        "mag-05"
+      ],
+      "difficulty": "intermediate",
+      "achievement_level": "N2",
+      "cognitive_process": "application",
+      "question_type": "single_choice",
+      "nature": "calculation",
+      "representation": "text",
+      "stem": "Честица наелектрисања |q|=2·10⁻⁶ C креће се брзином 3·10⁴ m/s нормално на B=0,50 T. Сила је:",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "3·10⁻³ N"
+        },
+        {
+          "option_id": "B",
+          "text": "3·10⁻² N"
+        },
+        {
+          "option_id": "V",
+          "text": "3·10⁻¹ N"
+        },
+        {
+          "option_id": "G",
+          "text": "30 N"
+        }
+      ],
+      "correct_option_id": "B",
+      "explanation": "F=|q|vB=2·10⁻⁶·3·10⁴·0,50=3·10⁻² N.",
+      "common_errors": [
+        {
+          "message": "Провери дефиницију, смер вектора и услове примене одговарајуће релације.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "MAG-III-001",
+          "role": "derived_pass_bank",
+          "source_state": "PASS_DERIVED"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "lesson_boundary": "pass",
+        "review_date": "2026-09-27"
+      },
+      "adaptive": {
+        "primary_concept_id": "mag-05",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "MAG-05-04",
+      "published_in": "3.0.0"
+    },
+    {
+      "id": "PHY-G3-MAG-000021",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 3,
+      "track": [
+        "PM",
+        "DJ"
+      ],
+      "domain_id": "MAG",
+      "domain_name": "Магнетно поље",
+      "subdomain_id": "MAG-06",
+      "subdomain_name": "Кретање наелектрисане честице",
+      "lesson_ids": [
+        "MAG-06"
+      ],
+      "unlock_order": 6,
+      "outcome_ids": [
+        "G3-MAG-06"
+      ],
+      "concept_ids": [
+        "mag-06"
+      ],
+      "difficulty": "basic",
+      "achievement_level": "N1",
+      "cognitive_process": "knowledge",
+      "question_type": "single_choice",
+      "nature": "theory",
+      "representation": "scheme",
+      "stem": "Честица улази брзином нормалном на хомогено B. Ако делује само магнетна сила, путања је:",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "праволинијска"
+        },
+        {
+          "option_id": "B",
+          "text": "кружна"
+        },
+        {
+          "option_id": "V",
+          "text": "параболична"
+        },
+        {
+          "option_id": "G",
+          "text": "увек спирална у равни"
+        }
+      ],
+      "correct_option_id": "B",
+      "explanation": "Сила је стално нормална на брзину и има улогу центрипеталне силе, па је путања кружна.",
+      "common_errors": [
+        {
+          "message": "Провери дефиницију, смер вектора и услове примене одговарајуће релације.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "MAG-III-001",
+          "role": "derived_pass_bank",
+          "source_state": "PASS_DERIVED"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "lesson_boundary": "pass",
+        "review_date": "2026-09-27"
+      },
+      "adaptive": {
+        "primary_concept_id": "mag-06",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "MAG-06-01",
+      "published_in": "3.0.0"
+    },
+    {
+      "id": "PHY-G3-MAG-000022",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 3,
+      "track": [
+        "PM",
+        "DJ"
+      ],
+      "domain_id": "MAG",
+      "domain_name": "Магнетно поље",
+      "subdomain_id": "MAG-06",
+      "subdomain_name": "Кретање наелектрисане честице",
+      "lesson_ids": [
+        "MAG-06"
+      ],
+      "unlock_order": 6,
+      "outcome_ids": [
+        "G3-MAG-06"
+      ],
+      "concept_ids": [
+        "mag-06"
+      ],
+      "difficulty": "basic",
+      "achievement_level": "N1",
+      "cognitive_process": "knowledge",
+      "question_type": "single_choice",
+      "nature": "calculation",
+      "representation": "text",
+      "stem": "Која формула даје полупречник кружне путање за v⊥B?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "r=|q|B/(mv)"
+        },
+        {
+          "option_id": "B",
+          "text": "r=mv/(|q|B)"
+        },
+        {
+          "option_id": "V",
+          "text": "r=mB/(|q|v)"
+        },
+        {
+          "option_id": "G",
+          "text": "r=|q|v/(mB)"
+        }
+      ],
+      "correct_option_id": "B",
+      "explanation": "Из |q|vB=mv²/r следи r=mv/(|q|B).",
+      "common_errors": [
+        {
+          "message": "Провери дефиницију, смер вектора и услове примене одговарајуће релације.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "MAG-III-001",
+          "role": "derived_pass_bank",
+          "source_state": "PASS_DERIVED"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "lesson_boundary": "pass",
+        "review_date": "2026-09-27"
+      },
+      "adaptive": {
+        "primary_concept_id": "mag-06",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "MAG-06-02",
+      "published_in": "3.0.0"
+    },
+    {
+      "id": "PHY-G3-MAG-000023",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 3,
+      "track": [
+        "PM",
+        "DJ"
+      ],
+      "domain_id": "MAG",
+      "domain_name": "Магнетно поље",
+      "subdomain_id": "MAG-06",
+      "subdomain_name": "Кретање наелектрисане честице",
+      "lesson_ids": [
+        "MAG-06"
+      ],
+      "unlock_order": 6,
+      "outcome_ids": [
+        "G3-MAG-06"
+      ],
+      "concept_ids": [
+        "mag-06"
+      ],
+      "difficulty": "intermediate",
+      "achievement_level": "N2",
+      "cognitive_process": "application",
+      "question_type": "single_choice",
+      "nature": "calculation",
+      "representation": "graph",
+      "stem": "Ако се брзина честице удвостручи при истим m, |q| и B, полупречник кружне путање постаје:",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "r/2"
+        },
+        {
+          "option_id": "B",
+          "text": "2r"
+        },
+        {
+          "option_id": "V",
+          "text": "4r"
+        },
+        {
+          "option_id": "G",
+          "text": "не мења се"
+        }
+      ],
+      "correct_option_id": "B",
+      "explanation": "Полупречник r је директно пропорционалан брзини v.",
+      "common_errors": [
+        {
+          "message": "Провери дефиницију, смер вектора и услове примене одговарајуће релације.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "MAG-III-001",
+          "role": "derived_pass_bank",
+          "source_state": "PASS_DERIVED"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "lesson_boundary": "pass",
+        "review_date": "2026-09-27"
+      },
+      "adaptive": {
+        "primary_concept_id": "mag-06",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "MAG-06-03",
+      "published_in": "3.0.0"
+    },
+    {
+      "id": "PHY-G3-MAG-000024",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 3,
+      "track": [
+        "PM",
+        "DJ"
+      ],
+      "domain_id": "MAG",
+      "domain_name": "Магнетно поље",
+      "subdomain_id": "MAG-06",
+      "subdomain_name": "Кретање наелектрисане честице",
+      "lesson_ids": [
+        "MAG-06"
+      ],
+      "unlock_order": 6,
+      "outcome_ids": [
+        "G3-MAG-06"
+      ],
+      "concept_ids": [
+        "mag-06"
+      ],
+      "difficulty": "advanced",
+      "achievement_level": "N3",
+      "cognitive_process": "reasoning",
+      "question_type": "single_choice",
+      "nature": "theory",
+      "representation": "text",
+      "stem": "Шта се дешава са кинетичком енергијом честице када на њу делује само магнетни део Лоренцове силе?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "Расте"
+        },
+        {
+          "option_id": "B",
+          "text": "Не мења се"
+        },
+        {
+          "option_id": "V",
+          "text": "Опада"
+        },
+        {
+          "option_id": "G",
+          "text": "Наизменично расте и опада"
+        }
+      ],
+      "correct_option_id": "B",
+      "explanation": "Магнетна сила је нормална на брзину и не врши рад, па не мења кинетичку енергију.",
+      "common_errors": [
+        {
+          "message": "Провери дефиницију, смер вектора и услове примене одговарајуће релације.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "MAG-III-001",
+          "role": "derived_pass_bank",
+          "source_state": "PASS_DERIVED"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "lesson_boundary": "pass",
+        "review_date": "2026-09-27"
+      },
+      "adaptive": {
+        "primary_concept_id": "mag-06",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "MAG-06-04",
+      "published_in": "3.0.0"
+    },
+    {
+      "id": "PHY-G3-MAG-000025",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 3,
+      "track": [
+        "PM",
+        "DJ"
+      ],
+      "domain_id": "MAG",
+      "domain_name": "Магнетно поље",
+      "subdomain_id": "MAG-07",
+      "subdomain_name": "Период и завојна путања",
+      "lesson_ids": [
+        "MAG-07"
+      ],
+      "unlock_order": 7,
+      "outcome_ids": [
+        "G3-MAG-07"
+      ],
+      "concept_ids": [
+        "mag-07"
+      ],
+      "difficulty": "intermediate",
+      "achievement_level": "N2",
+      "cognitive_process": "application",
+      "question_type": "single_choice",
+      "nature": "calculation",
+      "representation": "text",
+      "stem": "За нерелативистичку честицу која кружи у хомогеном B период је:",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "T=2π|q|B/m"
+        },
+        {
+          "option_id": "B",
+          "text": "T=2πm/(|q|B)"
+        },
+        {
+          "option_id": "V",
+          "text": "T=mv/(|q|B)"
+        },
+        {
+          "option_id": "G",
+          "text": "T=2πr/B"
+        }
+      ],
+      "correct_option_id": "B",
+      "explanation": "Комбиновањем кружног кретања и Лоренцове силе добија се T=2πm/(|q|B).",
+      "common_errors": [
+        {
+          "message": "Провери дефиницију, смер вектора и услове примене одговарајуће релације.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "MAG-III-001",
+          "role": "derived_pass_bank",
+          "source_state": "PASS_DERIVED"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "lesson_boundary": "pass",
+        "review_date": "2026-09-27"
+      },
+      "adaptive": {
+        "primary_concept_id": "mag-07",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "MAG-07-01",
+      "published_in": "3.0.0"
+    },
+    {
+      "id": "PHY-G3-MAG-000026",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 3,
+      "track": [
+        "PM",
+        "DJ"
+      ],
+      "domain_id": "MAG",
+      "domain_name": "Магнетно поље",
+      "subdomain_id": "MAG-07",
+      "subdomain_name": "Период и завојна путања",
+      "lesson_ids": [
+        "MAG-07"
+      ],
+      "unlock_order": 7,
+      "outcome_ids": [
+        "G3-MAG-07"
+      ],
+      "concept_ids": [
+        "mag-07"
+      ],
+      "difficulty": "intermediate",
+      "achievement_level": "N2",
+      "cognitive_process": "application",
+      "question_type": "single_choice",
+      "nature": "theory",
+      "representation": "graph",
+      "stem": "Од чега, у нерелативистичком случају, не зависи циклотронски период при датим m, |q| и B?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "Од масе"
+        },
+        {
+          "option_id": "B",
+          "text": "Од брзине честице"
+        },
+        {
+          "option_id": "V",
+          "text": "Од јачине B"
+        },
+        {
+          "option_id": "G",
+          "text": "Од апсолутне вредности наелектрисања"
+        }
+      ],
+      "correct_option_id": "B",
+      "explanation": "T=2πm/(|q|B), па брзина не улази у израз.",
+      "common_errors": [
+        {
+          "message": "Провери дефиницију, смер вектора и услове примене одговарајуће релације.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "MAG-III-001",
+          "role": "derived_pass_bank",
+          "source_state": "PASS_DERIVED"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "lesson_boundary": "pass",
+        "review_date": "2026-09-27"
+      },
+      "adaptive": {
+        "primary_concept_id": "mag-07",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "MAG-07-02",
+      "published_in": "3.0.0"
+    },
+    {
+      "id": "PHY-G3-MAG-000027",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 3,
+      "track": [
+        "PM",
+        "DJ"
+      ],
+      "domain_id": "MAG",
+      "domain_name": "Магнетно поље",
+      "subdomain_id": "MAG-07",
+      "subdomain_name": "Период и завојна путања",
+      "lesson_ids": [
+        "MAG-07"
+      ],
+      "unlock_order": 7,
+      "outcome_ids": [
+        "G3-MAG-07"
+      ],
+      "concept_ids": [
+        "mag-07"
+      ],
+      "difficulty": "intermediate",
+      "achievement_level": "N2",
+      "cognitive_process": "application",
+      "question_type": "single_choice",
+      "nature": "theory",
+      "representation": "scheme",
+      "stem": "Ако честица има и v⊥ и v∥ у односу на B, њена путања је:",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "парабола"
+        },
+        {
+          "option_id": "B",
+          "text": "просторна завојница (хеликс)"
+        },
+        {
+          "option_id": "V",
+          "text": "кружница у равни нормалној на B без померања"
+        },
+        {
+          "option_id": "G",
+          "text": "права линија нормална на B"
+        }
+      ],
+      "correct_option_id": "B",
+      "explanation": "v⊥ даје кружно кретање, а v∥ равномерно померање дуж B; резултат је хеликс.",
+      "common_errors": [
+        {
+          "message": "Провери дефиницију, смер вектора и услове примене одговарајуће релације.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "MAG-III-001",
+          "role": "derived_pass_bank",
+          "source_state": "PASS_DERIVED"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "lesson_boundary": "pass",
+        "review_date": "2026-09-27"
+      },
+      "adaptive": {
+        "primary_concept_id": "mag-07",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "MAG-07-03",
+      "published_in": "3.0.0"
+    },
+    {
+      "id": "PHY-G3-MAG-000028",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 3,
+      "track": [
+        "PM",
+        "DJ"
+      ],
+      "domain_id": "MAG",
+      "domain_name": "Магнетно поље",
+      "subdomain_id": "MAG-07",
+      "subdomain_name": "Период и завојна путања",
+      "lesson_ids": [
+        "MAG-07"
+      ],
+      "unlock_order": 7,
+      "outcome_ids": [
+        "G3-MAG-07"
+      ],
+      "concept_ids": [
+        "mag-07"
+      ],
+      "difficulty": "advanced",
+      "achievement_level": "N3",
+      "cognitive_process": "reasoning",
+      "question_type": "single_choice",
+      "nature": "calculation",
+      "representation": "scheme",
+      "stem": "Корак хеликса h једнак је:",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v⊥T"
+        },
+        {
+          "option_id": "B",
+          "text": "v∥T"
+        },
+        {
+          "option_id": "V",
+          "text": "2πr/T"
+        },
+        {
+          "option_id": "G",
+          "text": "vB/|q|"
+        }
+      ],
+      "correct_option_id": "B",
+      "explanation": "За један период компонента v∥ помери честицу за h=v∥T.",
+      "common_errors": [
+        {
+          "message": "Провери дефиницију, смер вектора и услове примене одговарајуће релације.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "MAG-III-001",
+          "role": "derived_pass_bank",
+          "source_state": "PASS_DERIVED"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "lesson_boundary": "pass",
+        "review_date": "2026-09-27"
+      },
+      "adaptive": {
+        "primary_concept_id": "mag-07",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "MAG-07-04",
+      "published_in": "3.0.0"
+    },
+    {
+      "id": "PHY-G3-MAG-000029",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 3,
+      "track": [
+        "PM",
+        "DJ"
+      ],
+      "domain_id": "MAG",
+      "domain_name": "Магнетно поље",
+      "subdomain_id": "MAG-08",
+      "subdomain_name": "Примене кретања честица",
+      "lesson_ids": [
+        "MAG-08"
+      ],
+      "unlock_order": 8,
+      "outcome_ids": [
+        "G3-MAG-08"
+      ],
+      "concept_ids": [
+        "mag-08"
+      ],
+      "difficulty": "intermediate",
+      "achievement_level": "N2",
+      "cognitive_process": "application",
+      "question_type": "single_choice",
+      "nature": "theory",
+      "representation": "text",
+      "stem": "На ком принципу магнетни део масеног спектрометра раздваја јоне различитог m/|q| при контролисаним условима?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "Различитој тежини у гравитационом пољу"
+        },
+        {
+          "option_id": "B",
+          "text": "Различитом полупречнику путање у магнетном пољу"
+        },
+        {
+          "option_id": "V",
+          "text": "Различитој температури јона"
+        },
+        {
+          "option_id": "G",
+          "text": "Различитом електричном отпору јона"
+        }
+      ],
+      "correct_option_id": "B",
+      "explanation": "Пошто је r=mv/(|q|B), различит однос m/|q| даје различите полупречнике при истим v и B.",
+      "common_errors": [
+        {
+          "message": "Провери дефиницију, смер вектора и услове примене одговарајуће релације.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "MAG-III-001",
+          "role": "derived_pass_bank",
+          "source_state": "PASS_DERIVED"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "lesson_boundary": "pass",
+        "review_date": "2026-09-27"
+      },
+      "adaptive": {
+        "primary_concept_id": "mag-08",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "MAG-08-01",
+      "published_in": "3.0.0"
+    },
+    {
+      "id": "PHY-G3-MAG-000030",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 3,
+      "track": [
+        "PM",
+        "DJ"
+      ],
+      "domain_id": "MAG",
+      "domain_name": "Магнетно поље",
+      "subdomain_id": "MAG-08",
+      "subdomain_name": "Примене кретања честица",
+      "lesson_ids": [
+        "MAG-08"
+      ],
+      "unlock_order": 8,
+      "outcome_ids": [
+        "G3-MAG-08"
+      ],
+      "concept_ids": [
+        "mag-08"
+      ],
+      "difficulty": "intermediate",
+      "achievement_level": "N2",
+      "cognitive_process": "application",
+      "question_type": "single_choice",
+      "nature": "calculation",
+      "representation": "table",
+      "stem": "Два јона имају исто |q| и исту брзину и улазе нормално у исто B. Јон веће масе има:",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "мањи полупречник"
+        },
+        {
+          "option_id": "B",
+          "text": "већи полупречник"
+        },
+        {
+          "option_id": "V",
+          "text": "исти полупречник"
+        },
+        {
+          "option_id": "G",
+          "text": "праволинијску путању"
+        }
+      ],
+      "correct_option_id": "B",
+      "explanation": "Из r=mv/(|q|B) следи да већа маса даје већи полупречник.",
+      "common_errors": [
+        {
+          "message": "Провери дефиницију, смер вектора и услове примене одговарајуће релације.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "MAG-III-001",
+          "role": "derived_pass_bank",
+          "source_state": "PASS_DERIVED"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "lesson_boundary": "pass",
+        "review_date": "2026-09-27"
+      },
+      "adaptive": {
+        "primary_concept_id": "mag-08",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "MAG-08-02",
+      "published_in": "3.0.0"
+    },
+    {
+      "id": "PHY-G3-MAG-000031",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 3,
+      "track": [
+        "PM",
+        "DJ"
+      ],
+      "domain_id": "MAG",
+      "domain_name": "Магнетно поље",
+      "subdomain_id": "MAG-08",
+      "subdomain_name": "Примене кретања честица",
+      "lesson_ids": [
+        "MAG-08"
+      ],
+      "unlock_order": 8,
+      "outcome_ids": [
+        "G3-MAG-08"
+      ],
+      "concept_ids": [
+        "mag-08"
+      ],
+      "difficulty": "advanced",
+      "achievement_level": "N3",
+      "cognitive_process": "reasoning",
+      "question_type": "single_choice",
+      "nature": "calculation",
+      "representation": "table",
+      "stem": "Два јона имају исту масу и брзину, али други има двоструко веће |q|. Његов полупречник је:",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "2r"
+        },
+        {
+          "option_id": "B",
+          "text": "r/2"
+        },
+        {
+          "option_id": "V",
+          "text": "4r"
+        },
+        {
+          "option_id": "G",
+          "text": "r"
+        }
+      ],
+      "correct_option_id": "B",
+      "explanation": "Полупречник је обрнуто пропорционалан |q|.",
+      "common_errors": [
+        {
+          "message": "Провери дефиницију, смер вектора и услове примене одговарајуће релације.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "MAG-III-001",
+          "role": "derived_pass_bank",
+          "source_state": "PASS_DERIVED"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "lesson_boundary": "pass",
+        "review_date": "2026-09-27"
+      },
+      "adaptive": {
+        "primary_concept_id": "mag-08",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "MAG-08-03",
+      "published_in": "3.0.0"
+    },
+    {
+      "id": "PHY-G3-MAG-000032",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 3,
+      "track": [
+        "PM",
+        "DJ"
+      ],
+      "domain_id": "MAG",
+      "domain_name": "Магнетно поље",
+      "subdomain_id": "MAG-08",
+      "subdomain_name": "Примене кретања честица",
+      "lesson_ids": [
+        "MAG-08"
+      ],
+      "unlock_order": 8,
+      "outcome_ids": [
+        "G3-MAG-08"
+      ],
+      "concept_ids": [
+        "mag-08"
+      ],
+      "difficulty": "advanced",
+      "achievement_level": "N3",
+      "cognitive_process": "reasoning",
+      "question_type": "single_choice",
+      "nature": "theory",
+      "representation": "scheme",
+      "stem": "Зашто се смер скретања негативног јона не сме одредити само правилом за позитивно наелектрисање?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "Зато што негативни јон нема брзину"
+        },
+        {
+          "option_id": "B",
+          "text": "Зато што је сила за q<0 супротна смеру v×B"
+        },
+        {
+          "option_id": "V",
+          "text": "Зато што B мења знак наелектрисања"
+        },
+        {
+          "option_id": "G",
+          "text": "Зато што маса одређује смер силе"
+        }
+      ],
+      "correct_option_id": "B",
+      "explanation": "Векторски облик је F=q(v×B); негативан q обрће смер у односу на v×B.",
+      "common_errors": [
+        {
+          "message": "Провери дефиницију, смер вектора и услове примене одговарајуће релације.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "MAG-III-001",
+          "role": "derived_pass_bank",
+          "source_state": "PASS_DERIVED"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "lesson_boundary": "pass",
+        "review_date": "2026-09-27"
+      },
+      "adaptive": {
+        "primary_concept_id": "mag-08",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "MAG-08-04",
+      "published_in": "3.0.0"
+    }
+  ]
+}
