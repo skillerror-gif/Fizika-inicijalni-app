@@ -8,7 +8,8 @@ assert len(m["packages"])==1
 pkg=m["packages"][0]
 path=root/"assets/content"/pkg["file"]
 raw=path.read_bytes()
-assert hashlib.sha256(raw).hexdigest()==pkg["sha256"], "SHA-256 mismatch"
+actual_sha256=hashlib.sha256(raw).hexdigest()
+assert actual_sha256==pkg["sha256"], f"SHA-256 mismatch: expected {pkg['sha256']}, actual {actual_sha256}"
 p=json.loads(raw)
 qs=p["questions"]
 assert len(qs)==m["question_count"]==pkg["question_count"]==136
