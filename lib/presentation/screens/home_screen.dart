@@ -168,52 +168,6 @@ MasterLevel _level(String a) {
   }
 }
 
-void _openMasterTest(BuildContext context, List<AppQuestion> qs) {
-  final map = {for (final q in qs) q.id: q};
-  final tq = qs
-      .map(
-        (q) => TestQuestion(
-          id: q.id,
-          unlockOrder: q.unlock,
-          level: _level(q.achievementLevel),
-          nature: q.nature,
-          representation: q.representation,
-          subdomainId: q.subdomainId,
-          correctOptionId: q.correct,
-          equivalenceGroup: q.equivalenceGroup,
-          published: true,
-          scientificPass: true,
-        ),
-      )
-      .toList();
-  try {
-    final picked = MasterTestGenerator().generate(tq, 35);
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (_) =>
-            QuizScreen(questions: picked.map((x) => map[x.id]!).toList()),
-      ),
-    );
-  } on TestGenerationException {
-    showDialog(
-      context: context,
-      builder: (_) => AlertDialog(
-        title: const Text('Test trenutno nije moguće sastaviti'),
-        content: const Text(
-          'Trenutno nema dovoljno odgovarajućih pitanja za sastavljanje testa. Pokušaj ponovo kasnije.',
-        ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.pop(context),
-            child: const Text('U redu'),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key, this.grade = 1});
   final int grade;
