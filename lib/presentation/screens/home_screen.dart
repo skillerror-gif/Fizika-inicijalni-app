@@ -631,7 +631,7 @@ class _TestPersonalizationScreenState extends State<TestPersonalizationScreen> {
               ListTile(
                 leading: Checkbox(value: areaSelected(area), onChanged: (v) => toggleArea(area, v == true)),
                 title: Text(mainAreaNames[area] ?? area),
-                subtitle: Text('\${ids.length} obrađenih celina'),
+                subtitle: Text('${ids.length} obrađenih celina'),
                 trailing: Icon(open ? Icons.expand_less : Icons.expand_more),
                 onTap: () => setState(() => open ? expandedAreas.remove(area) : expandedAreas.add(area)),
               ),
@@ -692,7 +692,7 @@ class _TestQuizScreenState extends State<TestQuizScreen> {
     final q = widget.questions[i];
     final selected = answers[q.id];
     return Scaffold(
-      appBar: AppBar(title: Text('Test • \${i + 1}/\${widget.questions.length}')),
+      appBar: AppBar(title: Text('Test • ${i + 1}/${widget.questions.length}')),
       body: ListView(
         padding: const EdgeInsets.all(20),
         children: [
@@ -704,7 +704,7 @@ class _TestQuizScreenState extends State<TestQuizScreen> {
           const SizedBox(height: 12),
           VisualQuestionPanel(representation: q.representation, media: q.media),
           const SizedBox(height: 16),
-          ...q.options.entries.map((e) => Card(child: RadioListTile<String>(value: e.key, groupValue: selected, title: Text('\${e.key}. \${e.value}'), onChanged: (v) => v == null ? null : select(v)))),
+          ...q.options.entries.map((e) => Card(child: RadioListTile<String>(value: e.key, groupValue: selected, title: Text('${e.key}. ${e.value}'), onChanged: (v) => v == null ? null : select(v)))),
           const SizedBox(height: 20),
           FilledButton(onPressed: selected == null ? null : next, child: Text(i + 1 == widget.questions.length ? 'Predaj test' : 'Sledeće pitanje')),
           const SizedBox(height: 8),
