@@ -11,7 +11,7 @@
     {
       "id": "PHY-G3-MAG-000001",
       "schema_version": 1,
-      "content_revision": 1,
+      "content_revision": 2,
       "status": "published",
       "grade": 3,
       "track": [
@@ -42,11 +42,11 @@
       "options": [
         {
           "option_id": "A",
-          "text": "Путање наелектрисаних честица"
+          "text": "Модел који показује правац и смер вектора B"
         },
         {
           "option_id": "B",
-          "text": "Модел који показује правац и смер вектора B"
+          "text": "Путање наелектрисаних честица"
         },
         {
           "option_id": "V",
@@ -57,7 +57,7 @@
           "text": "Границе области у којој нема поља"
         }
       ],
-      "correct_option_id": "B",
+      "correct_option_id": "A",
       "explanation": "Линије поља приказују правац и смер вектора магнетне индукције B; нису путање честица.",
       "common_errors": [
         {
@@ -100,7 +100,7 @@
     {
       "id": "PHY-G3-MAG-000002",
       "schema_version": 1,
-      "content_revision": 1,
+      "content_revision": 2,
       "status": "published",
       "grade": 3,
       "track": [
@@ -135,7 +135,7 @@
         },
         {
           "option_id": "B",
-          "text": "У свакој тачки тангента на линију даје правац вектора B"
+          "text": "Постоје само унутар магнета"
         },
         {
           "option_id": "V",
@@ -143,10 +143,10 @@
         },
         {
           "option_id": "G",
-          "text": "Постоје само унутар магнета"
+          "text": "У свакој тачки тангента на линију даје правац вектора B"
         }
       ],
-      "correct_option_id": "B",
+      "correct_option_id": "G",
       "explanation": "Тангента на линију поља у посматраној тачки одређује правац вектора B.",
       "common_errors": [
         {
@@ -189,7 +189,7 @@
     {
       "id": "PHY-G3-MAG-000003",
       "schema_version": 1,
-      "content_revision": 1,
+      "content_revision": 2,
       "status": "published",
       "grade": 3,
       "track": [
@@ -224,18 +224,18 @@
         },
         {
           "option_id": "B",
-          "text": "Струја ствара магнетно поље око проводника"
+          "text": "Компас повећава јачину струје"
         },
         {
           "option_id": "V",
-          "text": "Компас повећава јачину струје"
+          "text": "Струја ствара магнетно поље око проводника"
         },
         {
           "option_id": "G",
           "text": "Земљино магнетно поље нестаје"
         }
       ],
-      "correct_option_id": "B",
+      "correct_option_id": "V",
       "explanation": "Ерстедов оглед показује магнетни ефекат електричне струје.",
       "common_errors": [
         {
@@ -456,7 +456,7 @@
     {
       "id": "PHY-G3-MAG-000006",
       "schema_version": 1,
-      "content_revision": 1,
+      "content_revision": 2,
       "status": "published",
       "grade": 3,
       "track": [
@@ -487,11 +487,11 @@
       "options": [
         {
           "option_id": "A",
-          "text": "остати исто"
+          "text": "удвостручити се"
         },
         {
           "option_id": "B",
-          "text": "удвостручити се"
+          "text": "остати исто"
         },
         {
           "option_id": "V",
@@ -502,7 +502,7 @@
           "text": "порасти четири пута"
         }
       ],
-      "correct_option_id": "B",
+      "correct_option_id": "A",
       "explanation": "B је директно пропорционално струји I.",
       "common_errors": [
         {
@@ -545,7 +545,7 @@
     {
       "id": "PHY-G3-MAG-000007",
       "schema_version": 1,
-      "content_revision": 1,
+      "content_revision": 2,
       "status": "published",
       "grade": 3,
       "track": [
@@ -580,7 +580,7 @@
         },
         {
           "option_id": "B",
-          "text": "B/2"
+          "text": "B"
         },
         {
           "option_id": "V",
@@ -588,10 +588,10 @@
         },
         {
           "option_id": "G",
-          "text": "B"
+          "text": "B/2"
         }
       ],
-      "correct_option_id": "B",
+      "correct_option_id": "G",
       "explanation": "Пошто је B обрнуто пропорционално r, удвостручење растојања преполовљава B.",
       "common_errors": [
         {
@@ -634,7 +634,7 @@
     {
       "id": "PHY-G3-MAG-000008",
       "schema_version": 1,
-      "content_revision": 1,
+      "content_revision": 2,
       "status": "published",
       "grade": 3,
       "track": [
@@ -669,18 +669,18 @@
         },
         {
           "option_id": "B",
-          "text": "1,0·10⁻⁵ T"
+          "text": "5,0·10⁻⁵ T"
         },
         {
           "option_id": "V",
-          "text": "5,0·10⁻⁵ T"
+          "text": "1,0·10⁻⁵ T"
         },
         {
           "option_id": "G",
           "text": "1,0·10⁻⁴ T"
         }
       ],
-      "correct_option_id": "B",
+      "correct_option_id": "V",
       "explanation": "B=μ₀I/(2πr)=1,0·10⁻⁵ T=10 μT.",
       "common_errors": [
         {
@@ -723,7 +723,7 @@
     {
       "id": "PHY-G3-MAG-000009",
       "schema_version": 1,
-      "content_revision": 1,
+      "content_revision": 2,
       "status": "published",
       "grade": 3,
       "track": [
@@ -758,18 +758,18 @@
         },
         {
           "option_id": "B",
-          "text": "B и нормале на површину"
+          "text": "нормале и ивице површине"
         },
         {
           "option_id": "V",
-          "text": "нормале и ивице површине"
+          "text": "B и нормале на површину"
         },
         {
           "option_id": "G",
           "text": "B и смера струје"
         }
       ],
-      "correct_option_id": "B",
+      "correct_option_id": "V",
       "explanation": "У дефиницији магнетног флукса α се мери између B и нормале на површину.",
       "common_errors": [
         {
@@ -901,7 +901,7 @@
     {
       "id": "PHY-G3-MAG-000011",
       "schema_version": 1,
-      "content_revision": 1,
+      "content_revision": 2,
       "status": "published",
       "grade": 3,
       "track": [
@@ -932,11 +932,11 @@
       "options": [
         {
           "option_id": "A",
-          "text": "0 Wb"
+          "text": "0,10 Wb"
         },
         {
           "option_id": "B",
-          "text": "0,10 Wb"
+          "text": "0 Wb"
         },
         {
           "option_id": "V",
@@ -947,7 +947,7 @@
           "text": "2,5 Wb"
         }
       ],
-      "correct_option_id": "B",
+      "correct_option_id": "A",
       "explanation": "Φ=BS=0,50·0,20=0,10 Wb.",
       "common_errors": [
         {
@@ -990,7 +990,7 @@
     {
       "id": "PHY-G3-MAG-000012",
       "schema_version": 1,
-      "content_revision": 1,
+      "content_revision": 2,
       "status": "published",
       "grade": 3,
       "track": [
@@ -1025,7 +1025,7 @@
         },
         {
           "option_id": "B",
-          "text": "1/2"
+          "text": "0"
         },
         {
           "option_id": "V",
@@ -1033,10 +1033,10 @@
         },
         {
           "option_id": "G",
-          "text": "0"
+          "text": "1/2"
         }
       ],
-      "correct_option_id": "B",
+      "correct_option_id": "G",
       "explanation": "Φ₂/Φ₁=cos60°/cos0°=1/2.",
       "common_errors": [
         {
@@ -1079,7 +1079,7 @@
     {
       "id": "PHY-G3-MAG-000013",
       "schema_version": 1,
-      "content_revision": 1,
+      "content_revision": 2,
       "status": "published",
       "grade": 3,
       "track": [
@@ -1114,7 +1114,7 @@
         },
         {
           "option_id": "B",
-          "text": "F=BIl sinα"
+          "text": "F=BI/l"
         },
         {
           "option_id": "V",
@@ -1122,10 +1122,10 @@
         },
         {
           "option_id": "G",
-          "text": "F=BI/l"
+          "text": "F=BIl sinα"
         }
       ],
-      "correct_option_id": "B",
+      "correct_option_id": "G",
       "explanation": "За прав проводник важи F=BIl sinα, где је α угао између смера струје и B.",
       "common_errors": [
         {
@@ -1168,7 +1168,7 @@
     {
       "id": "PHY-G3-MAG-000014",
       "schema_version": 1,
-      "content_revision": 1,
+      "content_revision": 2,
       "status": "published",
       "grade": 3,
       "track": [
@@ -1203,18 +1203,18 @@
         },
         {
           "option_id": "B",
-          "text": "Када је смер струје паралелан B"
+          "text": "Само када је струја максимална"
         },
         {
           "option_id": "V",
-          "text": "Само када је струја максимална"
+          "text": "Када је смер струје паралелан B"
         },
         {
           "option_id": "G",
           "text": "Када је α=90°"
         }
       ],
-      "correct_option_id": "B",
+      "correct_option_id": "V",
       "explanation": "За паралелне правце је α=0° или 180°, па је sinα=0.",
       "common_errors": [
         {
@@ -1346,7 +1346,7 @@
     {
       "id": "PHY-G3-MAG-000016",
       "schema_version": 1,
-      "content_revision": 1,
+      "content_revision": 2,
       "status": "published",
       "grade": 3,
       "track": [
@@ -1377,11 +1377,11 @@
       "options": [
         {
           "option_id": "A",
-          "text": "2F"
+          "text": "4F"
         },
         {
           "option_id": "B",
-          "text": "4F"
+          "text": "2F"
         },
         {
           "option_id": "V",
@@ -1392,7 +1392,7 @@
           "text": "F"
         }
       ],
-      "correct_option_id": "B",
+      "correct_option_id": "A",
       "explanation": "Из F=BIl sinα следи да два фактора ×2 дају силу ×4.",
       "common_errors": [
         {
@@ -1435,7 +1435,7 @@
     {
       "id": "PHY-G3-MAG-000017",
       "schema_version": 1,
-      "content_revision": 1,
+      "content_revision": 2,
       "status": "published",
       "grade": 3,
       "track": [
@@ -1466,11 +1466,11 @@
       "options": [
         {
           "option_id": "A",
-          "text": "F=qE"
+          "text": "F=|q|vB sinα"
         },
         {
           "option_id": "B",
-          "text": "F=|q|vB sinα"
+          "text": "F=qE"
         },
         {
           "option_id": "V",
@@ -1481,7 +1481,7 @@
           "text": "F=mv²/r без услова"
         }
       ],
-      "correct_option_id": "B",
+      "correct_option_id": "A",
       "explanation": "За наелектрисану честицу у магнетном пољу F=|q|vB sinα.",
       "common_errors": [
         {
@@ -1524,7 +1524,7 @@
     {
       "id": "PHY-G3-MAG-000018",
       "schema_version": 1,
-      "content_revision": 1,
+      "content_revision": 2,
       "status": "published",
       "grade": 3,
       "track": [
@@ -1559,7 +1559,7 @@
         },
         {
           "option_id": "B",
-          "text": "Када је v паралелно или антипаралелно B"
+          "text": "Када је B хомогено"
         },
         {
           "option_id": "V",
@@ -1567,10 +1567,10 @@
         },
         {
           "option_id": "G",
-          "text": "Када је B хомогено"
+          "text": "Када је v паралелно или антипаралелно B"
         }
       ],
-      "correct_option_id": "B",
+      "correct_option_id": "G",
       "explanation": "За α=0° или 180° је sinα=0.",
       "common_errors": [
         {
@@ -1613,7 +1613,7 @@
     {
       "id": "PHY-G3-MAG-000019",
       "schema_version": 1,
-      "content_revision": 1,
+      "content_revision": 2,
       "status": "published",
       "grade": 3,
       "track": [
@@ -1648,18 +1648,18 @@
         },
         {
           "option_id": "B",
-          "text": "Супротни су"
+          "text": "Оба су дуж брзине"
         },
         {
           "option_id": "V",
-          "text": "Оба су дуж брзине"
+          "text": "Супротни су"
         },
         {
           "option_id": "G",
           "text": "Оба су дуж B"
         }
       ],
-      "correct_option_id": "B",
+      "correct_option_id": "V",
       "explanation": "Због супротних знакова наелектрисања смерови q(v×B) су супротни.",
       "common_errors": [
         {
@@ -1880,7 +1880,7 @@
     {
       "id": "PHY-G3-MAG-000022",
       "schema_version": 1,
-      "content_revision": 1,
+      "content_revision": 2,
       "status": "published",
       "grade": 3,
       "track": [
@@ -1911,11 +1911,11 @@
       "options": [
         {
           "option_id": "A",
-          "text": "r=|q|B/(mv)"
+          "text": "r=mv/(|q|B)"
         },
         {
           "option_id": "B",
-          "text": "r=mv/(|q|B)"
+          "text": "r=|q|B/(mv)"
         },
         {
           "option_id": "V",
@@ -1926,7 +1926,7 @@
           "text": "r=|q|v/(mB)"
         }
       ],
-      "correct_option_id": "B",
+      "correct_option_id": "A",
       "explanation": "Из |q|vB=mv²/r следи r=mv/(|q|B).",
       "common_errors": [
         {
@@ -1969,7 +1969,7 @@
     {
       "id": "PHY-G3-MAG-000023",
       "schema_version": 1,
-      "content_revision": 1,
+      "content_revision": 2,
       "status": "published",
       "grade": 3,
       "track": [
@@ -2004,7 +2004,7 @@
         },
         {
           "option_id": "B",
-          "text": "2r"
+          "text": "не мења се"
         },
         {
           "option_id": "V",
@@ -2012,10 +2012,10 @@
         },
         {
           "option_id": "G",
-          "text": "не мења се"
+          "text": "2r"
         }
       ],
-      "correct_option_id": "B",
+      "correct_option_id": "G",
       "explanation": "Полупречник r је директно пропорционалан брзини v.",
       "common_errors": [
         {
@@ -2058,7 +2058,7 @@
     {
       "id": "PHY-G3-MAG-000024",
       "schema_version": 1,
-      "content_revision": 1,
+      "content_revision": 2,
       "status": "published",
       "grade": 3,
       "track": [
@@ -2093,18 +2093,18 @@
         },
         {
           "option_id": "B",
-          "text": "Не мења се"
+          "text": "Опада"
         },
         {
           "option_id": "V",
-          "text": "Опада"
+          "text": "Не мења се"
         },
         {
           "option_id": "G",
           "text": "Наизменично расте и опада"
         }
       ],
-      "correct_option_id": "B",
+      "correct_option_id": "V",
       "explanation": "Магнетна сила је нормална на брзину и не врши рад, па не мења кинетичку енергију.",
       "common_errors": [
         {
@@ -2147,7 +2147,7 @@
     {
       "id": "PHY-G3-MAG-000025",
       "schema_version": 1,
-      "content_revision": 1,
+      "content_revision": 2,
       "status": "published",
       "grade": 3,
       "track": [
@@ -2182,18 +2182,18 @@
         },
         {
           "option_id": "B",
-          "text": "T=2πm/(|q|B)"
+          "text": "T=mv/(|q|B)"
         },
         {
           "option_id": "V",
-          "text": "T=mv/(|q|B)"
+          "text": "T=2πm/(|q|B)"
         },
         {
           "option_id": "G",
           "text": "T=2πr/B"
         }
       ],
-      "correct_option_id": "B",
+      "correct_option_id": "V",
       "explanation": "Комбиновањем кружног кретања и Лоренцове силе добија се T=2πm/(|q|B).",
       "common_errors": [
         {
@@ -2325,7 +2325,7 @@
     {
       "id": "PHY-G3-MAG-000027",
       "schema_version": 1,
-      "content_revision": 1,
+      "content_revision": 2,
       "status": "published",
       "grade": 3,
       "track": [
@@ -2356,11 +2356,11 @@
       "options": [
         {
           "option_id": "A",
-          "text": "парабола"
+          "text": "просторна завојница (хеликс)"
         },
         {
           "option_id": "B",
-          "text": "просторна завојница (хеликс)"
+          "text": "парабола"
         },
         {
           "option_id": "V",
@@ -2371,7 +2371,7 @@
           "text": "права линија нормална на B"
         }
       ],
-      "correct_option_id": "B",
+      "correct_option_id": "A",
       "explanation": "v⊥ даје кружно кретање, а v∥ равномерно померање дуж B; резултат је хеликс.",
       "common_errors": [
         {
@@ -2414,7 +2414,7 @@
     {
       "id": "PHY-G3-MAG-000028",
       "schema_version": 1,
-      "content_revision": 1,
+      "content_revision": 2,
       "status": "published",
       "grade": 3,
       "track": [
@@ -2449,7 +2449,7 @@
         },
         {
           "option_id": "B",
-          "text": "v∥T"
+          "text": "vB/|q|"
         },
         {
           "option_id": "V",
@@ -2457,10 +2457,10 @@
         },
         {
           "option_id": "G",
-          "text": "vB/|q|"
+          "text": "v∥T"
         }
       ],
-      "correct_option_id": "B",
+      "correct_option_id": "G",
       "explanation": "За један период компонента v∥ помери честицу за h=v∥T.",
       "common_errors": [
         {
@@ -2503,7 +2503,7 @@
     {
       "id": "PHY-G3-MAG-000029",
       "schema_version": 1,
-      "content_revision": 2,
+      "content_revision": 3,
       "status": "published",
       "grade": 3,
       "track": [
@@ -2538,7 +2538,7 @@
         },
         {
           "option_id": "B",
-          "text": "Различитом полупречнику путање у магнетном пољу"
+          "text": "Различитом електричном отпору јона"
         },
         {
           "option_id": "V",
@@ -2546,10 +2546,10 @@
         },
         {
           "option_id": "G",
-          "text": "Различитом електричном отпору јона"
+          "text": "Различитом полупречнику путање у магнетном пољу"
         }
       ],
-      "correct_option_id": "B",
+      "correct_option_id": "G",
       "explanation": "За кретање нормално на B важи r=mv/(|q|B). При истим контролисаним v и B различит однос m/|q| даје различите полупречнике путања.",
       "common_errors": [
         {
@@ -2592,7 +2592,7 @@
     {
       "id": "PHY-G3-MAG-000030",
       "schema_version": 1,
-      "content_revision": 1,
+      "content_revision": 2,
       "status": "published",
       "grade": 3,
       "track": [
@@ -2627,18 +2627,18 @@
         },
         {
           "option_id": "B",
-          "text": "већи полупречник"
+          "text": "исти полупречник"
         },
         {
           "option_id": "V",
-          "text": "исти полупречник"
+          "text": "већи полупречник"
         },
         {
           "option_id": "G",
           "text": "праволинијску путању"
         }
       ],
-      "correct_option_id": "B",
+      "correct_option_id": "V",
       "explanation": "Из r=mv/(|q|B) следи да већа маса даје већи полупречник.",
       "common_errors": [
         {
@@ -2770,7 +2770,7 @@
     {
       "id": "PHY-G3-MAG-000032",
       "schema_version": 1,
-      "content_revision": 1,
+      "content_revision": 2,
       "status": "published",
       "grade": 3,
       "track": [
@@ -2801,11 +2801,11 @@
       "options": [
         {
           "option_id": "A",
-          "text": "Зато што негативни јон нема брзину"
+          "text": "Зато што је сила за q<0 супротна смеру v×B"
         },
         {
           "option_id": "B",
-          "text": "Зато што је сила за q<0 супротна смеру v×B"
+          "text": "Зато што негативни јон нема брзину"
         },
         {
           "option_id": "V",
@@ -2816,7 +2816,7 @@
           "text": "Зато што маса одређује смер силе"
         }
       ],
-      "correct_option_id": "B",
+      "correct_option_id": "A",
       "explanation": "Векторски облик је F=q(v×B); негативан q обрће смер у односу на v×B.",
       "common_errors": [
         {
