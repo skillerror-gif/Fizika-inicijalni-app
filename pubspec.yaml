@@ -1,7 +1,7 @@
 name: fizika_adaptivno_vezbanje
 description: Offline-first adaptive physics practice app.
 publish_to: none
-version: 0.1.0+1
+version: 0.1.1+2
 environment:
   sdk: '>=3.4.0 <4.0.0'
 dependencies:
@@ -19,4 +19,4 @@ flutter:
   uses-material-design: true
   assets:
     - assets/content/manifest.json
-    - assets/content/g1_kinematika_1.0.0.json
+    - assets/content/g3_magnetno_polje_3.0.0_PASS.json
