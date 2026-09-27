@@ -21,28 +21,39 @@ jobs:
         run: flutter create --platforms=android --org rs.fizika.gimnazija --project-name fizika_adaptivno_vezbanje .
       - name: Build Tesla + motor launcher icons
         run: |
-          python3 -m pip install --user Pillow
-          python3 - <<'PY'
-          from pathlib import Path
-          from PIL import Image, ImageOps
-
-          src = Image.open("assets/branding/tesla_motor_icon.jpg").convert("RGB")
-          sizes = {
-              "mdpi": 48,
-              "hdpi": 72,
-              "xhdpi": 96,
-              "xxhdpi": 144,
-              "xxxhdpi": 192,
-          }
-          for density, size in sizes.items():
-              out = Path(f"android/app/src/main/res/mipmap-{density}")
-              out.mkdir(parents=True, exist_ok=True)
-              for old in out.glob("ic_launcher*"):
-                  old.unlink()
-              icon = ImageOps.fit(src, (size, size), method=Image.Resampling.LANCZOS)
-              icon.save(out / "ic_launcher.png", optimize=True)
-              icon.save(out / "ic_launcher_round.png", optimize=True)
-          PY
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq imagemagick
+          cat > /tmp/tesla_motor.svg <<'SVG'
+          <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+            <rect width="512" height="512" rx="96" fill="#071a33"/>
+            <circle cx="160" cy="145" r="72" fill="#e8edf5"/>
+            <path d="M92 139c8-77 126-105 151-16-33-30-94-35-151 16z" fill="#15243a"/>
+            <path d="M118 180c25 22 62 22 87 0-7 51-80 52-87 0z" fill="#d5dbe5"/>
+            <path d="M141 166c15 10 28 10 43 0-4 20-39 20-43 0z" fill="#26354a"/>
+            <path d="M74 335c10-95 51-135 88-135s78 40 88 135z" fill="#1c2c44"/>
+            <path d="M154 210l-25 125h65l-25-125z" fill="#f2f4f8"/>
+            <g transform="translate(245 210)">
+              <rect x="0" y="36" width="215" height="126" rx="25" fill="#34465e"/>
+              <circle cx="108" cy="99" r="76" fill="#1574c5"/>
+              <circle cx="108" cy="99" r="57" fill="#ed6a2c"/>
+              <circle cx="108" cy="99" r="36" fill="#172638"/>
+              <circle cx="108" cy="99" r="15" fill="#dfe6ee"/>
+              <rect x="-45" y="88" width="153" height="22" rx="11" fill="#cbd4df"/>
+              <path d="M52 57c28-25 83-25 111 0M52 141c28 25 83 25 111 0" fill="none" stroke="#ffb14a" stroke-width="12"/>
+            </g>
+            <path d="M229 80c48-42 105-42 153 0s79 42 112 4" fill="none" stroke="#32a8ff" stroke-width="9"/>
+            <path d="M235 113c42-32 87-32 129 0s84 33 126 0" fill="none" stroke="#ff594f" stroke-width="7"/>
+          </svg>
+          SVG
+          for spec in mdpi:48 hdpi:72 xhdpi:96 xxhdpi:144 xxxhdpi:192; do
+            density="${spec%%:*}"
+            size="${spec##*:}"
+            out="android/app/src/main/res/mipmap-$density"
+            mkdir -p "$out"
+            rm -f "$out"/ic_launcher*
+            convert -background none /tmp/tesla_motor.svg -resize "${size}x${size}" "$out/ic_launcher.png"
+            cp "$out/ic_launcher.png" "$out/ic_launcher_round.png"
+          done
           sed -i 's|android:icon="@mipmap/ic_launcher"|android:icon="@mipmap/ic_launcher" android:roundIcon="@mipmap/ic_launcher_round"|' android/app/src/main/AndroidManifest.xml
       - name: Set Android visible app name
         run: sed -i 's/android:label="[^"]*"/android:label="Fizika za III razred gimnazije"/' android/app/src/main/AndroidManifest.xml
