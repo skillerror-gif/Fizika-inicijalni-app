@@ -49,3 +49,20 @@ assert nature["theory"]>=7 and nature["calculation"]>=7
 rep=Counter(q["representation"] for q in active)
 assert rep["graph"]>=2 and rep["table"]>=1 and rep["scheme"]>=1
 print("PASS: content 1.3.0, SHA, metadata, cumulative boundary and MASTER pool preflight")
+
+# Grade III magnetic-field bank: independent structural and distribution gate.
+g3=json.loads((root/"assets/content/g3_magnetno_polje_3.0.0_PASS.json").read_text(encoding="utf-8"))
+g3q=g3["questions"]
+assert g3["grade"]==3 and g3["content_version"]=="3.1.0"
+assert g3["question_count"]==len(g3q)==100
+assert len({q["id"] for q in g3q})==100
+assert len({ " ".join(q["stem"].lower().split()) for q in g3q })==100
+assert Counter(q["correct_option_id"] for q in g3q)==Counter({"A":25,"B":25,"V":25,"G":25})
+for q in g3q:
+    assert required <= q.keys(), f"G3 missing fields: {q.get('id')}"
+    assert q["status"]=="published" and q["scientific_status"].lower()=="pass"
+    assert q["grade"]==3 and q["unlock_order"]<=35
+    assert q["correct_option_id"] in {o["option_id"] for o in q["options"]}
+    assert len(q["options"])==4
+    assert q["explanation"].strip() and q["stem"].strip()
+print("PASS: G3 100 unique IDs/stems, balanced key, metadata and answer integrity")
