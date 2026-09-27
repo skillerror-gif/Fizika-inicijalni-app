@@ -44,7 +44,7 @@ jobs:
           PY
           sed -i 's|android:icon="@mipmap/ic_launcher"|android:icon="@mipmap/ic_launcher" android:roundIcon="@mipmap/ic_launcher_round"|' android/app/src/main/AndroidManifest.xml
       - name: Set Android visible app name
-        run: sed -i 's/android:label="[^"]*"/android:label="Fizika za I razred gimnazije"/' android/app/src/main/AndroidManifest.xml
+        run: sed -i 's/android:label="[^"]*"/android:label="Fizika za III razred gimnazije"/' android/app/src/main/AndroidManifest.xml
       - name: Remove generated widget test
         run: rm -f test/widget_test.dart
       - name: Dependencies
