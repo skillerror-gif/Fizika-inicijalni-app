@@ -320,7 +320,12 @@ class _HomeScreenState extends State<HomeScreen> {
                   icon: Icons.assignment,
                   title: 'Test',
                   subtitle: 'Provera znanja',
-                  onTap: () => _openMasterTest(context, qs),
+                  onTap: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) => TestPersonalizationScreen(allQuestions: qs),
+                    ),
+                  ),
                 ),
                 _HomeCard(
                   icon: Icons.insights,
@@ -563,6 +568,147 @@ class _PracticePersonalizationScreenState
                   : 'Vežbaj izabrano (${selectedSubdomains.length})',
             ),
           ),
+        ],
+      ),
+    );
+  }
+}
+
+
+class TestPersonalizationScreen extends StatefulWidget {
+  const TestPersonalizationScreen({super.key, required this.allQuestions});
+  final List<AppQuestion> allQuestions;
+  @override
+  State<TestPersonalizationScreen> createState() => _TestPersonalizationScreenState();
+}
+
+class _TestPersonalizationScreenState extends State<TestPersonalizationScreen> {
+  final Set<String> selectedSubdomains = {};
+  final Set<String> expandedAreas = {};
+  int count = 10;
+  String focus = 'mixed';
+
+  List<String> get areas => widget.allQuestions.map((q) => mainAreaId(q.subdomainId)).toSet().toList()..sort();
+  List<String> subdomains(String area) => widget.allQuestions.where((q) => mainAreaId(q.subdomainId) == area).map((q) => q.subdomainId).toSet().toList()..sort();
+  bool areaSelected(String area) { final ids = subdomains(area); return ids.isNotEmpty && ids.every(selectedSubdomains.contains); }
+  void toggleArea(String area, bool value) { final ids = subdomains(area); setState(() { value ? selectedSubdomains.addAll(ids) : selectedSubdomains.removeAll(ids); }); }
+
+  List<AppQuestion> get eligiblePool {
+    final byLesson = widget.allQuestions.where((q) => selectedSubdomains.isEmpty || selectedSubdomains.contains(q.subdomainId));
+    return (focus == 'mixed' ? byLesson : byLesson.where((q) => q.nature == focus)).toList();
+  }
+
+  void start() {
+    final pool = eligiblePool;
+    if (pool.isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Za izabrane kriterijume trenutno nema pitanja.')));
+      return;
+    }
+    final n = min(count, pool.length);
+    final picked = randomizedPractice(pool, count: n, focus: focus);
+    Navigator.push(context, MaterialPageRoute(builder: (_) => TestQuizScreen(questions: picked)));
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final all = selectedSubdomains.isEmpty;
+    final available = eligiblePool.length;
+    final maxCount = max(5, min(20, available));
+    final shownCount = min(count, maxCount);
+    return Scaffold(
+      appBar: AppBar(title: const Text('Podesi test')),
+      body: ListView(
+        padding: const EdgeInsets.all(20),
+        children: [
+          const Text('Lekcije', style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
+          const SizedBox(height: 6),
+          const Text('Izaberi jednu, više ili sve trenutno dostupne lekcije.'),
+          CheckboxListTile(value: all, title: const Text('Sve obrađene lekcije'), onChanged: (_) => setState(selectedSubdomains.clear)),
+          ...areas.map((area) {
+            final open = expandedAreas.contains(area);
+            final ids = subdomains(area);
+            return Card(child: Column(children: [
+              ListTile(
+                leading: Checkbox(value: areaSelected(area), onChanged: (v) => toggleArea(area, v == true)),
+                title: Text(mainAreaNames[area] ?? area),
+                subtitle: Text('\${ids.length} obrađenih celina'),
+                trailing: Icon(open ? Icons.expand_less : Icons.expand_more),
+                onTap: () => setState(() => open ? expandedAreas.remove(area) : expandedAreas.add(area)),
+              ),
+              if (open) ...ids.map((id) => CheckboxListTile(
+                contentPadding: const EdgeInsets.only(left: 48, right: 16),
+                value: selectedSubdomains.contains(id),
+                title: Text(lessonNames[id] ?? id),
+                onChanged: (v) => setState(() { if (v == true) { selectedSubdomains.add(id); } else { selectedSubdomains.remove(id); } }),
+              )),
+            ]));
+          }),
+          const SizedBox(height: 12),
+          const Text('Vrsta zadataka', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+          SegmentedButton<String>(
+            segments: const [
+              ButtonSegment(value: 'mixed', label: Text('Mešovito')),
+              ButtonSegment(value: 'calculation', label: Text('Računski')),
+              ButtonSegment(value: 'theory', label: Text('Teorijski')),
+            ],
+            selected: {focus},
+            onSelectionChanged: (v) => setState(() => focus = v.first),
+          ),
+          const SizedBox(height: 12),
+          Text('Broj pitanja: $shownCount'),
+          Slider(value: shownCount.toDouble(), min: 5, max: maxCount.toDouble(), divisions: maxCount > 5 ? maxCount - 5 : 1, label: '$shownCount', onChanged: available < 5 ? null : (v) => setState(() => count = v.round())),
+          Text('Dostupno za izabrane kriterijume: $available'),
+          const SizedBox(height: 12),
+          FilledButton.icon(onPressed: available == 0 ? null : start, icon: const Icon(Icons.play_arrow), label: Text(all ? 'Pokreni test' : 'Pokreni test iz izabranog gradiva')),
+        ],
+      ),
+    );
+  }
+}
+
+class TestQuizScreen extends StatefulWidget {
+  const TestQuizScreen({super.key, required this.questions});
+  final List<AppQuestion> questions;
+  @override
+  State<TestQuizScreen> createState() => _TestQuizScreenState();
+}
+
+class _TestQuizScreenState extends State<TestQuizScreen> {
+  int i = 0;
+  final Map<String, String> answers = {};
+  void select(String optionId) => setState(() => answers[widget.questions[i].id] = optionId);
+
+  void next() {
+    if (i + 1 < widget.questions.length) { setState(() => i++); return; }
+    final correct = widget.questions.where((q) => answers[q.id] == q.correct).length;
+    for (final q in widget.questions) {
+      ProgressStore.record(questionId: q.id, subdomain: q.subdomainId, correct: answers[q.id] == q.correct, difficulty: q.difficulty);
+    }
+    Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => ResultScreen(correct: correct, total: widget.questions.length)));
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final q = widget.questions[i];
+    final selected = answers[q.id];
+    return Scaffold(
+      appBar: AppBar(title: Text('Test • \${i + 1}/\${widget.questions.length}')),
+      body: ListView(
+        padding: const EdgeInsets.all(20),
+        children: [
+          LinearProgressIndicator(value: (i + 1) / widget.questions.length),
+          const SizedBox(height: 20),
+          Text(q.subdomain, style: Theme.of(context).textTheme.labelLarge),
+          const SizedBox(height: 8),
+          Text(q.stem, style: Theme.of(context).textTheme.titleLarge),
+          const SizedBox(height: 12),
+          VisualQuestionPanel(representation: q.representation, media: q.media),
+          const SizedBox(height: 16),
+          ...q.options.entries.map((e) => Card(child: RadioListTile<String>(value: e.key, groupValue: selected, title: Text('\${e.key}. \${e.value}'), onChanged: (v) => v == null ? null : select(v)))),
+          const SizedBox(height: 20),
+          FilledButton(onPressed: selected == null ? null : next, child: Text(i + 1 == widget.questions.length ? 'Predaj test' : 'Sledeće pitanje')),
+          const SizedBox(height: 8),
+          const Text('Tačni odgovori i objašnjenja se ne prikazuju tokom testa.', textAlign: TextAlign.center),
         ],
       ),
     );
