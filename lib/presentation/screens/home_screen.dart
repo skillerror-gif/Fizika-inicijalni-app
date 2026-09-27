@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 
 import '../../data/content_repository.dart';
 import '../../domain/progress_store.dart';
-import '../../domain/master_test_generator.dart';
 import '../widgets/visual_question_panel.dart';
 import 'user_guide_screen.dart';
 
@@ -152,65 +151,6 @@ List<AppQuestion> randomizedPractice(
     if (q.nature == 'calculation') calc++;
   }
   return result;
-}
-
-MasterLevel _level(String a) {
-  switch (a) {
-    case 'N1':
-      return MasterLevel.basic;
-    case 'N2':
-      return MasterLevel.intermediate;
-    case 'N3':
-      return MasterLevel.advanced;
-    default:
-      throw FormatException('Nepoznat achievement_level: $a');
-  }
-}
-
-void _openMasterTest(BuildContext context, List<AppQuestion> qs) {
-  final map = {for (final q in qs) q.id: q};
-  final tq = qs
-      .map(
-        (q) => TestQuestion(
-          id: q.id,
-          unlockOrder: q.unlock,
-          level: _level(q.achievementLevel),
-          nature: q.nature,
-          representation: q.representation,
-          subdomainId: q.subdomainId,
-          correctOptionId: q.correct,
-          equivalenceGroup: q.equivalenceGroup,
-          published: true,
-          scientificPass: true,
-        ),
-      )
-      .toList();
-  try {
-    final picked = MasterTestGenerator().generate(tq, 35);
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (_) =>
-            QuizScreen(questions: picked.map((x) => map[x.id]!).toList()),
-      ),
-    );
-  } on TestGenerationException {
-    showDialog(
-      context: context,
-      builder: (_) => AlertDialog(
-        title: const Text('Test trenutno nije moguće sastaviti'),
-        content: const Text(
-          'Trenutno nema dovoljno odgovarajućih pitanja za sastavljanje testa. Pokušaj ponovo kasnije.',
-        ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.pop(context),
-            child: const Text('U redu'),
-          ),
-        ],
-      ),
-    );
-  }
 }
 
 class HomeScreen extends StatefulWidget {
@@ -578,35 +518,86 @@ class _PracticePersonalizationScreenState
 class TestPersonalizationScreen extends StatefulWidget {
   const TestPersonalizationScreen({super.key, required this.allQuestions});
   final List<AppQuestion> allQuestions;
+
   @override
-  State<TestPersonalizationScreen> createState() => _TestPersonalizationScreenState();
+  State<TestPersonalizationScreen> createState() =>
+      _TestPersonalizationScreenState();
 }
 
-class _TestPersonalizationScreenState extends State<TestPersonalizationScreen> {
+class _TestPersonalizationScreenState
+    extends State<TestPersonalizationScreen> {
   final Set<String> selectedSubdomains = {};
   final Set<String> expandedAreas = {};
   int count = 10;
   String focus = 'mixed';
 
-  List<String> get areas => widget.allQuestions.map((q) => mainAreaId(q.subdomainId)).toSet().toList()..sort();
-  List<String> subdomains(String area) => widget.allQuestions.where((q) => mainAreaId(q.subdomainId) == area).map((q) => q.subdomainId).toSet().toList()..sort();
-  bool areaSelected(String area) { final ids = subdomains(area); return ids.isNotEmpty && ids.every(selectedSubdomains.contains); }
-  void toggleArea(String area, bool value) { final ids = subdomains(area); setState(() { value ? selectedSubdomains.addAll(ids) : selectedSubdomains.removeAll(ids); }); }
+  List<String> get areas {
+    final result = widget.allQuestions
+        .map((q) => mainAreaId(q.subdomainId))
+        .toSet()
+        .toList();
+    result.sort();
+    return result;
+  }
+
+  List<String> subdomains(String area) {
+    final result = widget.allQuestions
+        .where((q) => mainAreaId(q.subdomainId) == area)
+        .map((q) => q.subdomainId)
+        .toSet()
+        .toList();
+    result.sort();
+    return result;
+  }
+
+  bool areaSelected(String area) {
+    final ids = subdomains(area);
+    return ids.isNotEmpty && ids.every(selectedSubdomains.contains);
+  }
+
+  void toggleArea(String area, bool value) {
+    final ids = subdomains(area);
+    setState(() {
+      if (value) {
+        selectedSubdomains.addAll(ids);
+      } else {
+        selectedSubdomains.removeAll(ids);
+      }
+    });
+  }
 
   List<AppQuestion> get eligiblePool {
-    final byLesson = widget.allQuestions.where((q) => selectedSubdomains.isEmpty || selectedSubdomains.contains(q.subdomainId));
-    return (focus == 'mixed' ? byLesson : byLesson.where((q) => q.nature == focus)).toList();
+    final byLesson = widget.allQuestions.where(
+      (q) =>
+          selectedSubdomains.isEmpty ||
+          selectedSubdomains.contains(q.subdomainId),
+    );
+    return (focus == 'mixed'
+            ? byLesson
+            : byLesson.where((q) => q.nature == focus))
+        .toList();
   }
 
   void start() {
     final pool = eligiblePool;
-    if (pool.isEmpty) {
-      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Za izabrane kriterijume trenutno nema pitanja.')));
+    if (pool.length < 5) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text(
+            'Za izabrane kriterijume potrebno je najmanje 5 pitanja.',
+          ),
+        ),
+      );
       return;
     }
     final n = min(count, pool.length);
     final picked = randomizedPractice(pool, count: n, focus: focus);
-    Navigator.push(context, MaterialPageRoute(builder: (_) => TestQuizScreen(questions: picked)));
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (_) => TestQuizScreen(questions: picked),
+      ),
+    );
   }
 
   @override
@@ -615,51 +606,106 @@ class _TestPersonalizationScreenState extends State<TestPersonalizationScreen> {
     final available = eligiblePool.length;
     final maxCount = max(5, min(20, available));
     final shownCount = min(count, maxCount);
+
     return Scaffold(
-      appBar: AppBar(title: const Text('Podesi test')),
+      appBar: AppBar(title: const Text('Подеси тест')),
       body: ListView(
         padding: const EdgeInsets.all(20),
         children: [
-          const Text('Lekcije', style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
+          const Text(
+            'Лекције',
+            style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+          ),
           const SizedBox(height: 6),
-          const Text('Izaberi jednu, više ili sve trenutno dostupne lekcije.'),
-          CheckboxListTile(value: all, title: const Text('Sve obrađene lekcije'), onChanged: (_) => setState(selectedSubdomains.clear)),
+          const Text(
+            'Изабери једну, више или све тренутно доступне лекције.',
+          ),
+          CheckboxListTile(
+            value: all,
+            title: const Text('Све обрађене лекције'),
+            onChanged: (_) => setState(selectedSubdomains.clear),
+          ),
           ...areas.map((area) {
             final open = expandedAreas.contains(area);
             final ids = subdomains(area);
-            return Card(child: Column(children: [
-              ListTile(
-                leading: Checkbox(value: areaSelected(area), onChanged: (v) => toggleArea(area, v == true)),
-                title: Text(mainAreaNames[area] ?? area),
-                subtitle: Text('${ids.length} obrađenih celina'),
-                trailing: Icon(open ? Icons.expand_less : Icons.expand_more),
-                onTap: () => setState(() => open ? expandedAreas.remove(area) : expandedAreas.add(area)),
+            return Card(
+              child: Column(
+                children: [
+                  ListTile(
+                    leading: Checkbox(
+                      value: areaSelected(area),
+                      onChanged: (v) => toggleArea(area, v == true),
+                    ),
+                    title: Text(mainAreaNames[area] ?? area),
+                    subtitle: Text('${ids.length} обрађених целина'),
+                    trailing: Icon(
+                      open ? Icons.expand_less : Icons.expand_more,
+                    ),
+                    onTap: () => setState(
+                      () => open
+                          ? expandedAreas.remove(area)
+                          : expandedAreas.add(area),
+                    ),
+                  ),
+                  if (open)
+                    ...ids.map(
+                      (id) => CheckboxListTile(
+                        contentPadding: const EdgeInsets.only(
+                          left: 48,
+                          right: 16,
+                        ),
+                        value: selectedSubdomains.contains(id),
+                        title: Text(lessonNames[id] ?? id),
+                        onChanged: (v) => setState(() {
+                          if (v == true) {
+                            selectedSubdomains.add(id);
+                          } else {
+                            selectedSubdomains.remove(id);
+                          }
+                        }),
+                      ),
+                    ),
+                ],
               ),
-              if (open) ...ids.map((id) => CheckboxListTile(
-                contentPadding: const EdgeInsets.only(left: 48, right: 16),
-                value: selectedSubdomains.contains(id),
-                title: Text(lessonNames[id] ?? id),
-                onChanged: (v) => setState(() { if (v == true) { selectedSubdomains.add(id); } else { selectedSubdomains.remove(id); } }),
-              )),
-            ]));
+            );
           }),
           const SizedBox(height: 12),
-          const Text('Vrsta zadataka', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+          const Text(
+            'Врста задатака',
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          ),
           SegmentedButton<String>(
             segments: const [
-              ButtonSegment(value: 'mixed', label: Text('Mešovito')),
-              ButtonSegment(value: 'calculation', label: Text('Računski')),
-              ButtonSegment(value: 'theory', label: Text('Teorijski')),
+              ButtonSegment(value: 'mixed', label: Text('Мешовито')),
+              ButtonSegment(value: 'calculation', label: Text('Рачунски')),
+              ButtonSegment(value: 'theory', label: Text('Теоријски')),
             ],
             selected: {focus},
             onSelectionChanged: (v) => setState(() => focus = v.first),
           ),
           const SizedBox(height: 12),
-          Text('Broj pitanja: $shownCount'),
-          Slider(value: shownCount.toDouble(), min: 5, max: maxCount.toDouble(), divisions: maxCount > 5 ? maxCount - 5 : 1, label: '$shownCount', onChanged: available < 5 ? null : (v) => setState(() => count = v.round())),
-          Text('Dostupno za izabrane kriterijume: $available'),
+          Text('Број питања: $shownCount'),
+          Slider(
+            value: shownCount.toDouble(),
+            min: 5,
+            max: maxCount.toDouble(),
+            divisions: maxCount > 5 ? maxCount - 5 : 1,
+            label: '$shownCount',
+            onChanged: available < 5
+                ? null
+                : (v) => setState(() => count = v.round()),
+          ),
+          Text('Доступно за изабране критеријуме: $available'),
           const SizedBox(height: 12),
-          FilledButton.icon(onPressed: available == 0 ? null : start, icon: const Icon(Icons.play_arrow), label: Text(all ? 'Pokreni test' : 'Pokreni test iz izabranog gradiva')),
+          FilledButton.icon(
+            onPressed: available < 5 ? null : start,
+            icon: const Icon(Icons.play_arrow),
+            label: Text(
+              all
+                  ? 'Покрени тест'
+                  : 'Покрени тест из изабраног градива',
+            ),
+          ),
         ],
       ),
     );
@@ -669,6 +715,7 @@ class _TestPersonalizationScreenState extends State<TestPersonalizationScreen> {
 class TestQuizScreen extends StatefulWidget {
   const TestQuizScreen({super.key, required this.questions});
   final List<AppQuestion> questions;
+
   @override
   State<TestQuizScreen> createState() => _TestQuizScreenState();
 }
@@ -676,23 +723,46 @@ class TestQuizScreen extends StatefulWidget {
 class _TestQuizScreenState extends State<TestQuizScreen> {
   int i = 0;
   final Map<String, String> answers = {};
-  void select(String optionId) => setState(() => answers[widget.questions[i].id] = optionId);
+
+  void select(String optionId) {
+    setState(() => answers[widget.questions[i].id] = optionId);
+  }
 
   void next() {
-    if (i + 1 < widget.questions.length) { setState(() => i++); return; }
-    final correct = widget.questions.where((q) => answers[q.id] == q.correct).length;
-    for (final q in widget.questions) {
-      ProgressStore.record(questionId: q.id, subdomain: q.subdomainId, correct: answers[q.id] == q.correct, difficulty: q.difficulty);
+    if (i + 1 < widget.questions.length) {
+      setState(() => i++);
+      return;
     }
-    Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => ResultScreen(correct: correct, total: widget.questions.length)));
+    final correct =
+        widget.questions.where((q) => answers[q.id] == q.correct).length;
+    for (final q in widget.questions) {
+      ProgressStore.record(
+        questionId: q.id,
+        subdomain: q.subdomainId,
+        correct: answers[q.id] == q.correct,
+        difficulty: q.difficulty,
+      );
+    }
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(
+        builder: (_) => ResultScreen(
+          correct: correct,
+          total: widget.questions.length,
+        ),
+      ),
+    );
   }
 
   @override
   Widget build(BuildContext context) {
     final q = widget.questions[i];
     final selected = answers[q.id];
+
     return Scaffold(
-      appBar: AppBar(title: Text('Test • ${i + 1}/${widget.questions.length}')),
+      appBar: AppBar(
+        title: Text('Тест • ${i + 1}/${widget.questions.length}'),
+      ),
       body: ListView(
         padding: const EdgeInsets.all(20),
         children: [
@@ -702,13 +772,43 @@ class _TestQuizScreenState extends State<TestQuizScreen> {
           const SizedBox(height: 8),
           Text(q.stem, style: Theme.of(context).textTheme.titleLarge),
           const SizedBox(height: 12),
-          VisualQuestionPanel(representation: q.representation, media: q.media),
+          VisualQuestionPanel(
+            representation: q.representation,
+            media: q.media,
+          ),
           const SizedBox(height: 16),
-          ...q.options.entries.map((e) => Card(child: RadioListTile<String>(value: e.key, groupValue: selected, title: Text('${e.key}. ${e.value}'), onChanged: (v) => v == null ? null : select(v)))),
+          RadioGroup<String>(
+            groupValue: selected,
+            onChanged: (value) {
+              if (value != null) select(value);
+            },
+            child: Column(
+              children: q.options.entries
+                  .map(
+                    (e) => Card(
+                      child: RadioListTile<String>(
+                        value: e.key,
+                        title: Text('${e.key}. ${e.value}'),
+                      ),
+                    ),
+                  )
+                  .toList(),
+            ),
+          ),
           const SizedBox(height: 20),
-          FilledButton(onPressed: selected == null ? null : next, child: Text(i + 1 == widget.questions.length ? 'Predaj test' : 'Sledeće pitanje')),
+          FilledButton(
+            onPressed: selected == null ? null : next,
+            child: Text(
+              i + 1 == widget.questions.length
+                  ? 'Предај тест'
+                  : 'Следеће питање',
+            ),
+          ),
           const SizedBox(height: 8),
-          const Text('Tačni odgovori i objašnjenja se ne prikazuju tokom testa.', textAlign: TextAlign.center),
+          const Text(
+            'Тачни одговори и објашњења се не приказују током теста.',
+            textAlign: TextAlign.center,
+          ),
         ],
       ),
     );
