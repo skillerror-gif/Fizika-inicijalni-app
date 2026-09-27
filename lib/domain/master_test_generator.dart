@@ -99,6 +99,72 @@ class MasterTestGenerator {
     ]);
   }
 
+  List<TestQuestion> generateConfigured(
+    Iterable<TestQuestion> all,
+    int unlock, {
+    required int count,
+    String focus = 'mixed',
+  }) {
+    if (count < 5 || count > 20) {
+      throw TestGenerationException(['broj pitanja mora biti od 5 do 20']);
+    }
+    var eligible = _eligible(all, unlock);
+    if (focus != 'mixed') {
+      eligible = eligible.where((q) => q.nature == focus).toList();
+    }
+    if (eligible.length < count) {
+      throw TestGenerationException(['nedovoljan broj pitanja za izabrane kriterijume']);
+    }
+
+    final basicTarget = (count * 0.5).round();
+    final advancedTarget = (count * 0.1875).round();
+    final intermediateTarget = count - basicTarget - advancedTarget;
+    final targets = <MasterLevel, int>{
+      MasterLevel.basic: basicTarget,
+      MasterLevel.intermediate: intermediateTarget,
+      MasterLevel.advanced: advancedTarget,
+    };
+
+    for (final entry in targets.entries) {
+      if (eligible.where((q) => q.level == entry.key).length < entry.value) {
+        throw TestGenerationException([
+          'nedovoljan fond za MASTER raspodelu nivoa',
+        ]);
+      }
+    }
+
+    for (var attempt = 0; attempt < 250; attempt++) {
+      final pool = [...eligible]..shuffle(_random);
+      final chosen = <TestQuestion>[];
+      for (final entry in targets.entries) {
+        chosen.addAll(
+          pool
+              .where(
+                (q) =>
+                    q.level == entry.key &&
+                    !chosen.any((selected) => selected.id == q.id),
+              )
+              .take(entry.value),
+        );
+      }
+      if (chosen.length != count) continue;
+      if (focus == 'mixed') {
+        final theory = chosen.where((q) => q.nature == 'theory').length;
+        final lower = (count * 0.45).floor();
+        final upper = (count * 0.55).ceil();
+        if (theory < lower || theory > upper) continue;
+      }
+      try {
+        return _antiPattern(chosen);
+      } on TestGenerationException {
+        continue;
+      }
+    }
+    throw TestGenerationException([
+      'nije pronađena validna MASTER kombinacija za izabrane kriterijume',
+    ]);
+  }
+
   bool _validNature(List<TestQuestion> q) {
     final t = q.where((x) => x.nature == 'theory').length,
         c = q.where((x) => x.nature == 'calculation').length;
