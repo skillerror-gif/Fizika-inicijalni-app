@@ -19,7 +19,7 @@ jobs:
           cache: true
       - name: Generate Android platform
         run: flutter create --platforms=android --org rs.fizika.gimnazija --project-name fizika_adaptivno_vezbanje .
-      - name: Restore selected Tesla + motor launcher icon
+      - name: Install verified Tesla + motor launcher icon
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y -qq imagemagick
@@ -29,7 +29,7 @@ jobs:
             out="android/app/src/main/res/mipmap-$density"
             mkdir -p "$out"
             rm -f "$out"/ic_launcher*
-            convert assets/branding/tesla_motor_selected.jpg -resize "${size}x${size}^" -gravity center -extent "${size}x${size}" "$out/ic_launcher.png"
+            convert assets/branding/tesla_motor_launcher_source.png -resize "${size}x${size}^" -gravity center -extent "${size}x${size}" "$out/ic_launcher.png"
             cp "$out/ic_launcher.png" "$out/ic_launcher_round.png"
           done
           sed -i 's|android:icon="@mipmap/ic_launcher"|android:icon="@mipmap/ic_launcher" android:roundIcon="@mipmap/ic_launcher_round"|' android/app/src/main/AndroidManifest.xml
@@ -49,6 +49,37 @@ jobs:
         run: flutter test
       - name: Build Android APK
         run: flutter build apk --release
+      - name: Verify launcher pixels inside built APK
+        run: |
+          python3 - <<'PY'
+          import pathlib
+          import subprocess
+          import tempfile
+          import zipfile
+
+          expected = pathlib.Path("android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png")
+          apk = pathlib.Path("build/app/outputs/flutter-apk/app-release.apk")
+          matches = 0
+          with zipfile.ZipFile(apk) as archive, tempfile.TemporaryDirectory() as tmp:
+              for i, name in enumerate(archive.namelist()):
+                  if not name.startswith("res/") or not name.endswith(".png"):
+                      continue
+                  actual = pathlib.Path(tmp) / f"{i}.png"
+                  actual.write_bytes(archive.read(name))
+                  dimensions = subprocess.check_output(
+                      ["identify", "-format", "%wx%h", str(actual)], text=True
+                  )
+                  if dimensions != "192x192":
+                      continue
+                  result = subprocess.run(
+                      ["compare", "-metric", "AE", str(expected), str(actual), "null:"],
+                      capture_output=True, text=True
+                  )
+                  if result.returncode == 0 and result.stderr.strip() == "0":
+                      matches += 1
+          assert matches >= 1, "Packaged 192px launcher does not match Tesla source"
+          print(f"PASS: {matches} packaged 192px launcher image(s) match source pixels")
+          PY
       - uses: actions/upload-artifact@v4
         with:
           name: fizika-android-apk
