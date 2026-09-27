@@ -25,6 +25,13 @@ class ContentRepository {
     return rootBundle.loadString('assets/content/g1_fizika_1.3.0_PASS.json');
   }
 
+  static Future<String> loadRawForGrade(int grade) async {
+    if (grade == 3) {
+      return rootBundle.loadString('assets/content/g3_magnetno_polje_3.0.0_PASS.json');
+    }
+    return loadRaw();
+  }
+
   static Future<void> refreshSilently() async {
     final client = http.Client();
     try {
