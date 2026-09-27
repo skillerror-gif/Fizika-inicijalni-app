@@ -41,7 +41,19 @@ jobs:
         run: flutter pub get
       - name: Validate content
         run: python3 tool/validate_content.py
-      - name: Check source formatting
+      - name: Format source with CI Dart
+        run: dart format lib test
+      - name: Commit CI-formatted source
+        if: github.event_name == 'pull_request'
+        run: |
+          if ! git diff --quiet -- lib test; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add lib test
+            git commit -m "Format Dart source with CI formatter"
+            git push origin HEAD:k7-build
+          fi
+      - name: Verify source formatting
         run: dart format --output=none --set-exit-if-changed lib test
       - name: Analyze
         run: flutter analyze
