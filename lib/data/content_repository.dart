@@ -27,7 +27,9 @@ class ContentRepository {
 
   static Future<String> loadRawForGrade(int grade) async {
     if (grade == 3) {
-      return rootBundle.loadString('assets/content/g3_magnetno_polje_3.0.0_PASS.json');
+      return rootBundle.loadString(
+        'assets/content/g3_magnetno_polje_3.0.0_PASS.json',
+      );
     }
     return loadRaw();
   }
