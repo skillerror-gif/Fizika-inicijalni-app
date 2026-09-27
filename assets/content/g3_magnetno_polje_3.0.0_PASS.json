@@ -84,7 +84,9 @@
         "answer_key": "PASS",
         "units": "PASS",
         "lesson_boundary": "pass",
-        "review_date": "2026-09-27"
+        "review_date": "2026-09-27",
+        "science_pass_date": "2026-09-27",
+        "science_pass_scope": "independent item-by-item physics, formula, arithmetic, units, key, distractor and explanation review"
       },
       "adaptive": {
         "primary_concept_id": "mag-01",
@@ -171,7 +173,9 @@
         "answer_key": "PASS",
         "units": "PASS",
         "lesson_boundary": "pass",
-        "review_date": "2026-09-27"
+        "review_date": "2026-09-27",
+        "science_pass_date": "2026-09-27",
+        "science_pass_scope": "independent item-by-item physics, formula, arithmetic, units, key, distractor and explanation review"
       },
       "adaptive": {
         "primary_concept_id": "mag-01",
@@ -258,7 +262,9 @@
         "answer_key": "PASS",
         "units": "PASS",
         "lesson_boundary": "pass",
-        "review_date": "2026-09-27"
+        "review_date": "2026-09-27",
+        "science_pass_date": "2026-09-27",
+        "science_pass_scope": "independent item-by-item physics, formula, arithmetic, units, key, distractor and explanation review"
       },
       "adaptive": {
         "primary_concept_id": "mag-01",
@@ -345,7 +351,9 @@
         "answer_key": "PASS",
         "units": "PASS",
         "lesson_boundary": "pass",
-        "review_date": "2026-09-27"
+        "review_date": "2026-09-27",
+        "science_pass_date": "2026-09-27",
+        "science_pass_scope": "independent item-by-item physics, formula, arithmetic, units, key, distractor and explanation review"
       },
       "adaptive": {
         "primary_concept_id": "mag-01",
@@ -432,7 +440,9 @@
         "answer_key": "PASS",
         "units": "PASS",
         "lesson_boundary": "pass",
-        "review_date": "2026-09-27"
+        "review_date": "2026-09-27",
+        "science_pass_date": "2026-09-27",
+        "science_pass_scope": "independent item-by-item physics, formula, arithmetic, units, key, distractor and explanation review"
       },
       "adaptive": {
         "primary_concept_id": "mag-02",
@@ -519,7 +529,9 @@
         "answer_key": "PASS",
         "units": "PASS",
         "lesson_boundary": "pass",
-        "review_date": "2026-09-27"
+        "review_date": "2026-09-27",
+        "science_pass_date": "2026-09-27",
+        "science_pass_scope": "independent item-by-item physics, formula, arithmetic, units, key, distractor and explanation review"
       },
       "adaptive": {
         "primary_concept_id": "mag-02",
@@ -606,7 +618,9 @@
         "answer_key": "PASS",
         "units": "PASS",
         "lesson_boundary": "pass",
-        "review_date": "2026-09-27"
+        "review_date": "2026-09-27",
+        "science_pass_date": "2026-09-27",
+        "science_pass_scope": "independent item-by-item physics, formula, arithmetic, units, key, distractor and explanation review"
       },
       "adaptive": {
         "primary_concept_id": "mag-02",
@@ -693,7 +707,9 @@
         "answer_key": "PASS",
         "units": "PASS",
         "lesson_boundary": "pass",
-        "review_date": "2026-09-27"
+        "review_date": "2026-09-27",
+        "science_pass_date": "2026-09-27",
+        "science_pass_scope": "independent item-by-item physics, formula, arithmetic, units, key, distractor and explanation review"
       },
       "adaptive": {
         "primary_concept_id": "mag-02",
@@ -780,7 +796,9 @@
         "answer_key": "PASS",
         "units": "PASS",
         "lesson_boundary": "pass",
-        "review_date": "2026-09-27"
+        "review_date": "2026-09-27",
+        "science_pass_date": "2026-09-27",
+        "science_pass_scope": "independent item-by-item physics, formula, arithmetic, units, key, distractor and explanation review"
       },
       "adaptive": {
         "primary_concept_id": "mag-03",
@@ -794,7 +812,7 @@
     {
       "id": "PHY-G3-MAG-000010",
       "schema_version": 1,
-      "content_revision": 1,
+      "content_revision": 2,
       "status": "published",
       "grade": 3,
       "track": [
@@ -821,7 +839,7 @@
       "question_type": "single_choice",
       "nature": "theory",
       "representation": "text",
-      "stem": "Када је магнетни флукс кроз равну површину у хомогеном пољу максималан?",
+      "stem": "Када магнетни флукс кроз оријентисану равну површину у хомогеном пољу има максималну позитивну вредност?",
       "options": [
         {
           "option_id": "A",
@@ -841,7 +859,7 @@
         }
       ],
       "correct_option_id": "B",
-      "explanation": "За α=0° је cosα=1, па је Φ=BS максималан.",
+      "explanation": "За α=0° је cosα=1, па је Φ=BS, што је максимална позитивна вредност флукса.",
       "common_errors": [
         {
           "message": "Провери дефиницију, смер вектора и услове примене одговарајуће релације.",
@@ -867,7 +885,9 @@
         "answer_key": "PASS",
         "units": "PASS",
         "lesson_boundary": "pass",
-        "review_date": "2026-09-27"
+        "review_date": "2026-09-27",
+        "science_pass_date": "2026-09-27",
+        "science_pass_scope": "independent item-by-item physics, formula, arithmetic, units, key, distractor and explanation review"
       },
       "adaptive": {
         "primary_concept_id": "mag-03",
@@ -954,7 +974,9 @@
         "answer_key": "PASS",
         "units": "PASS",
         "lesson_boundary": "pass",
-        "review_date": "2026-09-27"
+        "review_date": "2026-09-27",
+        "science_pass_date": "2026-09-27",
+        "science_pass_scope": "independent item-by-item physics, formula, arithmetic, units, key, distractor and explanation review"
       },
       "adaptive": {
         "primary_concept_id": "mag-03",
@@ -1041,7 +1063,9 @@
         "answer_key": "PASS",
         "units": "PASS",
         "lesson_boundary": "pass",
-        "review_date": "2026-09-27"
+        "review_date": "2026-09-27",
+        "science_pass_date": "2026-09-27",
+        "science_pass_scope": "independent item-by-item physics, formula, arithmetic, units, key, distractor and explanation review"
       },
       "adaptive": {
         "primary_concept_id": "mag-03",
@@ -1128,7 +1152,9 @@
         "answer_key": "PASS",
         "units": "PASS",
         "lesson_boundary": "pass",
-        "review_date": "2026-09-27"
+        "review_date": "2026-09-27",
+        "science_pass_date": "2026-09-27",
+        "science_pass_scope": "independent item-by-item physics, formula, arithmetic, units, key, distractor and explanation review"
       },
       "adaptive": {
         "primary_concept_id": "mag-04",
@@ -1215,7 +1241,9 @@
         "answer_key": "PASS",
         "units": "PASS",
         "lesson_boundary": "pass",
-        "review_date": "2026-09-27"
+        "review_date": "2026-09-27",
+        "science_pass_date": "2026-09-27",
+        "science_pass_scope": "independent item-by-item physics, formula, arithmetic, units, key, distractor and explanation review"
       },
       "adaptive": {
         "primary_concept_id": "mag-04",
@@ -1302,7 +1330,9 @@
         "answer_key": "PASS",
         "units": "PASS",
         "lesson_boundary": "pass",
-        "review_date": "2026-09-27"
+        "review_date": "2026-09-27",
+        "science_pass_date": "2026-09-27",
+        "science_pass_scope": "independent item-by-item physics, formula, arithmetic, units, key, distractor and explanation review"
       },
       "adaptive": {
         "primary_concept_id": "mag-04",
@@ -1389,7 +1419,9 @@
         "answer_key": "PASS",
         "units": "PASS",
         "lesson_boundary": "pass",
-        "review_date": "2026-09-27"
+        "review_date": "2026-09-27",
+        "science_pass_date": "2026-09-27",
+        "science_pass_scope": "independent item-by-item physics, formula, arithmetic, units, key, distractor and explanation review"
       },
       "adaptive": {
         "primary_concept_id": "mag-04",
@@ -1476,7 +1508,9 @@
         "answer_key": "PASS",
         "units": "PASS",
         "lesson_boundary": "pass",
-        "review_date": "2026-09-27"
+        "review_date": "2026-09-27",
+        "science_pass_date": "2026-09-27",
+        "science_pass_scope": "independent item-by-item physics, formula, arithmetic, units, key, distractor and explanation review"
       },
       "adaptive": {
         "primary_concept_id": "mag-05",
@@ -1563,7 +1597,9 @@
         "answer_key": "PASS",
         "units": "PASS",
         "lesson_boundary": "pass",
-        "review_date": "2026-09-27"
+        "review_date": "2026-09-27",
+        "science_pass_date": "2026-09-27",
+        "science_pass_scope": "independent item-by-item physics, formula, arithmetic, units, key, distractor and explanation review"
       },
       "adaptive": {
         "primary_concept_id": "mag-05",
@@ -1650,7 +1686,9 @@
         "answer_key": "PASS",
         "units": "PASS",
         "lesson_boundary": "pass",
-        "review_date": "2026-09-27"
+        "review_date": "2026-09-27",
+        "science_pass_date": "2026-09-27",
+        "science_pass_scope": "independent item-by-item physics, formula, arithmetic, units, key, distractor and explanation review"
       },
       "adaptive": {
         "primary_concept_id": "mag-05",
@@ -1737,7 +1775,9 @@
         "answer_key": "PASS",
         "units": "PASS",
         "lesson_boundary": "pass",
-        "review_date": "2026-09-27"
+        "review_date": "2026-09-27",
+        "science_pass_date": "2026-09-27",
+        "science_pass_scope": "independent item-by-item physics, formula, arithmetic, units, key, distractor and explanation review"
       },
       "adaptive": {
         "primary_concept_id": "mag-05",
@@ -1824,7 +1864,9 @@
         "answer_key": "PASS",
         "units": "PASS",
         "lesson_boundary": "pass",
-        "review_date": "2026-09-27"
+        "review_date": "2026-09-27",
+        "science_pass_date": "2026-09-27",
+        "science_pass_scope": "independent item-by-item physics, formula, arithmetic, units, key, distractor and explanation review"
       },
       "adaptive": {
         "primary_concept_id": "mag-06",
@@ -1911,7 +1953,9 @@
         "answer_key": "PASS",
         "units": "PASS",
         "lesson_boundary": "pass",
-        "review_date": "2026-09-27"
+        "review_date": "2026-09-27",
+        "science_pass_date": "2026-09-27",
+        "science_pass_scope": "independent item-by-item physics, formula, arithmetic, units, key, distractor and explanation review"
       },
       "adaptive": {
         "primary_concept_id": "mag-06",
@@ -1998,7 +2042,9 @@
         "answer_key": "PASS",
         "units": "PASS",
         "lesson_boundary": "pass",
-        "review_date": "2026-09-27"
+        "review_date": "2026-09-27",
+        "science_pass_date": "2026-09-27",
+        "science_pass_scope": "independent item-by-item physics, formula, arithmetic, units, key, distractor and explanation review"
       },
       "adaptive": {
         "primary_concept_id": "mag-06",
@@ -2085,7 +2131,9 @@
         "answer_key": "PASS",
         "units": "PASS",
         "lesson_boundary": "pass",
-        "review_date": "2026-09-27"
+        "review_date": "2026-09-27",
+        "science_pass_date": "2026-09-27",
+        "science_pass_scope": "independent item-by-item physics, formula, arithmetic, units, key, distractor and explanation review"
       },
       "adaptive": {
         "primary_concept_id": "mag-06",
@@ -2172,7 +2220,9 @@
         "answer_key": "PASS",
         "units": "PASS",
         "lesson_boundary": "pass",
-        "review_date": "2026-09-27"
+        "review_date": "2026-09-27",
+        "science_pass_date": "2026-09-27",
+        "science_pass_scope": "independent item-by-item physics, formula, arithmetic, units, key, distractor and explanation review"
       },
       "adaptive": {
         "primary_concept_id": "mag-07",
@@ -2259,7 +2309,9 @@
         "answer_key": "PASS",
         "units": "PASS",
         "lesson_boundary": "pass",
-        "review_date": "2026-09-27"
+        "review_date": "2026-09-27",
+        "science_pass_date": "2026-09-27",
+        "science_pass_scope": "independent item-by-item physics, formula, arithmetic, units, key, distractor and explanation review"
       },
       "adaptive": {
         "primary_concept_id": "mag-07",
@@ -2346,7 +2398,9 @@
         "answer_key": "PASS",
         "units": "PASS",
         "lesson_boundary": "pass",
-        "review_date": "2026-09-27"
+        "review_date": "2026-09-27",
+        "science_pass_date": "2026-09-27",
+        "science_pass_scope": "independent item-by-item physics, formula, arithmetic, units, key, distractor and explanation review"
       },
       "adaptive": {
         "primary_concept_id": "mag-07",
@@ -2433,7 +2487,9 @@
         "answer_key": "PASS",
         "units": "PASS",
         "lesson_boundary": "pass",
-        "review_date": "2026-09-27"
+        "review_date": "2026-09-27",
+        "science_pass_date": "2026-09-27",
+        "science_pass_scope": "independent item-by-item physics, formula, arithmetic, units, key, distractor and explanation review"
       },
       "adaptive": {
         "primary_concept_id": "mag-07",
@@ -2447,7 +2503,7 @@
     {
       "id": "PHY-G3-MAG-000029",
       "schema_version": 1,
-      "content_revision": 1,
+      "content_revision": 2,
       "status": "published",
       "grade": 3,
       "track": [
@@ -2474,7 +2530,7 @@
       "question_type": "single_choice",
       "nature": "theory",
       "representation": "text",
-      "stem": "На ком принципу магнетни део масеног спектрометра раздваја јоне различитог m/|q| при контролисаним условима?",
+      "stem": "На ком принципу магнетни део масеног спектрометра може да раздваја јоне различитог m/|q| када су њихове брзине контролисане?",
       "options": [
         {
           "option_id": "A",
@@ -2494,7 +2550,7 @@
         }
       ],
       "correct_option_id": "B",
-      "explanation": "Пошто је r=mv/(|q|B), различит однос m/|q| даје различите полупречнике при истим v и B.",
+      "explanation": "За кретање нормално на B важи r=mv/(|q|B). При истим контролисаним v и B различит однос m/|q| даје различите полупречнике путања.",
       "common_errors": [
         {
           "message": "Провери дефиницију, смер вектора и услове примене одговарајуће релације.",
@@ -2520,7 +2576,9 @@
         "answer_key": "PASS",
         "units": "PASS",
         "lesson_boundary": "pass",
-        "review_date": "2026-09-27"
+        "review_date": "2026-09-27",
+        "science_pass_date": "2026-09-27",
+        "science_pass_scope": "independent item-by-item physics, formula, arithmetic, units, key, distractor and explanation review"
       },
       "adaptive": {
         "primary_concept_id": "mag-08",
@@ -2607,7 +2665,9 @@
         "answer_key": "PASS",
         "units": "PASS",
         "lesson_boundary": "pass",
-        "review_date": "2026-09-27"
+        "review_date": "2026-09-27",
+        "science_pass_date": "2026-09-27",
+        "science_pass_scope": "independent item-by-item physics, formula, arithmetic, units, key, distractor and explanation review"
       },
       "adaptive": {
         "primary_concept_id": "mag-08",
@@ -2694,7 +2754,9 @@
         "answer_key": "PASS",
         "units": "PASS",
         "lesson_boundary": "pass",
-        "review_date": "2026-09-27"
+        "review_date": "2026-09-27",
+        "science_pass_date": "2026-09-27",
+        "science_pass_scope": "independent item-by-item physics, formula, arithmetic, units, key, distractor and explanation review"
       },
       "adaptive": {
         "primary_concept_id": "mag-08",
@@ -2781,7 +2843,9 @@
         "answer_key": "PASS",
         "units": "PASS",
         "lesson_boundary": "pass",
-        "review_date": "2026-09-27"
+        "review_date": "2026-09-27",
+        "science_pass_date": "2026-09-27",
+        "science_pass_scope": "independent item-by-item physics, formula, arithmetic, units, key, distractor and explanation review"
       },
       "adaptive": {
         "primary_concept_id": "mag-08",
@@ -2792,5 +2856,13 @@
       "equivalence_group": "MAG-08-04",
       "published_in": "3.0.0"
     }
-  ]
+  ],
+  "science_pass": {
+    "status": "PASS",
+    "date": "2026-09-27",
+    "items_reviewed": 32,
+    "items_corrected": 2,
+    "method": "independent item-by-item review; formulas, arithmetic, SI units, answer key, distractors, explanations and physical assumptions",
+    "external_cross_check": "OpenStax magnetic field/force/flux equations"
+  }
 }
