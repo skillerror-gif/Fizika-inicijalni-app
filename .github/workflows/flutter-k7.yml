@@ -19,11 +19,30 @@ jobs:
           cache: true
       - name: Generate Android platform
         run: flutter create --platforms=android --org rs.fizika.gimnazija --project-name fizika_adaptivno_vezbanje .
-      - name: Restore selected launcher icon
+      - name: Build Tesla + motor launcher icons
         run: |
-          for density in mdpi hdpi xhdpi xxhdpi xxxhdpi; do
-            rm -f "android/app/src/main/res/mipmap-$density/ic_launcher.png"\n            cp assets/branding/tesla_motor_icon.jpg "android/app/src/main/res/mipmap-$density/ic_launcher.jpg"
-          done
+          python3 - <<'PY'
+          from pathlib import Path
+          from PIL import Image, ImageOps
+
+          src = Image.open("assets/branding/tesla_motor_icon.jpg").convert("RGB")
+          sizes = {
+              "mdpi": 48,
+              "hdpi": 72,
+              "xhdpi": 96,
+              "xxhdpi": 144,
+              "xxxhdpi": 192,
+          }
+          for density, size in sizes.items():
+              out = Path(f"android/app/src/main/res/mipmap-{density}")
+              out.mkdir(parents=True, exist_ok=True)
+              for old in out.glob("ic_launcher*"):
+                  old.unlink()
+              icon = ImageOps.fit(src, (size, size), method=Image.Resampling.LANCZOS)
+              icon.save(out / "ic_launcher.png", optimize=True)
+              icon.save(out / "ic_launcher_round.png", optimize=True)
+          PY
+          sed -i 's|android:icon="@mipmap/ic_launcher"|android:icon="@mipmap/ic_launcher" android:roundIcon="@mipmap/ic_launcher_round"|' android/app/src/main/AndroidManifest.xml
       - name: Set Android visible app name
         run: sed -i 's/android:label="[^"]*"/android:label="Fizika za I razred gimnazije"/' android/app/src/main/AndroidManifest.xml
       - name: Remove generated widget test
