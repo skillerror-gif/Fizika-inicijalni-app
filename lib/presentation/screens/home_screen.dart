@@ -66,9 +66,9 @@ class AppQuestion {
   }
 }
 
-Future<List<AppQuestion>> loadQuestions() async {
-  final raw = await ContentRepository.loadRaw();
-  ContentRepository.refreshSilently();
+Future<List<AppQuestion>> loadQuestions({int grade = 1}) async {
+  final raw = await ContentRepository.loadRawForGrade(grade);
+  if (grade == 1) ContentRepository.refreshSilently();
   final data = jsonDecode(raw) as Map<String, dynamic>;
   return (data['questions'] as List)
       .where(
@@ -84,6 +84,7 @@ Future<List<AppQuestion>> loadQuestions() async {
 const mainAreaNames = <String, String>{
   'UVF': 'Увод у физику',
   'KIN': 'Кинематика',
+  'MAG': 'Магнетно поље',
 };
 String mainAreaId(String subdomainId) => subdomainId.split('-').first;
 
@@ -95,6 +96,14 @@ const lessonNames = <String, String>{
   'KIN-02': 'Пут и померај',
   'KIN-03': 'Средња брзина',
   'KIN-08': 'Слагање брзина',
+  'MAG-01': 'Магнетно поље и линије поља',
+  'MAG-02': 'Магнетна индукција и поље проводника',
+  'MAG-03': 'Магнетни флукс',
+  'MAG-04': 'Амперова сила',
+  'MAG-05': 'Лоренцова сила',
+  'MAG-06': 'Кретање наелектрисане честице',
+  'MAG-07': 'Период и завојна путања',
+  'MAG-08': 'Примене кретања честица',
 };
 
 List<AppQuestion> randomizedPractice(
@@ -205,7 +214,8 @@ void _openMasterTest(BuildContext context, List<AppQuestion> qs) {
 }
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+  const HomeScreen({super.key, this.grade = 1});
+  final int grade;
   @override
   State<HomeScreen> createState() => _HomeScreenState();
 }
@@ -215,7 +225,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
     super.initState();
-    _questions = loadQuestions();
+    _questions = loadQuestions(grade: widget.grade);
   }
 
   Future<void> _practice(List<AppQuestion> qs, {int count = 10}) async {
@@ -240,7 +250,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) => Scaffold(
-        appBar: AppBar(title: const Text('Fizika za I razred gimnazije')),
+        appBar: AppBar(title: Text(widget.grade == 3 ? 'Физика за III разред гимназије' : 'Fizika za I razred gimnazije')),
         body: FutureBuilder<List<AppQuestion>>(
           future: _questions,
           builder: (context, s) {
@@ -257,8 +267,8 @@ class _HomeScreenState extends State<HomeScreen> {
             return ListView(
               padding: const EdgeInsets.all(20),
               children: [
-                const Text(
-                  'Fizika za I razred gimnazije',
+                Text(
+                  widget.grade == 3 ? 'Физика за III разред гимназије' : 'Fizika za I razred gimnazije',
                   style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
                 ),
                 const SizedBox(height: 6),
