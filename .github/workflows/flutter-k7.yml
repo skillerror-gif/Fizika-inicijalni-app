@@ -21,6 +21,7 @@ jobs:
         run: flutter create --platforms=android --org rs.fizika.gimnazija --project-name fizika_adaptivno_vezbanje .
       - name: Build Tesla + motor launcher icons
         run: |
+          python3 -m pip install --user Pillow
           python3 - <<'PY'
           from pathlib import Path
           from PIL import Image, ImageOps
