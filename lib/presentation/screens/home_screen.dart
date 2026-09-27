@@ -250,7 +250,13 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) => Scaffold(
-        appBar: AppBar(title: Text(widget.grade == 3 ? 'Физика за III разред гимназије' : 'Fizika za I razred gimnazije')),
+        appBar: AppBar(
+          title: Text(
+            widget.grade == 3
+                ? 'Физика за III разред гимназије'
+                : 'Fizika za I razred gimnazije',
+          ),
+        ),
         body: FutureBuilder<List<AppQuestion>>(
           future: _questions,
           builder: (context, s) {
@@ -268,7 +274,9 @@ class _HomeScreenState extends State<HomeScreen> {
               padding: const EdgeInsets.all(20),
               children: [
                 Text(
-                  widget.grade == 3 ? 'Физика за III разред гимназије' : 'Fizika za I razred gimnazije',
+                  widget.grade == 3
+                      ? 'Физика за III разред гимназије'
+                      : 'Fizika za I razred gimnazije',
                   style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
                 ),
                 const SizedBox(height: 6),
