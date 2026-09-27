@@ -1,11 +1,11 @@
 {
   "database_id": "fizika-app-g3-mag",
   "schema_version": 1,
-  "content_version": "3.0.0",
+  "content_version": "3.0.1",
   "grade": 3,
   "domain_id": "MAG",
   "source_kb_id": "MAG-III-001",
-  "question_count": 32,
+  "question_count": 40,
   "scope": "PASS core reconstructed textbook content; common PM/DJ core only; track-specific extensions intentionally excluded pending separate package",
   "questions": [
     {
@@ -2855,6 +2855,718 @@
       },
       "equivalence_group": "MAG-08-04",
       "published_in": "3.0.0"
+    },
+    {
+      "id": "PHY-G3-MAG-000033",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 3,
+      "track": [
+        "PM",
+        "DJ"
+      ],
+      "domain_id": "MAG",
+      "domain_name": "Магнетно поље",
+      "subdomain_id": "MAG-02",
+      "subdomain_name": "Магнетна индукција и поље праволинијског проводника",
+      "lesson_ids": [
+        "MAG-02"
+      ],
+      "unlock_order": 2,
+      "outcome_ids": [
+        "G3-MAG-02"
+      ],
+      "concept_ids": [
+        "mag-02"
+      ],
+      "difficulty": "intermediate",
+      "achievement_level": "N2",
+      "cognitive_process": "applying",
+      "question_type": "single_choice",
+      "nature": "calculation",
+      "representation": "text",
+      "stem": "При истој струји измерено је: 5 cm → 8 μT, 10 cm → 4 μT, 20 cm → 2 μT. Како магнетна индукција зависи од растојања од дугог правог проводника?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "Расте сразмерно r"
+        },
+        {
+          "option_id": "B",
+          "text": "Обрнуто је сразмерна r"
+        },
+        {
+          "option_id": "V",
+          "text": "Не зависи од r"
+        },
+        {
+          "option_id": "G",
+          "text": "Расте сразмерно r²"
+        }
+      ],
+      "correct_option_id": "B",
+      "explanation": "Производ B·r је 40 μT·cm у сва три мерења, што одговара B∝1/r.",
+      "common_errors": [
+        {
+          "message": "Провери дефиницију, смер вектора и услове примене одговарајуће релације.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "MAG-III-001",
+          "role": "derived_pass_bank",
+          "source_state": "PASS_DERIVED"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "lesson_boundary": "pass",
+        "review_date": "2026-09-27",
+        "science_pass_date": "2026-09-27",
+        "science_pass_scope": "independent formula and arithmetic check against MAG-III-001"
+      },
+      "adaptive": {
+        "primary_concept_id": "mag-02",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "MAG-02-33",
+      "published_in": "3.0.1"
+    },
+    {
+      "id": "PHY-G3-MAG-000034",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 3,
+      "track": [
+        "PM",
+        "DJ"
+      ],
+      "domain_id": "MAG",
+      "domain_name": "Магнетно поље",
+      "subdomain_id": "MAG-03",
+      "subdomain_name": "Магнетни флукс",
+      "lesson_ids": [
+        "MAG-03"
+      ],
+      "unlock_order": 3,
+      "outcome_ids": [
+        "G3-MAG-03"
+      ],
+      "concept_ids": [
+        "mag-03"
+      ],
+      "difficulty": "intermediate",
+      "achievement_level": "N2",
+      "cognitive_process": "applying",
+      "question_type": "single_choice",
+      "nature": "calculation",
+      "representation": "text",
+      "stem": "Површина 0,50 m² је у пољу B=0,40 T. Угао између B и изабране нормале је 120°. Колики је оријентисани магнетни флукс?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "−0,10 Wb"
+        },
+        {
+          "option_id": "B",
+          "text": "+0,10 Wb"
+        },
+        {
+          "option_id": "V",
+          "text": "−0,20 Wb"
+        },
+        {
+          "option_id": "G",
+          "text": "+0,20 Wb"
+        }
+      ],
+      "correct_option_id": "A",
+      "explanation": "Φ=BS cos120°=0,40·0,50·(−1/2)=−0,10 Wb.",
+      "common_errors": [
+        {
+          "message": "Провери дефиницију, смер вектора и услове примене одговарајуће релације.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "MAG-III-001",
+          "role": "derived_pass_bank",
+          "source_state": "PASS_DERIVED"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "lesson_boundary": "pass",
+        "review_date": "2026-09-27",
+        "science_pass_date": "2026-09-27",
+        "science_pass_scope": "independent formula and arithmetic check against MAG-III-001"
+      },
+      "adaptive": {
+        "primary_concept_id": "mag-03",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "MAG-03-34",
+      "published_in": "3.0.1"
+    },
+    {
+      "id": "PHY-G3-MAG-000035",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 3,
+      "track": [
+        "PM",
+        "DJ"
+      ],
+      "domain_id": "MAG",
+      "domain_name": "Магнетно поље",
+      "subdomain_id": "MAG-04",
+      "subdomain_name": "Амперова сила",
+      "lesson_ids": [
+        "MAG-04"
+      ],
+      "unlock_order": 4,
+      "outcome_ids": [
+        "G3-MAG-04"
+      ],
+      "concept_ids": [
+        "mag-04"
+      ],
+      "difficulty": "intermediate",
+      "achievement_level": "N2",
+      "cognitive_process": "applying",
+      "question_type": "single_choice",
+      "nature": "calculation",
+      "representation": "text",
+      "stem": "Проводник дужине 0,30 m носи струју 2,0 A у пољу B=0,40 T. Измерена Амперова сила је 0,12 N. Колико је sinα?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "1"
+        },
+        {
+          "option_id": "B",
+          "text": "1/4"
+        },
+        {
+          "option_id": "V",
+          "text": "1/2"
+        },
+        {
+          "option_id": "G",
+          "text": "2"
+        }
+      ],
+      "correct_option_id": "V",
+      "explanation": "sinα=F/(BIl)=0,12/(0,40·2,0·0,30)=1/2.",
+      "common_errors": [
+        {
+          "message": "Провери дефиницију, смер вектора и услове примене одговарајуће релације.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "MAG-III-001",
+          "role": "derived_pass_bank",
+          "source_state": "PASS_DERIVED"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "lesson_boundary": "pass",
+        "review_date": "2026-09-27",
+        "science_pass_date": "2026-09-27",
+        "science_pass_scope": "independent formula and arithmetic check against MAG-III-001"
+      },
+      "adaptive": {
+        "primary_concept_id": "mag-04",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "MAG-04-35",
+      "published_in": "3.0.1"
+    },
+    {
+      "id": "PHY-G3-MAG-000036",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 3,
+      "track": [
+        "PM",
+        "DJ"
+      ],
+      "domain_id": "MAG",
+      "domain_name": "Магнетно поље",
+      "subdomain_id": "MAG-05",
+      "subdomain_name": "Лоренцова сила",
+      "lesson_ids": [
+        "MAG-05"
+      ],
+      "unlock_order": 5,
+      "outcome_ids": [
+        "G3-MAG-05"
+      ],
+      "concept_ids": [
+        "mag-05"
+      ],
+      "difficulty": "intermediate",
+      "achievement_level": "N2",
+      "cognitive_process": "applying",
+      "question_type": "single_choice",
+      "nature": "calculation",
+      "representation": "text",
+      "stem": "Честица |q|=1,0·10⁻⁶ C креће се брзином 2,0·10⁵ m/s под углом 30° према B=0,20 T. Колика је магнетна сила?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "0,040 N"
+        },
+        {
+          "option_id": "B",
+          "text": "0,080 N"
+        },
+        {
+          "option_id": "V",
+          "text": "0,010 N"
+        },
+        {
+          "option_id": "G",
+          "text": "0,020 N"
+        }
+      ],
+      "correct_option_id": "G",
+      "explanation": "F=|q|vB sin30°=1,0·10⁻⁶·2,0·10⁵·0,20·0,5=0,020 N.",
+      "common_errors": [
+        {
+          "message": "Провери дефиницију, смер вектора и услове примене одговарајуће релације.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "MAG-III-001",
+          "role": "derived_pass_bank",
+          "source_state": "PASS_DERIVED"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "lesson_boundary": "pass",
+        "review_date": "2026-09-27",
+        "science_pass_date": "2026-09-27",
+        "science_pass_scope": "independent formula and arithmetic check against MAG-III-001"
+      },
+      "adaptive": {
+        "primary_concept_id": "mag-05",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "MAG-05-36",
+      "published_in": "3.0.1"
+    },
+    {
+      "id": "PHY-G3-MAG-000037",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 3,
+      "track": [
+        "PM",
+        "DJ"
+      ],
+      "domain_id": "MAG",
+      "domain_name": "Магнетно поље",
+      "subdomain_id": "MAG-05",
+      "subdomain_name": "Лоренцова сила",
+      "lesson_ids": [
+        "MAG-05"
+      ],
+      "unlock_order": 5,
+      "outcome_ids": [
+        "G3-MAG-05"
+      ],
+      "concept_ids": [
+        "mag-05"
+      ],
+      "difficulty": "intermediate",
+      "achievement_level": "N2",
+      "cognitive_process": "applying",
+      "question_type": "single_choice",
+      "nature": "theory",
+      "representation": "text",
+      "stem": "Електрон се креће удесно по екрану, а B је усмерено у екран. У ком смеру делује магнетна сила?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "Надоле по екрану"
+        },
+        {
+          "option_id": "B",
+          "text": "Нагоре по екрану"
+        },
+        {
+          "option_id": "V",
+          "text": "Удесно по екрану"
+        },
+        {
+          "option_id": "G",
+          "text": "У екран"
+        }
+      ],
+      "correct_option_id": "A",
+      "explanation": "За позитивно наелектрисање v×B је нагоре; за електрон сила је супротна, надоле.",
+      "common_errors": [
+        {
+          "message": "Провери дефиницију, смер вектора и услове примене одговарајуће релације.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "MAG-III-001",
+          "role": "derived_pass_bank",
+          "source_state": "PASS_DERIVED"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "lesson_boundary": "pass",
+        "review_date": "2026-09-27",
+        "science_pass_date": "2026-09-27",
+        "science_pass_scope": "independent formula and arithmetic check against MAG-III-001"
+      },
+      "adaptive": {
+        "primary_concept_id": "mag-05",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "MAG-05-37",
+      "published_in": "3.0.1"
+    },
+    {
+      "id": "PHY-G3-MAG-000038",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 3,
+      "track": [
+        "PM",
+        "DJ"
+      ],
+      "domain_id": "MAG",
+      "domain_name": "Магнетно поље",
+      "subdomain_id": "MAG-07",
+      "subdomain_name": "Период и завојна путања",
+      "lesson_ids": [
+        "MAG-07"
+      ],
+      "unlock_order": 7,
+      "outcome_ids": [
+        "G3-MAG-07"
+      ],
+      "concept_ids": [
+        "mag-07"
+      ],
+      "difficulty": "intermediate",
+      "achievement_level": "N2",
+      "cognitive_process": "applying",
+      "question_type": "single_choice",
+      "nature": "calculation",
+      "representation": "text",
+      "stem": "Честица се креће по завојници. Брзина паралелна B је 3,0·10⁴ m/s, а период 2,0 μs. Колики је корак завојнице?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "0,006 m"
+        },
+        {
+          "option_id": "B",
+          "text": "0,60 m"
+        },
+        {
+          "option_id": "V",
+          "text": "0,060 m"
+        },
+        {
+          "option_id": "G",
+          "text": "6,0 m"
+        }
+      ],
+      "correct_option_id": "V",
+      "explanation": "h=v∥T=3,0·10⁴·2,0·10⁻⁶=0,060 m.",
+      "common_errors": [
+        {
+          "message": "Провери дефиницију, смер вектора и услове примене одговарајуће релације.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "MAG-III-001",
+          "role": "derived_pass_bank",
+          "source_state": "PASS_DERIVED"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "lesson_boundary": "pass",
+        "review_date": "2026-09-27",
+        "science_pass_date": "2026-09-27",
+        "science_pass_scope": "independent formula and arithmetic check against MAG-III-001"
+      },
+      "adaptive": {
+        "primary_concept_id": "mag-07",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "MAG-07-38",
+      "published_in": "3.0.1"
+    },
+    {
+      "id": "PHY-G3-MAG-000039",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 3,
+      "track": [
+        "PM",
+        "DJ"
+      ],
+      "domain_id": "MAG",
+      "domain_name": "Магнетно поље",
+      "subdomain_id": "MAG-08",
+      "subdomain_name": "Примене кретања честица",
+      "lesson_ids": [
+        "MAG-08"
+      ],
+      "unlock_order": 8,
+      "outcome_ids": [
+        "G3-MAG-08"
+      ],
+      "concept_ids": [
+        "mag-08"
+      ],
+      "difficulty": "advanced",
+      "achievement_level": "N3",
+      "cognitive_process": "reasoning",
+      "question_type": "single_choice",
+      "nature": "calculation",
+      "representation": "text",
+      "stem": "Два јона истог |q| и једнаке кинетичке енергије улазе нормално у исто B. Други има четири пута већу масу. Колико је r₂/r₁?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "4"
+        },
+        {
+          "option_id": "B",
+          "text": "1/2"
+        },
+        {
+          "option_id": "V",
+          "text": "1/4"
+        },
+        {
+          "option_id": "G",
+          "text": "2"
+        }
+      ],
+      "correct_option_id": "G",
+      "explanation": "r=√(2mK)/(|q|B), па је при истом K, |q| и B однос √4=2.",
+      "common_errors": [
+        {
+          "message": "Провери дефиницију, смер вектора и услове примене одговарајуће релације.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "MAG-III-001",
+          "role": "derived_pass_bank",
+          "source_state": "PASS_DERIVED"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "lesson_boundary": "pass",
+        "review_date": "2026-09-27",
+        "science_pass_date": "2026-09-27",
+        "science_pass_scope": "independent formula and arithmetic check against MAG-III-001"
+      },
+      "adaptive": {
+        "primary_concept_id": "mag-08",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "MAG-08-39",
+      "published_in": "3.0.1"
+    },
+    {
+      "id": "PHY-G3-MAG-000040",
+      "schema_version": 1,
+      "content_revision": 1,
+      "status": "published",
+      "grade": 3,
+      "track": [
+        "PM",
+        "DJ"
+      ],
+      "domain_id": "MAG",
+      "domain_name": "Магнетно поље",
+      "subdomain_id": "MAG-04",
+      "subdomain_name": "Амперова сила",
+      "lesson_ids": [
+        "MAG-04"
+      ],
+      "unlock_order": 4,
+      "outcome_ids": [
+        "G3-MAG-04"
+      ],
+      "concept_ids": [
+        "mag-04"
+      ],
+      "difficulty": "advanced",
+      "achievement_level": "N3",
+      "cognitive_process": "reasoning",
+      "question_type": "single_choice",
+      "nature": "calculation",
+      "representation": "text",
+      "stem": "За проводник дужине 0,30 m нормалан на B измерено је: I=1,0 A → F=0,06 N; I=2,0 A → F=0,12 N; I=3,0 A → F=0,18 N. Колико је B?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "0,060 T"
+        },
+        {
+          "option_id": "B",
+          "text": "0,20 T"
+        },
+        {
+          "option_id": "V",
+          "text": "0,30 T"
+        },
+        {
+          "option_id": "G",
+          "text": "0,60 T"
+        }
+      ],
+      "correct_option_id": "B",
+      "explanation": "F/I=Bl=0,06 N/A, па је B=0,06/0,30=0,20 T.",
+      "common_errors": [
+        {
+          "message": "Провери дефиницију, смер вектора и услове примене одговарајуће релације.",
+          "category": "conceptual"
+        }
+      ],
+      "error_categories": [
+        "conceptual"
+      ],
+      "source_refs": [
+        {
+          "id": "MAG-III-001",
+          "role": "derived_pass_bank",
+          "source_state": "PASS_DERIVED"
+        }
+      ],
+      "scientific_status": "PASS",
+      "qa": {
+        "program_alignment": "pass",
+        "scientific": "PASS",
+        "unambiguity": "pass",
+        "language": "pass",
+        "answer_key": "PASS",
+        "units": "PASS",
+        "lesson_boundary": "pass",
+        "review_date": "2026-09-27",
+        "science_pass_date": "2026-09-27",
+        "science_pass_scope": "independent formula and arithmetic check against MAG-III-001"
+      },
+      "adaptive": {
+        "primary_concept_id": "mag-04",
+        "diagnostic_weight": 1,
+        "cooldown_attempts": 2,
+        "adaptive_enabled": true
+      },
+      "equivalence_group": "MAG-04-40",
+      "published_in": "3.0.1"
     }
   ],
   "science_pass": {
