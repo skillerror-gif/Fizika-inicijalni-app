@@ -19,5 +19,4 @@ flutter:
   uses-material-design: true
   assets:
     - assets/content/manifest.json
-    - assets/content/g1_fizika_1.3.0_PASS.json
     - assets/content/g3_magnetno_polje_3.0.0_PASS.json
