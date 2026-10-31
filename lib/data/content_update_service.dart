@@ -64,26 +64,26 @@ class ContentUpdateService {
   }
 
   Future<ContentManifest> fetchManifest(Uri uri) async {
-    final r = await client.get(uri);
+    final r = await client.get(uri).timeout(const Duration(seconds: 5));
     if (r.statusCode != 200) throw HttpException('Manifest ${r.statusCode}');
-    return ContentManifest.fromJson(jsonDecode(r.body) as Map<String, dynamic>);
+    return ContentManifest.fromJson(jsonDecode(utf8.decode(r.bodyBytes)) as Map<String, dynamic>);
   }
 
   Future<List<int>> verifiedPackage(Uri base, ContentPackageRef p) async {
-    final r = await client.get(base.resolve(p.file));
+    final r = await client.get(base.resolve(p.file)).timeout(const Duration(seconds: 5));
     if (r.statusCode != 200) throw HttpException('Package ${r.statusCode}');
     final digest = await Sha256().hash(r.bodyBytes);
     final actual =
         digest.bytes.map((b) => b.toRadixString(16).padLeft(2, '0')).join();
     if (actual.toLowerCase() != p.sha256.toLowerCase())
       throw const FormatException('SHA-256 mismatch');
-    _validateJson(r.body, p.questionCount);
+    _validateJson(utf8.decode(r.bodyBytes), p.questionCount);
     return r.bodyBytes;
   }
 
   void _validateJson(String raw, int expected) {
     final d = jsonDecode(raw);
-    if (d is! Map<String, dynamic> || d['questions'] is! List)
+    if (d is! Map<String, dynamic> || d['schema_version'] != 1 || d['questions'] is! List)
       throw const FormatException('Neispravna struktura baze');
     final q = d['questions'] as List;
     if (expected > 0 && q.length != expected)
@@ -105,7 +105,16 @@ class ContentUpdateService {
     }
   }
 
-  Future<File> installAtomically(Uri manifestUri) async {
+  Future<File> installAtomically(Uri manifestUri, {
+    String contentPrefix = 'content',
+    int? expectedGrade,
+    String? expectedDatabaseId,
+    String? minimumContentVersion,
+    Directory? directory,
+  }) async {
+    if (!RegExp(r'^[a-z0-9_]+$').hasMatch(contentPrefix)) {
+      throw const FormatException('Invalid content cache name');
+    }
     final manifest = await fetchManifest(manifestUri);
     if (_olderThan(appVersion, manifest.minimumAppVersion))
       throw FormatException(
@@ -115,14 +124,33 @@ class ContentUpdateService {
       throw const FormatException('Nepodržana schema_version');
     if (manifest.packages.length != 1)
       throw const FormatException('Očekuje se jedan paket');
+    if (minimumContentVersion != null &&
+        _olderThan(manifest.contentVersion, minimumContentVersion)) {
+      throw const FormatException('Content downgrade rejected');
+    }
     final bytes = await verifiedPackage(
       manifestUri.resolve('.'),
       manifest.packages.first,
     );
-    final dir = Directory(await getDatabasesPath());
-    final current = File(join(dir.path, 'content_current.json'));
-    final temp = File(join(dir.path, 'content_next.tmp'));
-    final backup = File(join(dir.path, 'content_previous.json'));
+    final dir = directory ?? Directory(await getDatabasesPath());
+    final package = jsonDecode(utf8.decode(bytes)) as Map<String, dynamic>;
+    if ((expectedGrade != null && package['grade'] != expectedGrade) ||
+        (expectedDatabaseId != null && package['database_id'] != expectedDatabaseId) ||
+        package['content_version'] != manifest.contentVersion) {
+      throw const FormatException('Wrong grade, database or content version');
+    }
+    final current = File(join(dir.path, '${contentPrefix}_current.json'));
+    final temp = File(join(dir.path, '${contentPrefix}_next.tmp'));
+    final backup = File(join(dir.path, '${contentPrefix}_previous.json'));
+    if (await current.exists()) {
+      try {
+        final installed = jsonDecode(await current.readAsString());
+        if (installed is Map && installed['content_version'] is String &&
+            !_olderThan(installed['content_version'] as String, manifest.contentVersion)) {
+          return current;
+        }
+      } catch (_) { /* replace a corrupt cache with verified content */ }
+    }
     await temp.writeAsBytes(
       bytes,
       flush: true,

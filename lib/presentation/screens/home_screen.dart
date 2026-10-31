@@ -67,29 +67,37 @@ class AppQuestion {
   }
 }
 
-Future<List<AppQuestion>> loadQuestions({int grade = 1}) async {
-  final raw = await ContentRepository.loadRawForGrade(grade);
-  if (grade == 1) ContentRepository.refreshSilently();
+List<AppQuestion> questionsFromRaw(String raw) {
   final data = jsonDecode(raw) as Map<String, dynamic>;
-  return (data['questions'] as List)
-      .where(
-        (e) =>
-            e['status'] == 'published' &&
-            e['scientific_status'].toString().toLowerCase() == 'pass',
-      )
+  final boundary = data['current_unlock_order'] as int? ?? 35;
+  final questions = (data['questions'] as List)
+      .where((e) => e['status'] == 'published' &&
+          e['scientific_status'].toString().toLowerCase() == 'pass')
       .map((e) => AppQuestion.fromJson(e))
-      .where((q) => q.unlock <= 35)
+      .where((q) => q.unlock <= boundary)
       .toList();
+  for (final q in questions) {
+    lessonNames[q.lessonId] = q.subdomain;
+  }
+  return questions;
+}
+
+Future<List<AppQuestion>> loadQuestions({int grade = 1}) async {
+  // Keep the existing offline bootstrap; a refresh affects the next load.
+  final raw = await ContentRepository.loadRawForGrade(grade);
+  ContentRepository.refreshSilently(grade: grade);
+  return questionsFromRaw(raw);
 }
 
 const mainAreaNames = <String, String>{
   'UVF': 'Увод у физику',
   'KIN': 'Кинематика',
   'MAG': 'Магнетно поље',
+  'IND': 'Електромагнетна индукција и самоиндукција',
 };
 String mainAreaId(String subdomainId) => subdomainId.split('-').first;
 
-const lessonNames = <String, String>{
+final lessonNames = <String, String>{
   'UVF-01': 'Предмет, методе и задаци физике',
   'UVF-02': 'Физичке величине, мерење и SI јединице',
   'UVF-03': 'Скаларне и векторске физичке величине',
@@ -759,7 +767,7 @@ class FormativeLessonScreen extends StatelessWidget {
               child: ListTile(
                 leading: const Icon(Icons.menu_book),
                 title: Text(lessonNames[id]!),
-                subtitle: const Text('5–8 nasumičnih pitanja'),
+                subtitle: Text('${min(8, pool.length)} nasumičnih pitanja'),
                 trailing: const Icon(Icons.chevron_right),
                 onTap: () {
                   pool.shuffle(Random.secure());

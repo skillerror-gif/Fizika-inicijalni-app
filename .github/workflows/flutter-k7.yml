@@ -40,7 +40,10 @@ jobs:
       - name: Dependencies
         run: flutter pub get
       - name: Validate content
-        run: python3 tool/validate_content.py
+        run: |
+          python3 tool/validate_content.py
+          python3 tool/validate_grade3_induction.py
+          python3 content_bank/tools/verify_indukcija_mcq.py
       - name: Format source with CI Dart
         run: dart format lib test
       - name: Verify source formatting
