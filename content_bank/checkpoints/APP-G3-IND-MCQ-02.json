@@ -1,0 +1,29 @@
+{
+  "package": "APP-G3-IND-MCQ-02",
+  "status": "CONTENT_AUTHORED_TECHNICALLY_CHECKED_NOT_PUBLISHED",
+  "question_count": 59,
+  "source_coverage": "45 numbered tasks + 14 review questions; task 46 isolated",
+  "source_figures_inspected": 25,
+  "numeric_items_independently_checked": 26,
+  "symbolic_items_checked": [
+    37,
+    45
+  ],
+  "answer_options": 236,
+  "wrong_option_mappings": 177,
+  "group_count": 20,
+  "answer_key_distribution": {
+    "A": 15,
+    "B": 15,
+    "V": 15,
+    "G": 14
+  },
+  "date": "2026-10-31",
+  "science_review": "Independent law/geometry/sign/arithmetic and option-by-option conceptual audit; no MASTER or PROFESSOR PASS claimed.",
+  "blockers": [
+    "Program/track/outcome and unlock mapping not confirmed for full corpus",
+    "Professor approval and required Drive checkpoint synchronization pending",
+    "App integration/runtime not performed"
+  ],
+  "next": "Use the 59 authored MCQs and resolved source-figure descriptions; do not repeat source import. Resolve curriculum/source approval before publication."
+}
