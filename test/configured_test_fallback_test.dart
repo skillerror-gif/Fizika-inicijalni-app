@@ -92,7 +92,7 @@ void main() {
     await tester.tap(find.text('Направи тест'));
     await tester.pumpAndSettle();
     expect(find.text('Тест је прилагођен'),findsOneWidget);
-    expect(find.textContaining('Број питања: 1'),findsOneWidget);
+    expect(find.textContaining('Број питања: 1 (тражено: 16)'),findsOneWidget);
     await tester.tap(find.text('Почни тест'));
     await tester.pumpAndSettle();
     expect(find.text('Тест • 1/1'),findsOneWidget);
