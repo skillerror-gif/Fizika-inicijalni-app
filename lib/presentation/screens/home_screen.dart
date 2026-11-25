@@ -551,7 +551,7 @@ class _TestSetupScreenState extends State<TestSetupScreen> {
   int count = 16;
   String focus = 'mixed';
 
-  void start() {
+  Future<void> start() async {
     final pool = widget.allQuestions.where((q) => selected.isEmpty || selected.contains(q.subdomainId)).toList();
     final map = {for (final q in pool) q.id: q};
     final testPool = pool.map((q) => TestQuestion(
@@ -561,7 +561,18 @@ class _TestSetupScreenState extends State<TestSetupScreen> {
       equivalenceGroup: q.equivalenceGroup, published: true, scientificPass: true,
     )).toList();
     try {
-      final picked = MasterTestGenerator().generateConfigured(testPool, 35, count: count, focus: focus);
+      final boundary = pool.fold<int>(0, (value, q) => max(value, q.unlock));
+      final result = MasterTestGenerator().generateConfiguredWithReport(testPool, boundary, count: count, focus: focus);
+      final proceed = await showDialog<bool>(context: context, builder: (_) => AlertDialog(
+        title: Text(result.adjusted ? 'Тест је прилагођен' : 'Тест је спреман'),
+        content: SingleChildScrollView(child: Text(result.summary)),
+        actions: [
+          TextButton(onPressed: () => Navigator.pop(context, false), child: const Text('Назад')),
+          FilledButton(onPressed: () => Navigator.pop(context, true), child: const Text('Почни тест')),
+        ],
+      ));
+      if (proceed != true || !mounted) return;
+      final picked = result.questions;
       final scope = selected.isEmpty ? <String>['Све обрађене области'] : (selected.toList()..sort()).map((id) => lessonNames[id] ?? id).toList();
       Navigator.push(context, MaterialPageRoute(builder: (_) => MasterTestScreen(
         questions: picked.map((q) => map[q.id]!).toList(), scope: scope, focus: focus,

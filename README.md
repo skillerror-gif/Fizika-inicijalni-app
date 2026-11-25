@@ -60,3 +60,9 @@ lib/data/          SQLite, učitavanje i ažuriranje sadržaja
 lib/presentation/  ekrani i widgeti
 tool/              validacija sadržaja
 ```
+
+## Prilagođeni test za vežbanje (2026-11-25)
+
+Ekran Test prvo pokušava traženi broj i raspodelu nivoa. Ako fond nije dovoljan, bira raspoložive zadatke po tim nivoima i dodaje do dva preostala osnovna za svaki nedostajući srednji, odnosno do tri za napredni. Broj može porasti zbog zamena ili pasti zbog manjeg fonda. Ne ponavlja ID pitanja i ne izlazi iz izabranog gradiva, tipa, nastavničke granice ili published/scientific PASS statusa. Kada nema osnovnih za sve zamene, koristi one koji postoje; ne dodaje teže zadatke umesto osnovnih.
+
+Pre početka prikazuje stvarni broj, raspodelu i podatak da je sastav prilagođen. Prilagođeni rezultat je vežbanje, bez tvrdnje o istoj težini ili punom MASTER statusu. Odnos teorije i računa i redosled optimizuju se unutar raspoloživog fonda; nemoguć obrazac više ne blokira usku podoblast. Stari strogi generate() ostaje nepromenjen.

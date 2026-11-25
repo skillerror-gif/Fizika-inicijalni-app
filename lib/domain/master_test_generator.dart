@@ -33,6 +33,31 @@ class TestGenerationException implements Exception {
   String toString() => 'Nedovoljan fond: ${reasons.join('; ')}';
 }
 
+class ConfiguredTestResult {
+  ConfiguredTestResult({
+    required List<TestQuestion> questions,
+    required this.requestedCount,
+    this.missingIntermediate = 0,
+    this.missingAdvanced = 0,
+    this.replacementBasics = 0,
+    this.adjusted = false,
+  }) : questions = List.unmodifiable(questions);
+
+  final List<TestQuestion> questions;
+  final int requestedCount, missingIntermediate, missingAdvanced, replacementBasics;
+  final bool adjusted;
+
+  String get summary {
+    final basic = questions.where((q) => q.level == MasterLevel.basic).length;
+    final intermediate = questions.where((q) => q.level == MasterLevel.intermediate).length;
+    final advanced = questions.where((q) => q.level == MasterLevel.advanced).length;
+    return 'Број питања: ${questions.length} (тражено: $requestedCount).\n'
+        'Основни: $basic • Средњи: $intermediate • Напредни: $advanced.'
+        '${missingIntermediate + missingAdvanced > 0 ? '\nНедостаје средњих: $missingIntermediate; напредних: $missingAdvanced. Додато основних за замену: $replacementBasics.' : ''}'
+        '${adjusted ? '\nСастав је прилагођен доступним питањима. Један средњи замењују до два основна, а један напредни до три основна. Ово је тест за вежбање; замене не значе исту тежину или проверу истог нивоа знања.' : ''}';
+  }
+}
+
 class MasterTestGenerator {
   MasterTestGenerator({Random? random}) : _random = random ?? Random.secure();
   final Random _random;
@@ -100,6 +125,101 @@ class MasterTestGenerator {
   }
 
   List<TestQuestion> generateConfigured(
+    Iterable<TestQuestion> all,
+    int unlock, {
+    required int count,
+    String focus = 'mixed',
+  }) => generateConfiguredWithReport(all, unlock, count: count, focus: focus).questions;
+
+  ConfiguredTestResult generateConfiguredWithReport(
+    Iterable<TestQuestion> all,
+    int unlock, {
+    required int count,
+    String focus = 'mixed',
+  }) {
+    if (count < 5 || count > 20) {
+      throw TestGenerationException(['број питања мора бити од 5 до 20']);
+    }
+    if (!const {'mixed', 'theory', 'calculation'}.contains(focus)) {
+      throw TestGenerationException(['непозната врста питања']);
+    }
+    // Only published, approved, unlocked questions inside the supplied scope.
+    final byId = <String, TestQuestion>{};
+    for (final q in _eligible(all, unlock)) {
+      if (focus == 'mixed' || q.nature == focus) byId.putIfAbsent(q.id, () => q);
+    }
+    final pool = byId.values.toList();
+    if (pool.isEmpty) {
+      throw TestGenerationException(['нема доступних питања за изабрано градиво и врсту']);
+    }
+    try {
+      return ConfiguredTestResult(
+        questions: _generateConfiguredExact(pool, unlock, count: count, focus: focus),
+        requestedCount: count,
+      );
+    } on TestGenerationException {
+      // A limited bank must still yield a practice test. Hard eligibility
+      // constraints above never relax; composition and ordering are best effort.
+    }
+    final basicTarget = (count * 0.5).round();
+    final advancedTarget = (count * 0.1875).round();
+    final intermediateTarget = count - basicTarget - advancedTarget;
+    final chosen = <TestQuestion>[];
+    final remaining = [...pool]..shuffle(_random);
+    void takeLevel(MasterLevel level, int target) {
+      for (var i = 0; i < target; i++) {
+        var candidates = remaining.where((q) => q.level == level).toList();
+        if (candidates.isEmpty) break;
+        if (focus == 'mixed') {
+          final theory = chosen.where((q) => q.nature == 'theory').length;
+          final calculation = chosen.where((q) => q.nature == 'calculation').length;
+          final wanted = theory <= calculation ? 'theory' : 'calculation';
+          final balanced = candidates.where((q) => q.nature == wanted).toList();
+          if (balanced.isNotEmpty) candidates = balanced;
+        }
+        final q = candidates[_random.nextInt(candidates.length)];
+        chosen.add(q);
+        remaining.removeWhere((x) => x.id == q.id);
+      }
+    }
+    takeLevel(MasterLevel.basic, basicTarget);
+    takeLevel(MasterLevel.intermediate, intermediateTarget);
+    takeLevel(MasterLevel.advanced, advancedTarget);
+    final missingIntermediate = intermediateTarget - chosen.where((q) => q.level == MasterLevel.intermediate).length;
+    final missingAdvanced = advancedTarget - chosen.where((q) => q.level == MasterLevel.advanced).length;
+    final before = chosen.length;
+    takeLevel(MasterLevel.basic, 2 * missingIntermediate + 3 * missingAdvanced);
+    // Ordering can be impossible for a single small topic. Minimize repetitions
+    // without discarding available questions or introducing other material.
+    final ordered = <TestQuestion>[];
+    final rem = [...chosen]..shuffle(_random);
+    while (rem.isNotEmpty) {
+      int penalty(TestQuestion q) {
+        final n = ordered.length;
+        var score = 0;
+        if (n >= 2 && ordered[n-1].correctOptionId == q.correctOptionId && ordered[n-2].correctOptionId == q.correctOptionId) score += 8;
+        if (n >= 4 && ordered[n-4].correctOptionId == q.correctOptionId && ordered[n-2].correctOptionId == q.correctOptionId && ordered[n-3].correctOptionId == ordered[n-1].correctOptionId) score += 4;
+        if (n >= 2 && ordered[n-1].subdomainId == q.subdomainId && ordered[n-2].subdomainId == q.subdomainId) score += 2;
+        if (n > 0 && q.equivalenceGroup.isNotEmpty && ordered.last.equivalenceGroup == q.equivalenceGroup) score++;
+        return score;
+      }
+      final best = rem.map(penalty).reduce(min);
+      final candidates = rem.where((q) => penalty(q) == best).toList();
+      final q = candidates[_random.nextInt(candidates.length)];
+      ordered.add(q);
+      rem.remove(q);
+    }
+    return ConfiguredTestResult(
+      questions: ordered,
+      requestedCount: count,
+      missingIntermediate: missingIntermediate,
+      missingAdvanced: missingAdvanced,
+      replacementBasics: chosen.length - before,
+      adjusted: true,
+    );
+  }
+
+  List<TestQuestion> _generateConfiguredExact(
     Iterable<TestQuestion> all,
     int unlock, {
     required int count,
@@ -299,6 +419,23 @@ class MasterTestGenerator {
   }
 
   List<TestQuestion> _antiPattern(List<TestQuestion> src) {
+    for (final key in [
+      (TestQuestion q) => q.subdomainId,
+      (TestQuestion q) => q.correctOptionId,
+    ]) {
+      final counts = <String, int>{};
+      for (final q in src) { counts[key(q)] = (counts[key(q)] ?? 0) + 1; }
+      if (counts.values.any((n) => n > 2 * (src.length - n + 1))) {
+        throw TestGenerationException(['није могућ редослед без три иста узастопна']);
+      }
+    }
+    final groups = <String, int>{};
+    for (final q in src) {
+      if (q.equivalenceGroup.isNotEmpty) groups[q.equivalenceGroup] = (groups[q.equivalenceGroup] ?? 0) + 1;
+    }
+    if (groups.values.any((n) => n > src.length - n + 1)) {
+      throw TestGenerationException(['није могућ редослед без суседних еквивалентних питања']);
+    }
     for (var attempt = 0; attempt < 50; attempt++) {
       final rem = [...src]..shuffle(_random), out = <TestQuestion>[];
       while (rem.isNotEmpty) {
