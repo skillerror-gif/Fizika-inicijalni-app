@@ -14,7 +14,7 @@ class UserGuideScreen extends StatelessWidget {
             ),
             SizedBox(height: 8),
             Text(
-              'Aplikacija je namenjena vežbanju fizike za I razred gimnazije. U njoj su dostupne oblasti i teme koje su do sada obrađene.',
+              'Aplikacija je namenjena vežbanju fizike za III razred gimnazije. U njoj su dostupne oblasti i teme koje su do sada obrađene.',
             ),
             _Guide(
               'Vežbaj',
@@ -30,7 +30,7 @@ class UserGuideScreen extends StatelessWidget {
             ),
             _Guide(
               'Test',
-              'Aplikacija sastavlja test od 16 pitanja iz svih trenutno obrađenih oblasti: 8 osnovnog, 5 srednjeg i 3 naprednog nivoa, uz kombinovanje teorijskih i računskih zadataka i različitih prikaza. Neobrađeno gradivo se ne pojavljuje u testu.',
+              'Izaberi gradivo, vrstu zadataka i željeni broj pitanja (5–20). Ako nema dovoljno pitanja, test može biti kraći. Za svaki nedostajući srednji zadatak aplikacija dodaje do dva raspoloživa osnovna, a za napredni do tri; zato test može imati i više pitanja od traženog. Pitanja se ne ponavljaju. Pre početka vidiš stvarni broj i raspodelu po nivoima. Prilagođeni test služi za vežbanje: zamene ne znače istu težinu ili proveru istog nivoa znanja. Neobrađeno gradivo se ne pojavljuje u testu.',
             ),
             _Guide(
               'Moj napredak',
