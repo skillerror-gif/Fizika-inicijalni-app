@@ -1,0 +1,36 @@
+{
+  "package": "APP-TEST-FALLBACK-01",
+  "date": "2026-11-25",
+  "base_commit": "9215b4db5dca2acffcf1d6ccb9fc1e6d47ba1066",
+  "master": "CURRENT v40 + HUB + K7.5 + APP-G3-IND-INTEGRATION-03 reread",
+  "authorization": "User explicitly authorized shorter configured tests and up to 3 basic per missing advanced, 2 per missing intermediate. This is a practice-test exception, not a change to the strict MASTER generator or scientific levels.",
+  "packages": [
+    {
+      "id": "A",
+      "goal": "Ground requirements and sources",
+      "status": "DONE",
+      "qa": "CURRENT/HUB/module/source checkpoint read; source files and bank verified"
+    },
+    {
+      "id": "B",
+      "goal": "Implement configured fallback and preview",
+      "status": "DONE",
+      "qa": "No question content, progress database or production endpoint changes; unique eligible IDs only"
+    },
+    {
+      "id": "C",
+      "goal": "CI unit/widget tests and APK build",
+      "status": "IN_PROGRESS",
+      "next": "Inspect GitHub Actions run for PR 2 and retrieve APK"
+    },
+    {
+      "id": "D",
+      "goal": "Physical update continuity",
+      "status": "OPEN",
+      "next": "User device update with preserved progress; no final runtime PASS claim"
+    }
+  ],
+  "validation": "Content validators pass; local Flutter execution blocked by automatic review due attempted metadata endpoint access; GitHub CI is the safer verification route.",
+  "branch": "fix/adaptive-test-fallback-20261125",
+  "pr": "https://github.com/skillerror-gif/Fizika-inicijalni-app/pull/2"
+}

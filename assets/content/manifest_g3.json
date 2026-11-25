@@ -1,0 +1,16 @@
+{
+  "database_id": "fizika-app-g3-mag",
+  "grade": 3,
+  "schema_version": 1,
+  "content_version": "3.2.0",
+  "minimum_app_version": "0.1.2",
+  "question_count": 156,
+  "current_unlock_order": 26,
+  "packages": [
+    {
+      "file": "g3_fizika_3.2.0.json",
+      "sha256": "ec532256ab6c68a960dd9f4ecc2fd72fb419d3c98362abcc951553a3d179192d",
+      "question_count": 156
+    }
+  ]
+}

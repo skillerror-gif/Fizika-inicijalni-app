@@ -1,0 +1,42 @@
+{
+  "package": "APP-G3-IND-INTEGRATION-03",
+  "master": "CURRENT v40, HUB, K2; read directly 2026-10-31",
+  "status": "CONTENT_REVIEWED_INTEGRATION_PENDING_RUNTIME",
+  "source_checkpoint": "APP-G3-IND-MCQ-02",
+  "source_questions": 59,
+  "published_candidate_count": 56,
+  "cumulative_candidate_count": 156,
+  "held_teacher_led_supplements": [
+    "PHY-G3-IND-MCQ-000043",
+    "PHY-G3-IND-MCQ-000044",
+    "PHY-G3-IND-MCQ-000045"
+  ],
+  "source46": "Unresolved steel ring model excluded",
+  "normative_source": {
+    "url": "https://zuov.gov.rs/wp-content/uploads/2020/08/pravilnik-gimnazija.pdf",
+    "sha256": "d0590161b7351de6fd094e4f6491a634887958396bb130e49983c3f36a7f8fe3",
+    "printed_pages": [
+      575,
+      579,
+      581
+    ],
+    "pdf_pages": [
+      576,
+      580,
+      582
+    ],
+    "outcome": "повезује индуковану електромоторну силу са променом магнетног флукса и наводи њену примену (трансформатори, магнетне кочнице)",
+    "standard": "2.ФИ.1.3.5",
+    "local_outcome_id": "G3-IND-EMF-FLUX",
+    "guidelines": "Induction, motional EMF, stationary conductor, Faraday, Lenz, energy conservation, mutual/self induction explicitly present; teacher-led source supplements held."
+  },
+  "scope_authorization": "Teacher explicitly requested activating uploaded questions in current conversation; no claim of dated lesson realization.",
+  "qa": "59 stems/options/explanations reviewed; 26 numeric tasks and 2 symbolic tasks independently checked; 25 source images inspected; scope narrows to 56 core questions, supplementary groups 19/20 held.",
+  "release_blockers": [
+    "Drive checkpoint readback",
+    "CI/analyze/tests/build",
+    "Runtime installation/update continuity and progress preservation",
+    "Production main channel publication after all gates"
+  ],
+  "next": "Complete technical integration, run CI, inspect UI and runtime update before main publication."
+}

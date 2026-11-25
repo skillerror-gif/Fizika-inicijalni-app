@@ -1,0 +1,26 @@
+{
+  "package": "APP-G3-IND-IMPORT-01",
+  "status": "PARTIAL",
+  "master": "CURRENT v40; HUB; K2 model",
+  "completed": [
+    "Source document parsed: 46 tasks and 14 review questions",
+    "20 source groups plus separate unresolved task 46",
+    "Permanent source record IDs and source SHA-256",
+    "Math numerator/denominator structure preserved",
+    "Existing published content unchanged"
+  ],
+  "checks": {
+    "count": 60,
+    "unique_ids": 60,
+    "nonempty_stems": true,
+    "media_review_required": 23
+  },
+  "blocked": [
+    "No scientific/PROGRAM/track/outcome/unlock approval yet",
+    "23 records require graphics review/materialization",
+    "Source task 46 explicitly unresolved",
+    "Single-choice options and independent keys not yet authored",
+    "Grade III installed build has no remote-content path"
+  ],
+  "next": "Validate source graphics and grade/track scope; adapt grouped source records into approved app question schema; then technical QA before published package."
+}
